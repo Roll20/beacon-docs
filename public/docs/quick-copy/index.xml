@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quick Start on My Docs</title>
+    <link>http://localhost:1313/docs/quick-copy/</link>
+    <description>Recent content in Quick Start on My Docs</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Hyas</copyright>
+    <lastBuildDate>Tue, 07 May 2024 16:13:18 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/quick-copy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beginner Beacon Sheet</title>
+      <link>http://localhost:1313/docs/quick-copy/beginner-beacon-sheet/</link>
+      <pubDate>Tue, 07 May 2024 16:13:18 +0200</pubDate>
+      <guid>http://localhost:1313/docs/quick-copy/beginner-beacon-sheet/</guid>
+      <description>Prerequisites To set this sheet up properly, make sure that you have the following tools installed:&#xA;Vue.js Vite SCSS Figure 1: Quickstart sheet</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/quick-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/quick-copy/</guid>
+      <description>Reference pages are ideal for outlining how things work in terse and clear terms. Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.</description>
+    </item>
+  </channel>
+</rss>

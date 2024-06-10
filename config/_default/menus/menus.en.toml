@@ -30,14 +30,9 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/guides/example-guide/"
+  url = "/docs/guides/introduction"
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
-
-[[main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 30
 
 # [[social]]
 #   name = "Twitter"
@@ -59,15 +54,20 @@
   weight = 30
 
 # [[sidebar_docs]]
-#   name = "Guides"
+#   name = "Getting Started"
 #   pageRef = "/docs/guides"
 #   weight = 10
 # 
 # [[sidebar_docs]]
-#   name = "Reference"
-#   pageRef = "/docs/reference"
+#   name = "Quick Start"
+#   pageRef = "/docs/quick"
 #   weight = 20
 # 
+# [[sidebar_docs]]
+#   name = "Components"
+#   pageRef = "/docs/components"
+#   weight = 20
+
 # [[sidebar_docs]]
 #   name = "Resources"
 #   pageRef = "/docs/resources"
