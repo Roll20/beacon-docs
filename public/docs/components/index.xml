@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Components on Beacon SDK</title>
-    <link>//localhost:1313/docs/components/</link>
+    <link>http://localhost:1313/beacon-docs/docs/components/</link>
     <description>Recent content in Components on Beacon SDK</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Hyas</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
-    <atom:link href="//localhost:1313/docs/components/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/beacon-docs/docs/components/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Overview</title>
-      <link>//localhost:1313/docs/components/overview/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/overview/</link>
       <pubDate>Fri, 07 Jun 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/overview/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/overview/</guid>
       <description>The Beacon SDK is composed of various components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.</description>
     </item>
     <item>
       <title>Actions</title>
-      <link>//localhost:1313/docs/components/actions/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/actions/</link>
       <pubDate>Tue, 07 May 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/actions/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/actions/</guid>
       <description>Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.</description>
     </item>
     <item>
       <title>Computed</title>
-      <link>//localhost:1313/docs/components/computed/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/computed/</link>
       <pubDate>Sun, 07 Apr 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/computed/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/computed/</guid>
       <description>Sheet authors define computed properties that are accessed by the host. These computed properties can be used as attributes in macros and are available to assign as values to token bars - if the tokenBarValue property is set to true.</description>
     </item>
     <item>
       <title>Handlers</title>
-      <link>//localhost:1313/docs/components/handlers/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/handlers/</link>
       <pubDate>Thu, 07 Mar 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/handlers/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/handlers/</guid>
       <description>Handler functions allow the sheet to respond to messages from the host. The handlers argument requires the following methods:&#xA;onInit The onInit function provides the initial set of data to the sheet.</description>
     </item>
     <item>
       <title>Handling Legacy Macro Attributes</title>
-      <link>//localhost:1313/docs/components/handling-legacy-macro-attributes/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/handling-legacy-macro-attributes/</link>
       <pubDate>Wed, 07 Feb 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/handling-legacy-macro-attributes/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/handling-legacy-macro-attributes/</guid>
       <description>When utilizing Macros within the VTT, there are instances where a legacy macro might need to be employed for a Beacon sheet.</description>
     </item>
     <item>
       <title>Rolls</title>
-      <link>//localhost:1313/docs/components/rolls/</link>
+      <link>http://localhost:1313/beacon-docs/docs/components/rolls/</link>
       <pubDate>Sun, 07 Jan 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/components/rolls/</guid>
+      <guid>http://localhost:1313/beacon-docs/docs/components/rolls/</guid>
       <description>The VTT (Virtual Tabletop) has several new features that enhance the way rolls are handled and displayed. These features include attributes and elements that allow for dynamic roll results and interactivity within the VTT environment.</description>
     </item>
   </channel>
