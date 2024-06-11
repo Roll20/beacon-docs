@@ -1,5 +1,5 @@
 title = "Beacon SDK"
-baseurl = "http://localhost/"
+baseurl = "https://roll20.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
