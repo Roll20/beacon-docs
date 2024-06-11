@@ -2,21 +2,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/beacon-docs/docs/quick/beginner-beacon-sheet/</loc>
+      <loc>//localhost:1313/docs/quick/beginner-beacon-sheet/</loc>
       <lastmod>2024-05-07T16:13:18+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/beacon-docs/docs/quick/advanced-beacon-sheet/</loc>
+      <loc>//localhost:1313/docs/quick/advanced-beacon-sheet/</loc>
       <lastmod>2024-09-07T16:13:18+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/beacon-docs/docs/quick/release-sheet/</loc>
+      <loc>//localhost:1313/docs/quick/release-sheet/</loc>
       <lastmod>2024-09-07T16:13:18+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
