@@ -1,5 +1,5 @@
 title = "Beacon SDK"
-baseurl = "/"
+baseurl = "https://roll20.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -17,7 +17,7 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2020-2024 Hyas"
+copyRight = "Copyright (c) 2020-2024 Beacon SDK"
 
 [build.buildStats]
   enable = true

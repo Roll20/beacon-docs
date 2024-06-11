@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Changelog on Beacon SDK</title>
-    <link>//localhost:1313/docs/changelog/</link>
+    <link>http://localhost:1313/docs/changelog/</link>
     <description>Recent content in Changelog on Beacon SDK</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2020-2024 Hyas</copyright>
+    <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 16:12:37 +0200</lastBuildDate>
-    <atom:link href="//localhost:1313/docs/changelog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/changelog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Version 1.0.0</title>
-      <link>//localhost:1313/docs/changelog/version-1.0.0/</link>
+      <link>http://localhost:1313/docs/changelog/version-1.0.0/</link>
       <pubDate>Sun, 07 Jan 2024 16:12:37 +0200</pubDate>
-      <guid>//localhost:1313/docs/changelog/version-1.0.0/</guid>
+      <guid>http://localhost:1313/docs/changelog/version-1.0.0/</guid>
       <description>Release Date: 2022-03-17&#xA;New Features Initial release of the Beacon SDK. Support for Vue.js framework. Setup with Vite for rapid development.</description>
     </item>
   </channel>
