@@ -17,7 +17,7 @@
 <noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/quick/release-sheet/">
   <link rel="canonical" href="http://localhost:1313/docs/quick/release-sheet/">
 <title>Release Sheet  |  Beacon SDK</title>
-<meta name="description" content="This is an advanced quick start sheet example. This sheet takes an advanced approach to building the Beacon sheet.">
+<meta name="description" content="Releasing a Test Sheet.">
 
     
     <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -44,7 +44,7 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 <meta property="og:title" content="Release Sheet">
-<meta property="og:description" content="This is an advanced quick start sheet example. This sheet takes an advanced approach to building the Beacon sheet.">
+<meta property="og:description" content="Releasing a Test Sheet.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/docs/quick/release-sheet/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-02-07T16:13:18+02:00">
@@ -52,7 +52,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Release Sheet">
-<meta name="twitter:description" content="This is an advanced quick start sheet example. This sheet takes an advanced approach to building the Beacon sheet.">
+<meta name="twitter:description" content="Releasing a Test Sheet.">
 <meta name="twitter:site" content="@getdoks">
 
     
@@ -105,13 +105,6 @@
 
     
     
-    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <circle cx="10" cy="10" r="7"></circle>
-        <line x1="21" y1="21" x2="15" y2="15"></line>
-      </svg>
-    </button>
     
     <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -283,13 +276,6 @@
 
         
         
-        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <circle cx="10" cy="10" r="7"></circle>
-            <line x1="21" y1="21" x2="15" y2="15"></line>
-          </svg>
-        </button>
         
         
         
@@ -318,53 +304,6 @@
     <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="http://localhost:1313/docs/guides/introduction/" role="button">Get started</a>
     </div>
 </header>
-</div>
-
-<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
-        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="search-input flex-grow-1 d-none">
-          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
-            <label for="query" class="visually-hidden">Search</label>
-            <div class="d-flex">
-              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
-              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modal-body">
-        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
-        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
-        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
-        <div id="searchResults" class="search-results"></div>
-        <template>
-          <article class="search-result list-view">
-            <div class="card my-3">
-              <div class="card-body">
-                <header>
-                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
-                  <div class="submitted"><time class="created-date">Date here</time></div>
-                </header>
-                <div class="content">Summary here</div>
-              </div>
-            </div>
-          </article>
-        </template>
-      </div>
-      <div class="modal-footer">
-        <ul class="list-inline me-auto d-none d-md-block">
-          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
-          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
-          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
-        </ul>
-        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
-      </div>
-    </div>
-  </div>
 </div>
 
 
@@ -492,7 +431,13 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#steps-to-release-a-test-sheet">Steps to Release a Test Sheet</a></li>
+    <li><a href="#releasing-a-final-version">Releasing a Final Version</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -510,9 +455,100 @@
 			<h1>Release Sheet</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#steps-to-release-a-test-sheet">Steps to Release a Test Sheet</a></li>
+    <li><a href="#releasing-a-final-version">Releasing a Final Version</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>A release sheet is a finalized version of a character sheet or other content designed for use on the Roll20 platform. This sheet includes all the necessary code, assets, and metadata packaged together to be easily shared, tested, and eventually deployed on Roll20.</p>
+<p>When you&rsquo;re ready to test and share a sheet on Roll20, you&rsquo;d want to do it in such a way that others who might need it won&rsquo;t have to set it up with a local dev environment.</p>
+<p>That&rsquo;s what the steps below help you achieve. In this guide, you can make your sheet available in the Roll20 Tabletop and Characters.</p>
+<h2 id="steps-to-release-a-test-sheet">Steps to Release a Test Sheet<a href="#steps-to-release-a-test-sheet" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The following steps will aid you while releasing your sheet:</p>
+<ol>
+<li>
+<p><strong>Create a Build Command</strong>:</p>
+<p>You must have a build command that will produce the minified production-ready code. You can find an example in our <a href="https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/package.json">Quickstart Package JSON</a>. The build command must be able to create these exact files:</p>
+<ul>
+<li><code>sheet.js</code></li>
+<li><code>sheet.css</code></li>
+<li><code>host.css</code> (optional)</li>
+<li>Add a local folder that contains fonts and images used in the sheet (optional).</li>
+</ul>
+</li>
+<li>
+<p><strong>Add a <code>sheet.json</code> file</strong>:</p>
+<p>Add a <code>sheet.json</code> file to your sheet folder to ensure the metadata for your sheet is up-to-date. For this, you can also find an example in our <a href="https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/package.json">Quickstart Package JSON</a>.</p>
+</li>
+<li>
+<p><strong>Create a Pull Request in the Community Sheet Repo</strong>:</p>
+<p>In the Community Sheet Repo, create a pull request that must include the submission checklist from our previous process.</p>
+</li>
+</ol>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <h2 id="submission-checklist">Submission Checklist<a href="#submission-checklist" class="anchor" aria-hidden="true">#</a> </h2>
+<p>When submitting a new or updated sheet to Roll20, it&rsquo;s essential to follow the guidelines to ensure a smooth review and approval process.</p>
+<p>Below is a checklist to help you prepare your submission.</p>
+<h3 id="required">Required<a href="#required" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The following are the required submission checklist items:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> The pull request title clearly contains the name of the sheet I am editing.</li>
+<li><input checked="" disabled="" type="checkbox"> The pull request title clearly states the type of change I am submitting (New Sheet/New Feature/Bugfix/etc.).</li>
+<li><input checked="" disabled="" type="checkbox"> The pull request makes changes to files in only one sub-folder.</li>
+<li><input checked="" disabled="" type="checkbox"> The pull request does not contain changes to any JSON files in the translations folder (translation.json is permitted).</li>
+</ul>
+<h3 id="new-sheet-details">New Sheet Details<a href="#new-sheet-details" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You must include the following information in your sheet:</p>
+<ul>
+<li>The name of this game is: <code>&lt; THE AETHYRBLOOD CHRONICLES &gt;.</code></li>
+<li>The publisher of this game is: <code>&lt; HAPHAZARD PROJECTS &gt;</code></li>
+<li>The name of this game system/family is: <code>&lt; DPS System ('dice pool scales') &gt;</code></li>
+</ul>
+<p>You must also check out the following:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> I have followed the <a href="https://wiki.roll20.net/Character_Sheets_Standards">Character Sheets Standards</a> when building this sheet.</li>
+<li><input checked="" disabled="" type="checkbox"> I have authorization from the game&rsquo;s publisher to make this an official sheet on Roll20 with their name attached.</li>
+<li><input checked="" disabled="" type="checkbox"> This game is not traditionally published, but a copy of the game rules can be purchased/downloaded/found at <a href="https://www.drivethrurpg.com/en/product/364098/The-Aethyrblood-Chronicles-Core-Rule-Book">The Aethyrblood Chronicles Core Rule Book</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<p>In the pull request comments, make sure to list the email addresses of the Roll20 users you&rsquo;d like to have access to the sheet.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>We can always grant more people access to the sheet after it is released. However, you can inform us in our <a href="https://discord.com/invite/RollThru">Official Community Sheet Development Channels on Discord</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+<ol start="4">
+<li>
+<p><strong>Approval and Access</strong>:</p>
+<p>After you create a pull request, our team will approve it and add your sheet to the sheet selection in Roll20 Tabletop and Characters. We will then give only your Roll20 user and any others you&rsquo;ve listed in the pull request comments access to the sheet in Roll20. This sheet will then be available for you and others with access to test it.</p>
+</li>
+</ol>
+<h2 id="releasing-a-final-version">Releasing a Final Version<a href="#releasing-a-final-version" class="anchor" aria-hidden="true">#</a> </h2>
+<p>After you have released a test version of your sheet, you can follow the same steps as <a href="#steps-to-release-a-test-sheet">releasing a test version</a> to make your sheet available to everyone. This time, the pull request comments state that it is a final release version.</p>
+<p>Once you have created the pull request, our team will review the sheet functionality, code, and metadata for consistency, best practices, and overall system security. We reserve the right to reject any sheet that does not meet our terms of use or conflicts with our partnerships.</p>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
 				</div>
@@ -591,14 +627,6 @@
 
 
 
-<script async
-  src="/js/flexsearch.e7c4a8861a2b9321a8f6832b355a8ab241696a44eb17536b25c2a2e3b2e2705a.js"
-  integrity="sha256-58SohhorkyGo9oMrNVqKskFpakTrF1NrJcKi47LicFo=">
-</script>
-<script async
-  src="/js/search-modal.543117a85590123cda9e96d1fcbf8bd22fc1a3a3ca3d31a816382f0f10f30a34.js"
-  integrity="sha256-VDEXqFWQEjzanpbR/L&#43;L0i/Bo6PKPTGoFjgvDxDzCjQ=">
-</script>
 
     <div class="d-inline-flex fixed-bottom-right pb-4 pe-4">
   <button id="toTop" type="button" class="btn btn-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 15l6 -6l6 6"></path></svg></button>
