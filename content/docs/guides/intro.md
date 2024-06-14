@@ -14,13 +14,13 @@ seo:
   noindex: false # false (default) or true
 ---
 
-The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.
+The Beacon SDK is a toolset designed to enhance and streamline the development of digital character sheets on Roll20.
  
-Whether you're a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated VTT experiences.
+Whether you're a experience developer, or just starting out, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated character sheets experiences.
 
 ## What is the Beacon SDK?
 
-The Beacon SDK is a specialized software development kit for virtual tabletops.
+The Beacon SDK is a specialized software development kit that gives you tools to build digital character sheets on Roll20 for Roll20 Tabletop and Roll20 Characters.
 
 It facilitates creating and managing interactive character sheets, roll templates, macros, and other VTT functionalities.
 
