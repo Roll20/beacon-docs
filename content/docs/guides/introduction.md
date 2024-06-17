@@ -16,8 +16,6 @@ seo:
 
 The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.
 
-asdfasdfasdfaf
-
 Whether you're a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated VTT experiences.
 
 ## What is the Beacon SDK?
