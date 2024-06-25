@@ -32,6 +32,8 @@ The following steps will guide you in installing the Beacon SDK in your applicat
 
 ## Step 1: Add the package to your `package.json`.
 
+  [You can find the latest version of the package on NPM registry.](https://www.npmjs.com/package/@roll20-official/beacon-sdk)
+
   Under the `dependencies` object key of your `package.json`, add a new string key called `@roll20/beacon-sdk` with the version you want to install from our version history.
 
   **For example**:
@@ -54,7 +56,7 @@ The following steps will guide you in installing the Beacon SDK in your applicat
 
     For more information about NPM commands, refer to the [NPM install documentation](https://docs.npmjs.com/cli/v6/commands/npm-install).
 
-## Import the necessary package contents in your application.
+## Step 3: Import the necessary package contents in your application.
 
     The package exports various utilities you can use in your application. For example, you will need to utilize the `initRelay` function from the package.
 
