@@ -42,7 +42,7 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/guides/installation/</loc>
+        <loc>http://localhost:1313/docs/guides/installing-beacon/</loc>
         <lastmod>2024-02-07T16:04:48+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -84,7 +84,7 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/components/overview/</loc>
+        <loc>http://localhost:1313/docs/components/initrelay/</loc>
         <lastmod>2023-09-07T16:12:37+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -115,6 +115,12 @@
       </url>
       <url>
         <loc>http://localhost:1313/docs/components/rolls/</loc>
+        <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/components/dispatch/</loc>
         <lastmod>2023-09-07T16:12:37+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

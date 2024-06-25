@@ -144,7 +144,7 @@
   </li>
 
   <li>
-      <a href="/docs/guides/installation/">Installation</a>
+      <a href="/docs/guides/installing-beacon/">Installing Beacon</a>
   </li>
 
   <li>
@@ -188,7 +188,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/components/overview/">Overview</a>
+      <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -209,6 +209,10 @@
 
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li>
+      <a href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -317,7 +321,7 @@
   </li>
 
   <li>
-      <a href="/docs/guides/installation/">Installation</a>
+      <a href="/docs/guides/installing-beacon/">Installing Beacon</a>
   </li>
 
   <li>
@@ -361,7 +365,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/components/overview/">Overview</a>
+      <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -382,6 +386,10 @@
 
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li>
+      <a href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -451,33 +459,33 @@
 			<p>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</p>
 <p>Whether you&rsquo;re a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated VTT experiences.</p>
 <h2 id="what-is-the-beacon-sdk">What is the Beacon SDK?<a href="#what-is-the-beacon-sdk" class="anchor" aria-hidden="true">#</a> </h2>
-<p>The Beacon SDK is a specialized software development kit for virtual tabletops.</p>
-<p>It facilitates creating and managing interactive character sheets, roll templates, macros, and other VTT functionalities.</p>
-<p>The SDK ensures easy communication between the VTT platform and the character sheets, allowing real-time updates and interactions.</p>
+<p>The Beacon SDK (software development kit) is a toolset used to create digital character sheets on Roll20 for Roll20 Tabletop and Roll20 Characters.</p>
+<p>Whether you&rsquo;re an experience developer, or just starting out, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated character sheet experiences.</p>
+<p>The Beacon SDK also introduces a new way to develop characters sheets for Roll20. Beacon SDK allows you to connect your local development environment to sandboxes in Roll20 Characters and Roll20 Tabletop, giving you real-time updates as you develop.</p>
 <h2 id="key-features">Key Features<a href="#key-features" class="anchor" aria-hidden="true">#</a> </h2>
 <ul>
-<li><strong>Character Sheets</strong>: Design and implement detailed character sheets with dynamic attributes and real-time updates.</li>
-<li><strong>Roll Mechanics</strong>: Integrate complex roll formulas and display roll results directly within the VTT.</li>
-<li><strong>Macros</strong>: Create and manage macros for automated actions and roll calculations.</li>
-<li><strong>Event Handling</strong>: Utilize a comprehensive set of handlers to manage various events and interactions within the VTT.</li>
+<li><strong>Character Sheets</strong>: Design and implement a web app character sheet with dynamic attributes and real-time updates.</li>
+<li><strong>Local Development</strong>: Work where you are most comfortable and get real-time updates in sandboxes in Roll20.</li>
+<li><strong>Testing Sheets</strong>: Release a testing sheet and give others special access to it before you push it live for everyone.</li>
+<li><strong>Roll Mechanics</strong>: Integrate complex roll formulas and display roll results directly within the Roll20 Tabletop and Roll20 Characters.</li>
 <li><strong>Legacy Support</strong>: Convert and integrate legacy macros and roll templates with the new Beacon architecture.</li>
-<li><strong>Customization</strong>: Define custom actions computed properties and handle specific roll templates tailored to your game&rsquo;s needs.</li>
+<li><strong>Customization</strong>: Define custom actions, computed attributes and handle specific roll templates tailored to your game&rsquo;s needs.</li>
 </ul>
 <h2 id="components-overview">Components Overview<a href="#components-overview" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The Beacon SDK is composed of several key components:</p>
 <ul>
 <li><strong>Actions</strong>: Define and manage custom actions that can be triggered within the VTT.</li>
 <li><strong>Handlers</strong>: Event handlers that process and respond to various VTT events and messages.</li>
-<li><strong>Computed Properties</strong>: Define dynamically computed properties based on other attributes.</li>
+<li><strong>Computed Attributes</strong>: Define dynamically computed attributes based on other attributes.</li>
 <li><strong>Macro Attributes</strong>: Convert and manage legacy macro attributes for compatibility with the Beacon SDK.</li>
 <li><strong>Rolls</strong>: Implement advanced roll mechanics and display results dynamically within the VTT.</li>
 </ul>
 <p>For a comprehensive overview of these components, view the components section.</p>
 <h2 id="getting-started">Getting Started<a href="#getting-started" class="anchor" aria-hidden="true">#</a> </h2>
-<p>To get started with the Beacon SDK, you must initialize the relay, set up your character sheets, and define the necessary actions, handlers, and computed properties.</p>
-<p>This documentation provides detailed guides and examples to help you through each step of the process.</p>
+<p>To get started with the Beacon SDK, you must initialize the relay, set up your character sheets, and define the necessary actions, handlers, and computed attributes.</p>
+<p>This documentation provides detailed guides and example sheets to help you through each step of the process.</p>
 <p>By leveraging the Beacon SDK, you can create rich, interactive, fully integrated VTT experiences that enhance gameplay and streamline game management.</p>
-<p>Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your virtual tabletop to life.</p>
+<p>Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your digital character sheet to life.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
@@ -488,7 +496,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/docs/guides/installation/" class="stretched-link text-reset text-decoration-none">Installation</a>
+					<a href="/docs/guides/installing-beacon/" class="stretched-link text-reset text-decoration-none">Installing Beacon</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -532,8 +540,8 @@
     
 
 <script async
-  src="/js/app.0b7b914fd2bb7362ac1e14b25bfb268dee724a79fdbb257f1a6d87048825d635.js"
-  integrity="sha256-C3uRT9K7c2KsHhSyW/smje5ySnn9uyV/Gm2HBIgl1jU=">
+  src="/js/app.6beeb46650c5d08462910d6031395524eb3abc383e8aa7b9ab2b66207286bf9a.js"
+  integrity="sha256-a&#43;60ZlDF0IRikQ1gMTlVJOs6vDg&#43;iqe5qytmIHKGv5o=">
 </script>
 
 

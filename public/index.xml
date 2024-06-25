@@ -24,11 +24,11 @@
       <description>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
     </item>
     <item>
-      <title>Installation</title>
-      <link>http://localhost:1313/docs/guides/installation/</link>
+      <title>Installing Beacon</title>
+      <link>http://localhost:1313/docs/guides/installing-beacon/</link>
       <pubDate>Sun, 07 Apr 2024 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/guides/installation/</guid>
-      <description>Prerequisites Before you can install the Beacon SDK, you&amp;rsquo;ll need to have Node.js installed on your machine. If you don&amp;rsquo;t have Node.</description>
+      <guid>http://localhost:1313/docs/guides/installing-beacon/</guid>
+      <description>This installation guide is designed for sheet developers with experience in web development, that want to start creating a character sheet from scratch or already have an existing project they wish to add Beacon to.</description>
     </item>
     <item>
       <title>Glossary</title>
@@ -42,14 +42,14 @@
       <link>http://localhost:1313/docs/guides/faq/</link>
       <pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate>
       <guid>http://localhost:1313/docs/guides/faq/</guid>
-      <description>Q1: What are actions in the context of the VTT?&#xD;Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons.</description>
+      <description>Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?&#xD;It depends on your web development skill level.</description>
     </item>
     <item>
-      <title>Overview</title>
-      <link>http://localhost:1313/docs/components/overview/</link>
+      <title>InitRelay</title>
+      <link>http://localhost:1313/docs/components/initrelay/</link>
       <pubDate>Fri, 07 Jun 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/overview/</guid>
-      <description>The Beacon SDK is composed of various components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.</description>
+      <guid>http://localhost:1313/docs/components/initrelay/</guid>
+      <description>The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.</description>
     </item>
     <item>
       <title>Actions</title>

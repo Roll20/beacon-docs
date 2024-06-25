@@ -44,7 +44,7 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 <meta property="og:title" content="FAQ">
-<meta property="og:description" content="Q1: What are actions in the context of the VTT?Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons.">
+<meta property="og:description" content="Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?It depends on your web development skill level.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/docs/guides/faq/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-01-07T16:04:48+02:00">
@@ -52,7 +52,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="FAQ">
-<meta name="twitter:description" content="Q1: What are actions in the context of the VTT?Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons.">
+<meta name="twitter:description" content="Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?It depends on your web development skill level.">
 <meta name="twitter:site" content="@getdoks">
 
     
@@ -144,7 +144,7 @@
   </li>
 
   <li>
-      <a href="/docs/guides/installation/">Installation</a>
+      <a href="/docs/guides/installing-beacon/">Installing Beacon</a>
   </li>
 
   <li>
@@ -188,7 +188,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/components/overview/">Overview</a>
+      <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -209,6 +209,10 @@
 
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li>
+      <a href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -317,7 +321,7 @@
   </li>
 
   <li>
-      <a href="/docs/guides/installation/">Installation</a>
+      <a href="/docs/guides/installing-beacon/">Installing Beacon</a>
   </li>
 
   <li>
@@ -361,7 +365,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/docs/components/overview/">Overview</a>
+      <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -382,6 +386,10 @@
 
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li>
+      <a href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -428,29 +436,54 @@
 				
 			</nav>
 			<details>
-  <summary><strong>Q1: What are actions in the context of the VTT?</strong></summary>
-  Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons. They are defined in the sheet&rsquo;s configuration and can interact with character data.</details>
+  <summary><strong>Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?</strong></summary>
+  <p>It depends on your web development skill level. There are a number of benefits to the Beacon SDK if you know how to build web applications. If you don&rsquo;t know how to set up your own local environment, than the Beacon SDK might now be the first place you should start. <a href="https://help.roll20.net/hc/en-us/articles/360037773413-Intro-to-Sheet-Development">Learn more about sheet development using the custom sheet</a>.</p>
+<p>If you have the skill to take advantage of the Beacon SDK, there are a number of improvements that will make it much easier to build characters sheets.</p>
+<p>First, the Beacon SDK allows you to develop locally and preview your changes automatically in the Roll20 Tabletop and Roll20 Character sandboxes. This means that you don&rsquo;t have to keep uploading your HTML and CSS into the custom sheet to see your changes.</p>
+<p>Next, it allows you to develop your character sheet with all the power of JavaScript frameworks and modern web development libraries. In our example sheets, we use Vue.js, but you are free to use whatever you are most comfortable with. Also, you could use something like <a href="https://www.cypress.io/">Cypress</a> to create automated testing. That&rsquo;s what we use in our Beacon sheets.</p>
+<p>Lastly, the Beacon SDK makes it much easier for a web developer who knows JSON and Javascript to access character data and manage attributes on the character. If you&rsquo;re familiar with the custom sheet, you no longer have to deal with sheet workers to get the data you need for a character. Also, the Beacon SDK introduces nested and computed attributes that make complex data models for your character sheet easier to create and maintain.</p>
+</details>
 <details>
-  <summary><strong>Q2: How are computed properties used in the VTT?</strong></summary>
-  Computed properties are defined attributes accessible by the host, usable in macros, and assignable to token bars. They can represent derived values or complex calculations based on character data.</details>
+  <summary><strong>Q: I&rsquo;m not really a web developer, should I use Beacon or the custom sheet to make a my own character sheet?</strong></summary>
+  <p>That is up to you and your comfort level. If you&rsquo;re looking to learn more about web development, building a character sheet with the Beacon SDK is a great way to level up your skills. What you learn during this process can be taken with you into any other web development project you work on in the future.</p>
+<p>If setting up your own development environment is too intimidating for you, than it might be easier for you to start with the <a href="https://help.roll20.net/hc/en-us/articles/360037773413-Intro-to-Sheet-Development">custom sheet</a> and to go from there.</p>
+</details>
 <details>
-  <summary><strong>Q3: What is the dispatch function used for?</strong></summary>
-  The dispatch function provides methods for sending commands from the character sheet back to the host, including updating character data, performing actions, and interacting with the VTT interface.</details>
+  <summary><strong>Q: I&rsquo;m interested in using Beacon, but I don&rsquo;t know the basics of setting up a local environment. Where can I go to learn more about web development?</strong></summary>
+  <p>You can start learning how to build a local development environment by reading or watching the following tutorials. Note: these are not tutorials that we&rsquo;ve produced, but we have found them helpful in getting started with web development.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/dev-environment/javascript/vue-on-wsl">https://learn.microsoft.com/en-us/windows/dev-environment/javascript/vue-on-wsl</a></li>
+<li><a href="https://www.youtube.com/watch?v=WPqXP_kLzpo">https://www.youtube.com/watch?v=WPqXP_kLzpo</a></li>
+</ul></details>
 <details>
-  <summary><strong>Q4: What are roll buttons, and how do they work?</strong></summary>
+  <summary><strong>Q: Now that Roll20 has acquired Demiplane, will you continue to support character sheets built on Beacon?</strong></summary>
+  <p>The recent acquisition of Demiplane brings exciting new opportunities for character sheets and compendiums on Roll20. At the same time, we are fully committed to supporting the Beacon SDK and character sheets that are built in our new advanced sheets ecosystem on Roll20. In fact, we believe that the Beacon SDK will be a key component of our future plans for Demiplane integration. In addition, our new D&amp;D 2024 sheet is built on top of the Beacon SDK, and we will continue to utilize it to build first-class experiences on Roll20.</p>
+<p>In short, you can rest assured that the Beacon SDK is an important tool in our toolbox moving forward.</p>
+</details>
+<details>
+  <summary><strong>Q: What are actions in the context of Beacon?</strong></summary>
+  Actions are methods executed in the chat log of Roll20 Tabletop or Roll20 Characters, often used for rolls triggered from macros or chat buttons. They are defined in the sheet&rsquo;s configuration and can interact with character data.</details>
+<details>
+  <summary><strong>Q: How are computed properties used in Roll20?</strong></summary>
+  Computed properties are attributes which are accessible by users of your character sheet. They are usable in macros to create custom rolls or common actions for each character. Computed properties can represent derived values or complex calculations based on character data.</details>
+<details>
+  <summary><strong>Q: What is the dispatch function used for?</strong></summary>
+  The dispatch function provides methods for sending commands from the character sheet back to Roll20, including updating character data, performing actions, and interacting with the interface.</details>
+<details>
+  <summary><strong>Q: What are roll buttons, and how do they work?</strong></summary>
   Roll buttons are HTML elements with specific attributes that execute designated sheet actions when clicked. They can pass arguments to the action method and are commonly used for triggering rolls from the character sheet.</details>
 <details>
-  <summary><strong>Q5: How are legacy macro attributes handled in the VTT?</strong></summary>
-  Legacy macro attributes can be mapped to the new sheet structure using the convertLegacyMacroAttributes function. Sheet developers can define how to handle legacy attribute values to ensure compatibility with existing macros.</details>
+  <summary><strong>Q: How are legacy attributes handled in Beacon?</strong></summary>
+  Beacon gives you the ability to transition your legacy attributes to new attributes you create in Beacon. This means that when a user updates their sheet to the new Beacon sheet, their legacy attribute can be mapped to Beacon attributes using the <code>convertLegacyMacroAttributes</code> function. Sheet developers can define how to handle legacy attribute values to ensure compatibility with existing macros.</details>
 <details>
-  <summary><strong>Q6: What is the purpose of the query function?</strong></summary>
-  The query function displays a SweetAlert prompt to users and returns the results along with any errors. It is commonly used for interactive prompts or confirmations within the VTT interface.</details>
+  <summary><strong>Q: What is the purpose of the query function?</strong></summary>
+  The query function displays a <a href="https://sweetalert2.github.io/"><code>SweetAlert2</code></a> prompt to users and returns the results along with any errors. It is commonly used for interactive prompts or confirmations within the VTT interface.</details>
 <details>
-  <summary><strong>Q7: How are tokens managed in the VTT?</strong></summary>
-  Tokens represent characters or objects on the virtual tabletop. Functions like getTokens, updateTokensByCharacter, and addToTracker are used to retrieve token information, update token data, and manage tokens in the turn tracker.</details>
+  <summary><strong>Q: How are tokens managed in the VTT?</strong></summary>
+  Tokens represent characters or objects on Roll20 Tabletop (VTT). Functions like getTokens, updateTokensByCharacter, and addToTracker are used to retrieve token information, update token data, and manage tokens in the turn tracker.</details>
 <details>
-  <summary><strong>Q8: What is the role of the convertLegacyMacroAttributesArgs type?</strong></summary>
-  The convertLegacyMacroAttributesArgs type defines the arguments used for handling legacy macro attributes. It includes the attribute name, character ID, and character data needed for mapping legacy attributes to the new sheet structure.</details>
+  <summary><strong>Q: What is the role of the convertLegacyMacroAttributesArgs type?</strong></summary>
+  The <code>convertLegacyMacroAttributesArgs</code> type defines the arguments used for handling legacy macro attributes. It includes the attribute name, character ID, and character data needed for mapping legacy attributes to the new sheet structure.</details>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
@@ -478,7 +511,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/docs/components/overview/" class="stretched-link text-reset text-decoration-none">Overview</a>
+					<a href="/docs/components/initrelay/" class="stretched-link text-reset text-decoration-none">InitRelay</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -522,8 +555,8 @@
     
 
 <script async
-  src="/js/app.0b7b914fd2bb7362ac1e14b25bfb268dee724a79fdbb257f1a6d87048825d635.js"
-  integrity="sha256-C3uRT9K7c2KsHhSyW/smje5ySnn9uyV/Gm2HBIgl1jU=">
+  src="/js/app.6beeb46650c5d08462910d6031395524eb3abc383e8aa7b9ab2b66207286bf9a.js"
+  integrity="sha256-a&#43;60ZlDF0IRikQ1gMTlVJOs6vDg&#43;iqe5qytmIHKGv5o=">
 </script>
 
 

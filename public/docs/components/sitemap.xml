@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/components/overview/</loc>
+      <loc>http://localhost:1313/docs/components/initrelay/</loc>
       <lastmod>2023-09-07T16:12:37+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -38,6 +38,13 @@
     
     <url>
       <loc>http://localhost:1313/docs/components/rolls/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/docs/components/dispatch/</loc>
       <lastmod>2023-09-07T16:12:37+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

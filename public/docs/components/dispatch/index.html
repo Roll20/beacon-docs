@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/resources/">
-  <link rel="canonical" href="http://localhost:1313/docs/resources/">
-<title>Resources  |  Beacon SDK</title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/components/dispatch/">
+  <link rel="canonical" href="http://localhost:1313/docs/components/dispatch/">
+<title>Dispatch  |  Beacon SDK</title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -43,18 +43,19 @@
         type="image/png"
       >
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Resources">
-<meta property="og:description" content="Link to valuable, relevant resources.">
+<meta property="og:title" content="Dispatch">
+<meta property="og:description" content="The dispatch is returned by the initRelay and provides methods for sending commands from the character sheet back to the host.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/docs/resources/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2024-02-27T09:30:56+01:00">
-<meta property="article:modified_time" content="2024-02-27T09:30:56+01:00"><meta property="og:site_name" content="Beacon SDK">
+<meta property="og:url" content="http://localhost:1313/docs/components/dispatch/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
+
+<meta property="article:modified_time" content="2023-09-07T16:12:37+02:00"><meta property="og:site_name" content="Beacon SDK">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Resources">
-<meta name="twitter:description" content="Link to valuable, relevant resources.">
+<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Dispatch">
+<meta name="twitter:description" content="The dispatch is returned by the initRelay and provides methods for sending commands from the character sheet back to the host.">
 <meta name="twitter:site" content="@getdoks">
 
+    
     
     <script type="application/ld+json">
   {
@@ -75,8 +76,14 @@
      },
      {
        "@type": "ListItem",
-       "name": "Resources",
+       "item": "http://localhost:1313/docs/components/",
+       "name": "Components",
        "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Dispatch",
+       "position": 4
      }
    ]
  }
@@ -176,7 +183,7 @@
   </li>
 
   <li>
-    <details>
+    <details open>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
@@ -204,8 +211,8 @@
       <a href="/docs/components/rolls/">Rolls</a>
   </li>
 
-  <li>
-      <a href="/docs/components/dispatch/">Dispatch</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -353,7 +360,7 @@
   </li>
 
   <li>
-    <details>
+    <details open>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
@@ -381,8 +388,8 @@
       <a href="/docs/components/rolls/">Rolls</a>
   </li>
 
-  <li>
-      <a href="/docs/components/dispatch/">Dispatch</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/dispatch/">Dispatch</a>
   </li>
       </ul>
     </details>
@@ -418,16 +425,29 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">Home</a></li>
 <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
-<li class="breadcrumb-item active" aria-current="page">Resources</li>
+<li class="breadcrumb-item"><a href="/docs/components/">Components</a></li>
+<li class="breadcrumb-item active" aria-current="page">Dispatch</li>
 					</ol>
 				</nav>
 			
-			<h1>Resources</h1>
+			<h1>Dispatch</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				
 			</nav>
-			<p>Link to valuable, relevant resources.</p>
+			<p>The dispatch is returned by the <code>initRelay</code> and provides methods for sending commands from the character sheet back to the host. Except when specified every method below will return a promise.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"></code></pre></div>
+  </figure>
+</div>
+<p>ddds</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
@@ -446,7 +466,24 @@
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/quick/release-sheet/" class="stretched-link text-reset text-decoration-none">Release Sheet</a>
+					<a href="/docs/changelog/version-1.0.0/" class="stretched-link text-reset text-decoration-none">Version 1.0.0</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/docs/quick/beginner-beacon-sheet/" class="stretched-link text-reset text-decoration-none">Beginner Beacon Sheet</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
 				</div>
 			</div>
 		</div>

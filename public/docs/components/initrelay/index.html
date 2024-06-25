@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/resources/">
-  <link rel="canonical" href="http://localhost:1313/docs/resources/">
-<title>Resources  |  Beacon SDK</title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/components/initrelay/">
+  <link rel="canonical" href="http://localhost:1313/docs/components/initrelay/">
+<title>InitRelay  |  Beacon SDK</title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -43,18 +43,19 @@
         type="image/png"
       >
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Resources">
-<meta property="og:description" content="Link to valuable, relevant resources.">
+<meta property="og:title" content="InitRelay">
+<meta property="og:description" content="The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/docs/resources/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2024-02-27T09:30:56+01:00">
-<meta property="article:modified_time" content="2024-02-27T09:30:56+01:00"><meta property="og:site_name" content="Beacon SDK">
+<meta property="og:url" content="http://localhost:1313/docs/components/initrelay/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-06-07T16:12:37+02:00">
+<meta property="article:modified_time" content="2023-09-07T16:12:37+02:00"><meta property="og:site_name" content="Beacon SDK">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Resources">
-<meta name="twitter:description" content="Link to valuable, relevant resources.">
+<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="InitRelay">
+<meta name="twitter:description" content="The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.">
 <meta name="twitter:site" content="@getdoks">
 
+    
     
     <script type="application/ld+json">
   {
@@ -75,8 +76,14 @@
      },
      {
        "@type": "ListItem",
-       "name": "Resources",
+       "item": "http://localhost:1313/docs/components/",
+       "name": "Components",
        "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Init Relay",
+       "position": 4
      }
    ]
  }
@@ -176,12 +183,12 @@
   </li>
 
   <li>
-    <details>
+    <details open>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/docs/components/initrelay/">InitRelay</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -353,12 +360,12 @@
   </li>
 
   <li>
-    <details>
+    <details open>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/docs/components/initrelay/">InitRelay</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
   <li>
@@ -418,16 +425,161 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">Home</a></li>
 <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
-<li class="breadcrumb-item active" aria-current="page">Resources</li>
+<li class="breadcrumb-item"><a href="/docs/components/">Components</a></li>
+<li class="breadcrumb-item active" aria-current="page">InitRelay</li>
 					</ol>
 				</nav>
 			
-			<h1>Resources</h1>
+			<h1>InitRelay</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				
 			</nav>
-			<p>Link to valuable, relevant resources.</p>
+			<p>The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games. <code>initRelay</code> is the main method that initializes the Beacon SDK communication channel with the host (Either the Roll20 tabletop or in Roll20 Characters). It should be initialized as soon as the sheet loads, as its <code>onInit</code> handler will be the earliest we can get access to that character&rsquo;s data.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">initRelay</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">handlers</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onInit</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onChange</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onSettingsChange</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onSharedSettingsChange</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onTranslationsRequest</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onDragOver</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">onDropOver</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">actions</span><span class="o">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">computed</span><span class="o">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">convertLegacyMacroAttributes</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">handleLegacyRollTemplates</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Dispatch</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>These components are crucial for handling actions, computations, macros, and rolls. This overview provides a high-level summary of each section, helping you understand their roles and how they integrate within the SDK.</p>
+<div class="card-nav d-flex flex-column flex-sm-row">
+  
+
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/actions/" target="_blank" class="stretched-link text-reset text-decoration-none">Actions</a></h5>
+        <p class="card-text mt-1"> Actions define specific operations that can be performed by characters within the VTT. These operations can range from simple tasks like rolling a dice to more complex interactions such as casting spells or activating abilities.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/handlers/" target="_blank" class="stretched-link text-reset text-decoration-none">Handlers</a></h5>
+        <p class="card-text mt-1">Handlers are event listeners that manage communication between the VTT and the character sheet. They respond to various events, such as changes in character attributes or settings, and trigger appropriate actions or updates.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="card-nav d-flex flex-column flex-sm-row">
+  
+
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/computed/" target="_blank" class="stretched-link text-reset text-decoration-none">Computed</a></h5>
+        <p class="card-text mt-1"> Computed properties are dynamic values derived from other character attributes. They allow for the creation of complex, calculated attributes that automatically update when their dependencies change.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/handling-legacy-macro-attributes/" target="_blank" class="stretched-link text-reset text-decoration-none">Macro Attributes</a></h5>
+        <p class="card-text mt-1">Macro attributes handle the conversion of legacy macro attributes to the new format used in the Beacon SDK. This ensures compatibility with older character sheets and macros, allowing for a smooth transition to the new system.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+  <div class="card-nav d-flex flex-column flex-sm-row">
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/rolls/" target="_blank" class="stretched-link text-reset text-decoration-none">Rolls</a></h5>
+        <p class="card-text mt-1">The Rolls component allows for advanced dice-rolling mechanics within the VTT. It supports both simple and complex rolls, providing flexibility in how roll results are displayed and computed.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="card-nav d-flex flex-column flex-sm-row">
+  <div class="card text-end w-100">
+    <div class="card-body d-flex">
+      <div class="d-flex flex-column me-auto text-start">
+        <h5 class="card-title my-0"><a href="/docs/components/dispatch/" target="_blank" class="stretched-link text-reset text-decoration-none">Dispatch</a></h5>
+        <p class="card-text mt-1">The dispatch object provides methods for sending commands from the character sheet back to the host. Except when specified every method returns a promise.</p>
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  </div>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
@@ -446,7 +598,24 @@
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/quick/release-sheet/" class="stretched-link text-reset text-decoration-none">Release Sheet</a>
+					<a href="/docs/guides/faq/" class="stretched-link text-reset text-decoration-none">FAQ</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/docs/components/actions/" class="stretched-link text-reset text-decoration-none">Actions</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
 				</div>
 			</div>
 		</div>
