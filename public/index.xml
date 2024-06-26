@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to Beacon SDK on Beacon SDK</title>
+    <title>Welcome to Beacon SDK on </title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to Beacon SDK on Beacon SDK</description>
+    <description>Recent content in Welcome to Beacon SDK on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
@@ -21,7 +21,7 @@
       <link>http://localhost:1313/docs/guides/introduction/</link>
       <pubDate>Tue, 07 May 2024 16:04:48 +0200</pubDate>
       <guid>http://localhost:1313/docs/guides/introduction/</guid>
-      <description>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
+      <description>This is currently in closed beta&#xA;The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
     </item>
     <item>
       <title>Installation</title>

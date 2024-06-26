@@ -63,6 +63,13 @@ Tokens represent characters or objects on the virtual tabletop. Functions like g
 The convertLegacyMacroAttributesArgs type defines the arguments used for handling legacy macro attributes. It includes the attribute name, character ID, and character data needed for mapping legacy attributes to the new sheet structure.
 {{< /details >}}
 
+{{< details "**Q9:Now that Roll20 has acquired Demiplane, will you continue to support character sheets built on Beacon?**" >}}
+
+The recent acquisition of Demiplane brings exciting new opportunities for character sheets and compendiums on Roll20. At the same time, we are fully committed to supporting the Beacon SDK and character sheets that are built in our new advanced sheets ecosystem on Roll20. In fact, we believe that the Beacon SDK will be a key component of our future plans for Demiplane integration. In addition, our new D&D 2024 sheet is built on top of the Beacon SDK, and we will continue to utilize it to build first-class experiences on Roll20.
+
+In short, you can rest assured that the Beacon SDK is an important tool in our toolbox moving forward.
+{{< /details >}}
+
 
 
 

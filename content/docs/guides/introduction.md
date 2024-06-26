@@ -14,24 +14,29 @@ seo:
   noindex: false # false (default) or true
 ---
 
+
+{{< callout context="caution" title="This is currently in closed beta" icon="outline/alert-triangle" >}}
+
+{{< /callout >}}
+
 The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.
- 
-Whether you're a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated VTT experiences.
+
+Whether you're a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated Roll20 Tabletop experiences.
 
 ## What is the Beacon SDK?
 
 The Beacon SDK is a specialized software development kit for virtual tabletops.
 
-It facilitates creating and managing interactive character sheets, roll templates, macros, and other VTT functionalities.
+It facilitates creating and managing interactive character sheets, roll templates, macros, and other Roll20 Tabletop functionalities.
 
-The SDK ensures easy communication between the VTT platform and the character sheets, allowing real-time updates and interactions.
+The SDK ensures easy communication between the Roll20 Tabletop platform and the character sheets, allowing real-time updates and interactions.
 
 ## Key Features
 
 - **Character Sheets**: Design and implement detailed character sheets with dynamic attributes and real-time updates.
-- **Roll Mechanics**: Integrate complex roll formulas and display roll results directly within the VTT.
+- **Roll Mechanics**: Integrate complex roll formulas and display roll results directly within the Roll20 Tabletop.
 - **Macros**: Create and manage macros for automated actions and roll calculations.
-- **Event Handling**: Utilize a comprehensive set of handlers to manage various events and interactions within the VTT.
+- **Event Handling**: Utilize a comprehensive set of handlers to manage various events and interactions within the Roll20 Tabletop.
 - **Legacy Support**: Convert and integrate legacy macros and roll templates with the new Beacon architecture.
 - **Customization**: Define custom actions computed properties and handle specific roll templates tailored to your game's needs.
 
@@ -39,11 +44,11 @@ The SDK ensures easy communication between the VTT platform and the character sh
 
 The Beacon SDK is composed of several key components:
 
-- **Actions**: Define and manage custom actions that can be triggered within the VTT.
-- **Handlers**: Event handlers that process and respond to various VTT events and messages.
+- **Actions**: Define and manage custom actions that can be triggered within the Roll20 Tabletop.
+- **Handlers**: Event handlers that process and respond to various Roll20 Tabletop events and messages.
 - **Computed Properties**: Define dynamically computed properties based on other attributes.
 - **Macro Attributes**: Convert and manage legacy macro attributes for compatibility with the Beacon SDK.
-- **Rolls**: Implement advanced roll mechanics and display results dynamically within the VTT.
+- **Rolls**: Implement advanced roll mechanics and display results dynamically within the Roll20 Tabletop.
 
 For a comprehensive overview of these components, view the components section.
 
@@ -53,6 +58,6 @@ To get started with the Beacon SDK, you must initialize the relay, set up your c
 
 This documentation provides detailed guides and examples to help you through each step of the process.
 
-By leveraging the Beacon SDK, you can create rich, interactive, fully integrated VTT experiences that enhance gameplay and streamline game management.
+By leveraging the Beacon SDK, you can create rich, interactive, fully integrated Roll20 Tabletop experiences that enhance gameplay and streamline game management.
 
 Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your virtual tabletop to life.
