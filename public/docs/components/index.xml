@@ -49,7 +49,7 @@
       <link>http://localhost:1313/docs/components/rolls/</link>
       <pubDate>Sun, 07 Jan 2024 16:12:37 +0200</pubDate>
       <guid>http://localhost:1313/docs/components/rolls/</guid>
-      <description>The VTT (Virtual Tabletop) has several new features that enhance the way rolls are handled and displayed. These features include attributes and elements that allow for dynamic roll results and interactivity within the VTT environment.</description>
+      <description>The Roll20 Tabletop and Roll20 Characters (both refered to as host throughout the rest of this page) have several new features that enhance the way rolls are handled and displayed.</description>
     </item>
     <item>
       <title>Dispatch</title>
