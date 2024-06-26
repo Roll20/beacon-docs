@@ -14,58 +14,78 @@ seo:
   noindex: false # false (default) or true
 ---
 
-This installation guide is designed for sheet developers that want to start creating a sheet from scratch or already have an existing project they wish to start from. To get started quickly with a boilerplate, you can download and start editing the [Quick Start Example Sheet](https://github.com/Roll20/roll20-beacon-sheets/tree/main/sheets/quickstart-example-sheet) which already has the Beacon SDK installed in a [Vue.js](https://vuejs.org/guide/introduction.html) project. 
+This installation guide is designed for sheet developers with experience in web development, that want to start creating a character sheet from scratch or already have an existing project they wish to add Beacon to. 
+
+{{< callout context="tip" >}}
+To get started quickly with a boilerplate, you can download and start editing the [Quick Start Example Sheet](https://github.com/Roll20/roll20-beacon-sheets/tree/main/sheets/quickstart-example-sheet) which already has the Beacon SDK installed, along with several recommanded patterns implemented in a [Vue.js](https://vuejs.org/guide/introduction.html) project. 
+{{< /callout >}}
 
 ## Prerequisites
 
-Before you can install the Beacon SDK, you'll need to have the following completed. 
-- A local development environment with a code editor.
+Before you can install the Beacon SDK, you'll need to have the following:
+- A local web development environment with a code editor.
 - Node.js installed on your machine. If you don't have Node.js installed, use the following steps in the [official Node.js documentation](https://nodejs.org/en/download/package-manager).
-- A project with a javascript framework. We suggest [Vue.js](https://vuejs.org/guide/introduction.html) but you can choose whichever you are more comfortable with.
+- A javascript project, we recommand [Vue.js](https://vuejs.org/guide/introduction.html) but you can choose whichever you are more comfortable with.
 
 {{< callout context="note" >}}
-These steps use the npm package manager but you are free to use any package manager you prefer. 
+These steps use npm but you are free to use any package manager and framework you prefer. 
 {{< /callout >}}
 
 The following steps will guide you in installing the Beacon SDK in your application:
 
 
-## Step 1: Add the package to your `package.json`.
+## Step 1: Add the package to your project
 
-  [You can find the latest version of the package on NPM registry.](https://www.npmjs.com/package/@roll20-official/beacon-sdk)
+[You can find the latest version of the package on the NPM registry.](https://www.npmjs.com/package/@roll20-official/beacon-sdk)
 
-  Under the `dependencies` object key of your `package.json`, add a new string key called `@roll20/beacon-sdk` with the version you want to install from our version history.
+In your project's directory, run the following:
 
-  **For example**:
+```javascript
+  npm i @roll20-official/beacon-sdk
+```
 
-    ```json
-    {
-      "@roll20/beacon-sdk": "0.0.0"
-    }
-    ```
+This will install the Beacon SDK package to your project's `package.json` file.
 
-    For more information about installing packages, refer to the [NPM documentation](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
+## Step 2: Use the Beacon package in your project
 
-## Step 2: Run `npm install`.
+The Beacon package exports various utilities you can use in your application. The main one that needs to be setup to enable the connection between Beacon SDK and Roll20 is `initRelay`. 
 
-    Open a terminal in the root of your application’s folder and run the following command:
+Ideally you would want to call this when your sheet is initalizing, and it is the function where you will define sheet actions, computed values, and how the sheet will response to or send character data changes.  [visit the initRelay page for a more detailed breakdown.]()
 
-    ```bash
-    npm install
-    ```
+Add the following to your project: 
+```javascript
+import { initRelay } from '@roll20/beacon-sdk';
 
-    For more information about NPM commands, refer to the [NPM install documentation](https://docs.npmjs.com/cli/v6/commands/npm-install).
+const dispatch = initRelay({
+    handlers: {
+        onInit: ({ character } ) => { console.log('sheet character', character) },
+        onChange: () => {},
+        onSettingsChange: () => {},
+        onSharedSettingsChange: () => {},
+        onTranslationsRequest: () => {},
+        onDragOver: () => {}
+    },
+    // Refer to our advanced example sheet on how to setup actions and computed properties.
+    actions: {},
+    computed: {}
+})
+```
 
-## Step 3: Import the necessary package contents in your application.
+`initRelay` returns a dispatch function that allows you to call methods or send changes from the sheet to Roll20. Check out the page on [dispatch]() to learn more about the different methods.
 
-    The package exports various utilities you can use in your application. For example, you will need to utilize the `initRelay` function from the package.
+## Step 3: Settings up the Roll20 tabletop sandbox
 
-    Here's an import statement for that function:
+On the Roll20 website visit the [custom sheet sandbox](https://app.roll20.net/sheetsandbox) and create a new sandbox, we'll use this sandbox to develop our sheet but we must set it up to listen to our local project's web server.
 
-    ```javascript
-    import { initRelay } from '@roll20/beacon-sdk';
-    ```
+After creating a new sandbox, we'll be taken to the sandbox details page, here you will find a collapseable section called `Sheet.json Editor`, opening this we can add the settings we need to connect to our project:
 
-    <!-- We need to add a link to learn more about the InitRelay -->
+```javascript
+{
+	"advanced": true,
+	"advancedPort": 7620 // or the port of your webserver
+}
+```
 
-    For more information about imports, refer to the [JavaScript import documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
+After adding these changes make sure to click  `Save Changes` at the bottom of the page. After which you can click `Launch Game` on the page to go into the game and start testing your sheet.
+
+![Character sheet and dev tools open showing character data results](images/installation-end-results.png)

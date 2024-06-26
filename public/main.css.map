@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/wisdomnwokocha/Documents/GitHub/beacon-docs",
+	"sourceRoot": "/home/lazyalleycat/work/beacon-docs",
 	"sources": [
 		"node_modules/@hyas/core/assets/scss/app.scss",
 		"node_modules/bootstrap/scss/_functions.scss",
