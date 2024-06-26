@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Beacon SDK</title><link>https://roll20.github.io/beacon-docs/docs/</link><description>Recent content in Docs on Beacon SDK</description><generator>Hugo</generator><language>en</language><copyright>Copyright (c) 2020-2024 Beacon SDK</copyright><lastBuildDate>Tue, 27 Feb 2024 09:30:56 +0100</lastBuildDate><atom:link href="https://roll20.github.io/beacon-docs/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Resources</title><link>https://roll20.github.io/beacon-docs/docs/resources/</link><pubDate>Tue, 27 Feb 2024 09:30:56 +0100</pubDate><guid>https://roll20.github.io/beacon-docs/docs/resources/</guid><description>Link to valuable, relevant resources.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on </title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
+    <lastBuildDate>Tue, 27 Feb 2024 09:30:56 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FAQ</title>
+      <link>http://localhost:1313/docs/faq/</link>
+      <pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/faq/</guid>
+      <description>Q1: What are actions in the context of the VTT?&#xD;Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons.</description>
+    </item>
+    <item>
+      <title>Resources</title>
+      <link>http://localhost:1313/docs/resources/</link>
+      <pubDate>Tue, 27 Feb 2024 09:30:56 +0100</pubDate>
+      <guid>http://localhost:1313/docs/resources/</guid>
+      <description>Link to valuable, relevant resources.</description>
+    </item>
+  </channel>
+</rss>

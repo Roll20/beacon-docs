@@ -17,7 +17,7 @@ seo:
 ---
 The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games. `initRelay` is the main method that initializes the Beacon SDK communication channel with the host (Either the Roll20 tabletop or in Roll20 Characters). It should be initialized as soon as the sheet loads, as its `onInit` handler will be the earliest we can get access to that character's data.
 
-```javascript
+```typescript
 initRelay({
     handlers: {
         onInit,

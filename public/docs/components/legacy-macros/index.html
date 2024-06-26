@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/components/handling-legacy-macro-attributes/">
-  <link rel="canonical" href="http://localhost:1313/docs/components/handling-legacy-macro-attributes/">
-<title>Handling Legacy Macro Attributes  |  </title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/components/legacy-macros/">
+  <link rel="canonical" href="http://localhost:1313/docs/components/legacy-macros/">
+<title>Legacy Macros  |  </title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -43,16 +43,16 @@
         type="image/png"
       >
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Handling Legacy Macro Attributes">
-<meta property="og:description" content="When utilizing Macros within the Roll20 Tabletop or Roll20 Characters, there are instances where a legacy macro might need to be employed for a Beacon sheet.">
+<meta property="og:title" content="Legacy Macros">
+<meta property="og:description" content="When utilizing Macros within the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page), there are instances where a legacy macro might need to be employed for a Beacon sheet.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/docs/components/handling-legacy-macro-attributes/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2024-02-07T16:12:37+02:00">
+<meta property="og:url" content="http://localhost:1313/docs/components/legacy-macros/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
+
 <meta property="article:modified_time" content="2023-09-07T16:12:37+02:00"><meta property="og:site_name" content="Beacon SDK">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Handling Legacy Macro Attributes">
-<meta name="twitter:description" content="When utilizing Macros within the Roll20 Tabletop or Roll20 Characters, there are instances where a legacy macro might need to be employed for a Beacon sheet.">
+<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Legacy Macros">
+<meta name="twitter:description" content="When utilizing Macros within the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page), there are instances where a legacy macro might need to be employed for a Beacon sheet.">
 <meta name="twitter:site" content="@getdoks">
 
     
@@ -82,7 +82,7 @@
      },
      {
        "@type": "ListItem",
-       "name": "Handling Legacy Macro Attributes",
+       "name": "Legacy Macros",
        "position": 4
      }
    ]
@@ -183,16 +183,16 @@
       <a href="/docs/components/handlers/">Handlers</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/components/handling-legacy-macro-attributes/">Handling Legacy Macro Attributes</a>
-  </li>
-
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
   </li>
 
   <li>
       <a href="/docs/components/dispatch/">Dispatch</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/legacy-macros/">Legacy Macros</a>
   </li>
       </ul>
     </details>
@@ -350,16 +350,16 @@
       <a href="/docs/components/handlers/">Handlers</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/components/handling-legacy-macro-attributes/">Handling Legacy Macro Attributes</a>
-  </li>
-
   <li>
       <a href="/docs/components/rolls/">Rolls</a>
   </li>
 
   <li>
       <a href="/docs/components/dispatch/">Dispatch</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/components/legacy-macros/">Legacy Macros</a>
   </li>
       </ul>
     </details>
@@ -400,7 +400,7 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#convertlegacymacroattributes"><code>convertLegacyMacroAttributes</code></a></li>
+    <li><a href="#convertlegacymacroattributes">convertLegacyMacroAttributes</a></li>
   </ul>
 </nav>
 </div>
@@ -413,11 +413,11 @@
 						<li class="breadcrumb-item"><a href="/">Home</a></li>
 <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
 <li class="breadcrumb-item"><a href="/docs/components/">Components</a></li>
-<li class="breadcrumb-item active" aria-current="page">Handling Legacy Macro Attributes</li>
+<li class="breadcrumb-item active" aria-current="page">Legacy Macros</li>
 					</ol>
 				</nav>
 			
-			<h1>Handling Legacy Macro Attributes</h1>
+			<h1>Legacy Macros</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -425,18 +425,17 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#convertlegacymacroattributes"><code>convertLegacyMacroAttributes</code></a></li>
+    <li><a href="#convertlegacymacroattributes">convertLegacyMacroAttributes</a></li>
   </ul>
 </nav>
     </div>
   </details>
 
 			</nav>
-			<p>When utilizing Macros within the Roll20 Tabletop or Roll20 Characters, there are instances where a legacy macro might need to be employed for a Beacon sheet.</p>
+			<p>When utilizing Macros within the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page), there are instances where a legacy macro might need to be employed for a Beacon sheet.</p>
 <p>This scenario commonly arises when transitioning from an existing legacy sheet to a Beacon sheet. During such transitions, it&rsquo;s possible that the attributes called from the legacy macro may not align with the structure of attributes in the Beacon Sheet.</p>
-<p>The <code>convertLegacyMacroAttributes</code> function serves as a pivotal tool, empowering Sheet Developers to determine the mapping strategy for legacy attributes to the new Beacon Sheet.</p>
-<h2 id="convertlegacymacroattributes"><code>convertLegacyMacroAttributes</code><a href="#convertlegacymacroattributes" class="anchor" aria-hidden="true">#</a> </h2>
-<p>This function is defined during the initial SDK initialization process and is invoked by the host when it encounters a failure in locating an attribute&rsquo;s value.</p>
+<h2 id="convertlegacymacroattributes">convertLegacyMacroAttributes<a href="#convertlegacymacroattributes" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <code>convertLegacyMacroAttributes</code> function serves as a pivotal tool, that allows us to determine the mapping strategy for legacy attributes to the new Beacon Sheet.</p>
 
 
 
@@ -445,11 +444,43 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">convertLegacyMacroAttributes</span><span class="o">:</span> <span class="p">(</span><span class="nx">messages</span>: <span class="kt">convertLegacyMacroAttributesArgs</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{}</span><span class="o">:</span> <span class="kt">any</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">initRelay</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">convertLegacyMacroAttributes</span><span class="o">:</span> <span class="p">(</span><span class="nx">messages</span>: <span class="kt">convertLegacyMacroAttributesArgs</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{}</span><span class="o">:</span> <span class="kt">any</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">Dispatch</span><span class="p">&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Advanced sheet macros typically first search through the defined computed properties before resorting to the <code>convertLegacyMacroAttributes</code> function.</p>
-<p>The function&rsquo;s purpose is to return a value that will be substituted in the macro. However, it grants Sheet Developers the autonomy to devise their preferred approach for handling legacy attribute values.</p>
+<p>This method is defined during the initial SDK initialization process and is invoked by the host when it attempts to parse a macro and encounters a failure in locating an attribute&rsquo;s value during an macro&rsquo;s execution.
+Advanced sheet actions typically will first search through the defined computed properties before resorting to the <code>convertLegacyMacroAttributes</code> method as a fallback..</p>
+<p>The method&rsquo;s purpose is to return a value that will be substituted in the macro. However, it allows grants us the autonomy to devise the preferred approach for handling legacy attribute values.</p>
+<p>When utilizing Rolls within the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page), there are instances where a macro</p>
+<p>Since Beacon sheets no longer require roll templates, there will be times
+The <code>handleLegacyRollTemplates</code> method will be called when handling a roll template for an advanced sheet.
+The method receives a dispatch message that has the player id, a reference to dispatch, the roll template name, the original text input for the entire roll template string, and the properties list which lists the value and formula for rolls and macros, along with values for other properties in the template, and a plainText key for roll template arguments not inside the curly brace syntax.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">initRelay</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">handleLegacyRollTemplates</span><span class="o">:</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="p">{</span> <span class="nx">templateName</span><span class="p">,</span> <span class="nx">properties</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">,</span> <span class="nx">playerid</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// NOTE: Plain text are properties not embedded with {{foo=bar}} syntax and for things like the api
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span> <span class="nx">plainText</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">properties</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// NOTE: Can handle legacy template with a new template function, and determine what to do with the properties.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">sendToChat</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span>: <span class="kt">templateName</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&#34;Testing handleLegacyRollTemplates&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">textContent</span>: <span class="kt">JSON.stringify</span><span class="p">(</span><span class="nx">properties</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">playerid</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">dispatch</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">Dispatch</span><span class="p">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
@@ -468,7 +499,7 @@
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/components/handlers/" class="stretched-link text-reset text-decoration-none">Handlers</a>
+					<a href="/docs/components/dispatch/" class="stretched-link text-reset text-decoration-none">Dispatch</a>
 				</div>
 			</div>
 		</div>
@@ -477,7 +508,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/docs/about/changelog/" class="stretched-link text-reset text-decoration-none">Changelog</a>
+					<a href="/docs/gettingstarted/quick-start-sheet-template/" class="stretched-link text-reset text-decoration-none">Quick Start Sheet Template</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
