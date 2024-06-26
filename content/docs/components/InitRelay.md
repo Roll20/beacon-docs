@@ -50,11 +50,7 @@ These components are crucial for handling actions, computations, macros, and rol
   href="/docs/components/handlers/"
   target="_blank"
 >}}
-
 {{< /card-grid >}}
-
-
-
 
 {{< card-grid >}}
 {{< link-card
@@ -69,10 +65,9 @@ These components are crucial for handling actions, computations, macros, and rol
   href="/docs/components/handling-legacy-macro-attributes/"
   target="_blank"
 >}}
-
 {{< /card-grid >}}
 
-
+{{< card-grid >}}
 {{< link-card
   title="Rolls"
   description="The Rolls component allows for advanced dice-rolling mechanics within the Roll20 Tabletop. It supports both simple and complex rolls, providing flexibility in how roll results are displayed and computed."
@@ -80,10 +75,10 @@ These components are crucial for handling actions, computations, macros, and rol
   target="_blank"
 >}}
 
-
 {{< link-card
   title="Dispatch"
   description="The dispatch object provides methods for sending commands from the character sheet back to the host. Except when specified every method returns a promise."
   href="/docs/components/dispatch/"
   target="_blank"
 >}}
+{{< /card-grid >}}
