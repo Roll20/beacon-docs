@@ -30,7 +30,7 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/guides/introduction"
+  url = "/docs/gettingstarted/introduction"
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
 
@@ -55,13 +55,8 @@
 
 # [[sidebar_docs]]
 #   name = "Getting Started"
-#   pageRef = "/docs/guides"
+#   pageRef = "/docs/gettingstarted"
 #   weight = 10
-# 
-# [[sidebar_docs]]
-#   name = "Quick Start"
-#   pageRef = "/docs/quick"
-#   weight = 20
 # 
 # [[sidebar_docs]]
 #   name = "Components"
@@ -69,8 +64,8 @@
 #   weight = 20
 
 # [[sidebar_docs]]
-#   name = "Resources"
-#   pageRef = "/docs/resources"
+#   name = "About"
+#   pageRef = "/docs/about"
 #   weight = 30
 
 [[footer]]
