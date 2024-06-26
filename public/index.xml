@@ -2,82 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to Beacon SDK on </title>
-    <link>http://localhost:1313/</link>
+    <link>https://roll20.github.io/beacon-docs/</link>
     <description>Recent content in Welcome to Beacon SDK on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
     <lastBuildDate>Wed, 07 Feb 2024 16:04:48 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://roll20.github.io/beacon-docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Post</title>
-      <link>http://localhost:1313/blog/example-post/</link>
+      <link>https://roll20.github.io/beacon-docs/blog/example-post/</link>
       <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
-      <guid>http://localhost:1313/blog/example-post/</guid>
+      <guid>https://roll20.github.io/beacon-docs/blog/example-post/</guid>
       <description>You can use blog posts for announcing product updates and features.</description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>http://localhost:1313/docs/guides/introduction/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction/</link>
       <pubDate>Tue, 07 May 2024 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/guides/introduction/</guid>
-      <description>This is currently in closed beta&#xA;The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction/</guid>
+      <description>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
     </item>
     <item>
-      <title>Installation</title>
-      <link>http://localhost:1313/docs/guides/installation/</link>
+      <title>Installing Beacon</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/installing-beacon/</link>
       <pubDate>Sun, 07 Apr 2024 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/guides/installation/</guid>
-      <description>Prerequisites Before you can install the Beacon SDK, you&amp;rsquo;ll need to have Node.js installed on your machine. If you don&amp;rsquo;t have Node.</description>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/installing-beacon/</guid>
+      <description>This installation guide is designed for sheet developers with experience in web development, that want to start creating a character sheet from scratch or already have an existing project they wish to add Beacon to.</description>
     </item>
     <item>
       <title>Glossary</title>
-      <link>http://localhost:1313/docs/guides/glossary/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/about/glossary/</link>
       <pubDate>Thu, 07 Mar 2024 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/guides/glossary/</guid>
+      <guid>https://roll20.github.io/beacon-docs/docs/about/glossary/</guid>
       <description>Background: The background color of the alert box.&#xA;Character: An entity in the game with attributes, bio, GM notes, and a token representation.</description>
     </item>
     <item>
       <title>FAQ</title>
-      <link>http://localhost:1313/docs/guides/faq/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/about/faq/</link>
       <pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate>
-      <guid>http://localhost:1313/docs/guides/faq/</guid>
+      <guid>https://roll20.github.io/beacon-docs/docs/about/faq/</guid>
+      <description>Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?&#xD;It depends on your web development skill level.</description>
+    </item>
+    <item>
+      <title>FAQ</title>
+      <link>https://roll20.github.io/beacon-docs/docs/faq/</link>
+      <pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/faq/</guid>
       <description>Q1: What are actions in the context of the VTT?&#xD;Actions are methods executed from the VTT, often used for rolls triggered from macros or chat buttons.</description>
     </item>
     <item>
-      <title>Overview</title>
-      <link>http://localhost:1313/docs/components/overview/</link>
+      <title>InitRelay</title>
+      <link>https://roll20.github.io/beacon-docs/docs/components/initrelay/</link>
       <pubDate>Fri, 07 Jun 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/overview/</guid>
-      <description>The Beacon SDK is composed of various components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.</description>
+      <guid>https://roll20.github.io/beacon-docs/docs/components/initrelay/</guid>
+      <description>The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.</description>
     </item>
     <item>
       <title>Actions</title>
-      <link>http://localhost:1313/docs/components/actions/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/components/actions/</link>
       <pubDate>Tue, 07 May 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/actions/</guid>
+      <guid>https://roll20.github.io/beacon-docs/docs/components/actions/</guid>
       <description>Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.</description>
     </item>
     <item>
       <title>Computed</title>
-      <link>http://localhost:1313/docs/components/computed/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/components/computed/</link>
       <pubDate>Sun, 07 Apr 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/computed/</guid>
+      <guid>https://roll20.github.io/beacon-docs/docs/components/computed/</guid>
       <description>Sheet authors define computed properties that are accessed by the host. These computed properties can be used as attributes in macros and are available to assign as values to token bars - if the tokenBarValue property is set to true.</description>
     </item>
     <item>
       <title>Handlers</title>
-      <link>http://localhost:1313/docs/components/handlers/</link>
+      <link>https://roll20.github.io/beacon-docs/docs/components/handlers/</link>
       <pubDate>Thu, 07 Mar 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/handlers/</guid>
+      <guid>https://roll20.github.io/beacon-docs/docs/components/handlers/</guid>
       <description>Handler functions allow the sheet to respond to messages from the host. The handlers argument requires the following methods:&#xA;onInit The onInit function provides the initial set of data to the sheet.</description>
-    </item>
-    <item>
-      <title>Handling Legacy Macro Attributes</title>
-      <link>http://localhost:1313/docs/components/handling-legacy-macro-attributes/</link>
-      <pubDate>Wed, 07 Feb 2024 16:12:37 +0200</pubDate>
-      <guid>http://localhost:1313/docs/components/handling-legacy-macro-attributes/</guid>
-      <description>When utilizing Macros within the VTT, there are instances where a legacy macro might need to be employed for a Beacon sheet.</description>
     </item>
   </channel>
 </rss>

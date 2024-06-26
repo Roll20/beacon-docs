@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on </title>
+    <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/</link>
+    <description>Recent content in Getting Started on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
+    <lastBuildDate>Sat, 07 Sep 2024 16:13:18 +0200</lastBuildDate>
+    <atom:link href="https://roll20.github.io/beacon-docs/docs/gettingstarted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction/</link>
+      <pubDate>Tue, 07 May 2024 16:04:48 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction/</guid>
+      <description>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</description>
+    </item>
+    <item>
+      <title>Installing Beacon</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/installing-beacon/</link>
+      <pubDate>Sun, 07 Apr 2024 16:04:48 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/installing-beacon/</guid>
+      <description>This installation guide is designed for sheet developers with experience in web development, that want to start creating a character sheet from scratch or already have an existing project they wish to add Beacon to.</description>
+    </item>
+    <item>
+      <title>Quick Start Sheet Template</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/quick-start-sheet-template/</link>
+      <pubDate>Sun, 07 Apr 2024 16:13:18 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/quick-start-sheet-template/</guid>
+      <description>Prerequisites To set this sheet up properly, make sure that you have the following tools installed:&#xA;Vue.js Vite SCSS Figure 1: Quickstart sheet</description>
+    </item>
+    <item>
+      <title>Example Patterns Sheet</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/example-patterns-sheet/</link>
+      <pubDate>Thu, 07 Mar 2024 16:13:18 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/example-patterns-sheet/</guid>
+      <description>Prerequisites To set this sheet up properly, make sure that you have the following:&#xA;Vue framework &amp;amp; Routing Multiple Data Stores Complex Roll Templates Rich Sheet Actions TypeScript Vite SCSS Ability to run Unit &amp;amp; End-to-End Tests Figure 1: Advanced sheet</description>
+    </item>
+    <item>
+      <title>Releasing a Sheet</title>
+      <link>https://roll20.github.io/beacon-docs/docs/gettingstarted/releasing-a-sheet/</link>
+      <pubDate>Wed, 07 Feb 2024 16:13:18 +0200</pubDate>
+      <guid>https://roll20.github.io/beacon-docs/docs/gettingstarted/releasing-a-sheet/</guid>
+      <description>A release sheet is a finalized version of a character sheet or other content designed for use on the Roll20 platform.</description>
+    </item>
+  </channel>
+</rss>

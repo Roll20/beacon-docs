@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="https://roll20.github.io/beacon-docs/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://roll20.github.io/beacon-docs/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://roll20.github.io/beacon-docs/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/beacon-docs/js/color-mode.86a91f050a481d0a3f0c72ac26543cb6228c770875981c58dcbc008fd3f875c8.js"
+  integrity="sha256-hqkfBQpIHQo/DHKsJlQ8tiKMdwh1mBxY3LwAj9P4dcg=">
+</script>
+
+
+<link rel="stylesheet" href="/beacon-docs/main.658443b7314ee7fb7d7ae8e767f5d4fe49c74541dd953fd163159eeae063feb5a005499c715522b9323d5eb0d548f2c671c1df86b9ca0a134d453f8bb80282ed.css" integrity="sha512-ZYRDtzFO5/t9eujnZ/XU/knHRUHdlT/RYxWe6uBj/rWgBUmccVUiuTI9XrDVSPLGccHfhrnKChNNRT+LuAKC7Q==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="https://roll20.github.io/beacon-docs/docs/components/dispatch/">
+  <link rel="canonical" href="https://roll20.github.io/beacon-docs/docs/components/dispatch/">
+<title>Dispatch  |  </title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/beacon-docs/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/beacon-docs/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/beacon-docs/beacon-docs/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/beacon-docs/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/beacon-docs/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/beacon-docs/manifest.webmanifest">
+<meta property="og:title" content="Dispatch">
+<meta property="og:description" content="The dispatch is returned by the initRelay and provides methods for sending commands from the character sheet back to the host.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://roll20.github.io/beacon-docs/docs/components/dispatch/"><meta property="og:image" content="https://roll20.github.io/beacon-docs/cover.png"><meta property="article:section" content="docs">
+
+<meta property="article:modified_time" content="2023-09-07T16:12:37+02:00"><meta property="og:site_name" content="Beacon SDK">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://roll20.github.io/beacon-docs/cover.png"><meta name="twitter:title" content="Dispatch">
+<meta name="twitter:description" content="The dispatch is returned by the initRelay and provides methods for sending commands from the character sheet back to the host.">
+<meta name="twitter:site" content="@getdoks">
+
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://roll20.github.io/beacon-docs/",
+       "name": "Welcome to Beacon Sdk",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://roll20.github.io/beacon-docs/docs/",
+       "name": "Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://roll20.github.io/beacon-docs/docs/components/",
+       "name": "Components",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Dispatch",
+       "position": 4
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/beacon-docs/"></a>
+
+    
+    
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Getting Started</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/introduction/">Introduction</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/installing-beacon/">Installing Beacon</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/quick-start-sheet-template/">Quick Start Sheet Template</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/example-patterns-sheet/">Example Patterns Sheet</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/releasing-a-sheet/">Releasing a Sheet</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Components</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/components/initrelay/">InitRelay</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/actions/">Actions</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/computed/">Computed</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/handlers/">Handlers</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/handling-legacy-macro-attributes/">Handling Legacy Macro Attributes</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/beacon-docs/docs/components/dispatch/">Dispatch</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>About</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/about/glossary/">Glossary</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/faq/">FAQ</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/changelog/">Changelog</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/how-to-contribute/">How to Contribute</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel"></h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link active" href="https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction" aria-current="true">Docs</a>
+              </li>
+            </ul>
+
+        
+        
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/Roll20/beacon-docs"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Getting Started</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/introduction/">Introduction</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/installing-beacon/">Installing Beacon</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/quick-start-sheet-template/">Quick Start Sheet Template</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/example-patterns-sheet/">Example Patterns Sheet</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/gettingstarted/releasing-a-sheet/">Releasing a Sheet</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Components</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/components/initrelay/">InitRelay</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/actions/">Actions</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/computed/">Computed</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/handlers/">Handlers</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/handling-legacy-macro-attributes/">Handling Legacy Macro Attributes</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/components/rolls/">Rolls</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/beacon-docs/docs/components/dispatch/">Dispatch</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>About</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/beacon-docs/docs/about/glossary/">Glossary</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/faq/">FAQ</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/changelog/">Changelog</a>
+  </li>
+
+  <li>
+      <a href="/beacon-docs/docs/about/how-to-contribute/">How to Contribute</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/beacon-docs/">Home</a></li>
+<li class="breadcrumb-item"><a href="/beacon-docs/docs/">Docs</a></li>
+<li class="breadcrumb-item"><a href="/beacon-docs/docs/components/">Components</a></li>
+<li class="breadcrumb-item active" aria-current="page">Dispatch</li>
+					</ol>
+				</nav>
+			
+			<h1>Dispatch</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>The dispatch is returned by the <code>initRelay</code> and provides methods for sending commands from the character sheet back to the host. Except when specified every method below will return a promise.</p>
+<h4 id="update">update<a href="#update" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span> <span class="nx">overwrite</span><span class="o">?:</span> <span class="kr">boolean</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">character</span><span class="o">:</span> <span class="nx">Partial</span><span class="o">&lt;</span><span class="nx">Character</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>update</code> method sends character changes to the host (Roll20 Tabletop or Roll20 Characters) to be persisted. The partial character passed in here must contain the character&rsquo;s id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.</p>
+<h4 id="updatecharacter">updateCharacter<a href="#updatecharacter" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">updateCharacter</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">character</span><span class="o">:</span> <span class="nx">Partial</span><span class="o">&lt;</span><span class="nx">Character</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Like the <code>update</code> method, <code>updateCharacter</code> sends character changes to the host page (Roll20 Tabletop or Roll20 Characters) to be persisted. However, this method takes a full set of character attributes as the character argument, and automatically computes the diff with existing character attributes, so that only changed attributes are sent to the data store.</p>
+<h4 id="roll">roll<a href="#roll" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">roll</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">rolls</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">rollName</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span> <span class="p">}</span> <span class="c1">// Ex. {attack: &#39;1d20+4&#39;, damage: `3d6+2`}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">messageId</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span><span class="nx">messageId</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">results</span><span class="o">:</span> <span class="nx">RollResults</span> <span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>roll</code> method takes one or more rolls in the form of an object, where the keys are unique roll names and the values are roll strings. messageId can be provided to attach the roll to an existing chat message, either overriding it or appending to it in the chat log. If messageId is omitted, the roll will be associated with a new chat message and a new messageId for that message will be returned with the roll results. The method returns a promise that resolves with an object containing the messageId and the RollResult (see Types). The roll result is returned in the same format as in the non-beacon dice rolls computed roll system.</p>
+<h4 id="post">post<a href="#post" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">post</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">messageId</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">content</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">options</span><span class="o">?:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">whisper</span><span class="o">?:</span> <span class="s1">&#39;gm&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">secret</span><span class="o">?:</span> <span class="kr">boolean</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>post</code> posts a message to chat, either creating a new message or overwriting an existing one. It requires a character id and message content, a string containing either plain text or HTML to be posted. The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm. The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player. Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.</p>
+<h4 id="query">query<a href="#query" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="nx">options</span><span class="o">:</span> <span class="nx">Swal2Options</span><span class="p">)</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isConfirmed</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isDenied</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isDismissed</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">value</span><span class="o">?:</span> <span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">dismiss</span><span class="o">?:</span> <span class="s2">&#34;cancel&#34;</span> <span class="o">|</span> <span class="s2">&#34;backdrop&#34;</span> <span class="o">|</span> <span class="s2">&#34;close&#34;</span> <span class="o">|</span> <span class="s2">&#34;esc&#34;</span> <span class="o">|</span> <span class="s2">&#34;timer&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">errors</span><span class="o">?:</span> <span class="nx">string</span><span class="p">[],</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">results</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isConfirmed</span><span class="o">:</span> <span class="kr">boolean</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isDenied</span><span class="o">:</span> <span class="kr">boolean</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isDismissed</span><span class="o">:</span> <span class="kr">boolean</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dismiss</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">errors</span><span class="o">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>query</code> method takes an options object and uses them to display a <a href="https://sweetalert2.github.io/">SweetAlert2</a> prompt to the user. It returns the results of the query as a <code>SweetAlertResult</code>, along with any errors encountered. The options work exactly as described in the documentation for <a href="https://sweetalert2.github.io/">SweetAlert2</a>, however not all options are allowed. Here is a list of the allowed options:</p>
+<p><code>titleText, text, iconColor, input, width, padding, background, position, grow, timer, timerProgressBar, showConfirmButton, showDenyButton, showCancelButton, ariaLabel, confirmButtonText, denyButtonText, cancelButtonText, confirmButtonAriaLabel, confirmButtonColor, cancelButtonAriaLabel, cancelButtonColor, denyButtonAriaLabel, denyButtonColor, reverseButtons, showCloseButton, closeButtonAriaLabel, returnInputValueOnDeny, imageUrl, imageWidth, imageHeight, imageAlt, inputLabel, inputPlaceholder, inputValue, inputOptions, inputPlaceholder, inputAutoTrim, inputAttributes, validationMessage, progressSteps, currentProgressStep, progressStepsDistance.</code></p>
+<h4 id="perform">Perform<a href="#perform" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">perform</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">action</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="nx">string</span><span class="p">[],</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>perform</code> executes the specified action on behalf of the character (designated by the character id), passing in args to the action method. This method can perform actions on behalf of any character, even a character that the sheet does not have data for.</p>
+<h4 id="getcomputed">getComputed<a href="#getcomputed" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">getComputed</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">property</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="nx">string</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span> <span class="o">|</span> <span class="nx">object</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>see <code>setComputed</code> below</p>
+<h4 id="setcomputed">setComputed<a href="#setcomputed" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">setComputed</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">property</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="nx">string</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span> <span class="o">|</span> <span class="nx">object</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>getComputed</code> and <code>setComputed</code> are both nearly identical in how they are called, taking a character id and a property with the name of the computed property you wish to get or set, and an array of string args. Both methods return a promise that resolves with the computed value.</p>
+<h4 id="compendiumrequest">compendiumRequest<a href="#compendiumrequest" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">compendiumRequest</span><span class="p">({</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">query</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="o">:</span> <span class="nb">Object</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">errors</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nb">Error</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">extensions</span><span class="o">:</span> <span class="nx">Record</span><span class="o">&lt;</span><span class="nx">string</span><span class="p">,</span> <span class="nx">any</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>compendiumRequest</code> executes an AJAX request to the compendium service’s graphQL endpoint. It takes in a graphQL query string written according to the Compendium service’s schema. The query string does not need to include the ruleSystem shortName as this is set automatically according to the campaign override or sheet.json value in the Roll20 Tabletop.</p>
+<h4 id="debouncedcompendiumrequest">debouncedCompendiumRequest<a href="#debouncedcompendiumrequest" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">debouncedCompendiumRequest</span><span class="p">({</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">query</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="o">:</span> <span class="nb">Object</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Like <code>compendiumRequest</code>, except that calls to this method are automatically debounced (at 100ms) and grouped together into a single request to the compendium service. Note that this method will only return the requested data, it does not return errors or extensions.</p>
+<h4 id="gettokens">getTokens<a href="#gettokens" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">getTokens</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">selected</span><span class="o">:</span> <span class="nx">Token</span><span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tokens</span><span class="o">:</span> <span class="nx">Token</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">selected</span><span class="o">:</span> <span class="nx">Token</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tokens</span><span class="o">:</span> <span class="nx">Token</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>getTokens</code> requires a character id string and returns information about tokens on the user’s current page. The return value contains two arrays of tokens. The tokens array contains all tokens on the current page that represent the character whose id was provided to the method. The selected array contains any tokens that are currently selected, regardless of which character they represent. The returned token objects contain all of the token attributes available to the API, you can find documentation here and here.</p>
+<h4 id="addtotracker">addToTracker<a href="#addtotracker" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">addToTracker</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tokenId</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">custom</span><span class="o">?:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">img</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">formula</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>addToTracker</code> adds or updates a single item in the turn tracker. Passing in a tokenId will add the specified token to the tracker, while passing in custom with a name and an optional image url (img) will add a custom item, not connected to any character or token. A round calculation string can be added via the optional formula parameter. value is the initiative number for the item.</p>
+<h4 id="addactionstohost">addActionsToHost<a href="#addactionstohost" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">addActionsToHost</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sheetAction</span><span class="o">?:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">action</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">args</span><span class="o">?:</span> <span class="nx">string</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">action</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">locations</span><span class="o">?:</span> <span class="p">[</span><span class="s1">&#39;macroBar&#39;</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="s1">&#39;tokenActionBar&#39;</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="s1">&#39;macroBar&#39;</span><span class="p">,</span> <span class="s1">&#39;tokenActionBar&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">actionId</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">requestId</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="k">void</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>addActionsToHost</code> adds a specific action(macro) to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. Either sheetAction or action can be passed in but not both at the same time. The sheetAction arg should be passed in when an the action is to designated to a character. While the action arg should be passed in when the action is more generic.</p>
+<h4 id="getactions">getActions<a href="#getactions" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">getActions</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">characterId</span><span class="o">?:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">actions</span><span class="o">?:</span> <span class="p">{}</span> <span class="o">|</span> <span class="p">{</span> <span class="p">[</span><span class="nx">id</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">ActionFromHost</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>getActions</code> gets a specific character’s actions(macro).</p>
+<h4 id="setcontainersize">setContainerSize<a href="#setcontainersize" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">setContainerSize</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">width</span><span class="o">?:</span> <span class="nx">number</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">height</span><span class="o">?:</span> <span class="nx">number</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>setContainerSize</code> updates the size of the container which holds the sheet shared settings. Returns a promise that can be awaited. This can be used in conjunction with something like the ResizeSensor event listener from npm: css-element-queries to automatically resize the container on the host.</p>
+<h4 id="updatetokensbycharacter">updateTokensByCharacter<a href="#updatetokensbycharacter" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">updateTokensByCharacter</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nx">characterId</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">token</span><span class="o">:</span> <span class="nx">Partial</span><span class="o">&lt;</span><span class="nx">Token</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>updateTokensByCharacter</code> updates a particular character’s default token as well as all existing tokens representing that character. Returns a promise that can be awaited.</p>
+<h4 id="updatetokensbyids">updateTokensByIds<a href="#updatetokensbyids" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">updateTokensByIds</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="nx">tokenIds</span><span class="o">:</span> <span class="nx">array</span> <span class="k">of</span> <span class="nx">ids</span> <span class="nx">as</span> <span class="nx">strings</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">token</span><span class="o">:</span> <span class="nx">Partial</span><span class="o">&lt;</span><span class="nx">Token</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>updateTokensByIds</code> updates a single or several tokens. Returns a promise that can be awaited.</p>
+<h4 id="autolinktext">autoLinkText<a href="#autolinktext" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">autoLinkText</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>autoLinkText</code> goes through the text to find handout names between square brackets and converts them into links with the handoutID. For example in a game with a handout named <code>Dragon</code>, passing in the text string of <code>this is a [Dragon]</code> to autoLinkText returns something similar to this is a <code>&lt;a href=&quot;https://journal.roll20.net/8je02j0kd02k&quot;&gt;Dragon&lt;/a&gt;</code>.</p>
+<h4 id="opendialogfromlink">openDialogFromLink<a href="#opendialogfromlink" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">.</span><span class="nx">openDialogFromLink</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">args</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="nx">urlString</span><span class="o">:</span> <span class="nx">string</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="k">void</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>openDialogFromLink</code> opens the supplied urlString through the Roll20 Tabletop.</p>
+<ul>
+<li>If the url is for a handout, it will open the corresponding handout in the campaign. This will also check if the user opening the link has access to the handout.</li>
+<li>If the url is for a compendium, it will open a pop up to the compendium page, it will also check to ensure the user has access to view the page.</li>
+<li>If the url is for an external page, a confirmation pop up will display to warn the user that the link is for an external site and open a new tab in their main window if confirmed.</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/beacon-docs/docs/components/rolls/" class="stretched-link text-reset text-decoration-none">Rolls</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/beacon-docs/docs/gettingstarted/quick-start-sheet-template/" class="stretched-link text-reset text-decoration-none">Quick Start Sheet Template</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/beacon-docs/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Brought to you by <a class="text-muted" href="https://gethyas.com/">Hyas</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/beacon-docs/js/app.47b84f3b640408af6efe7bf4add1a36f5b9c6227fbae7b8bcdf0c9ce42fefc54.js"
+  integrity="sha256-R7hPO2QECK9u/nv0rdGjb1ucYif7rnuLzfDJzkL&#43;/FQ=">
+</script>
+
+
+
+
+
+
+    <div class="d-inline-flex fixed-bottom-right pb-4 pe-4">
+  <button id="toTop" type="button" class="btn btn-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 15l6 -6l6 6"></path></svg></button>
+</div>
+
+    
+  </body>
+</html>
