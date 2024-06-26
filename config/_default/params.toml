@@ -20,7 +20,7 @@ mainSections = ["docs"]
   containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
 
   ## Button
-  navBarButton = false # false (default) or true
+  navBarButton = true # false (default) or true
   navBarButtonUrl = "docs/guides/introduction/"
   navBarButtonText = "Get started"
 

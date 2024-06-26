@@ -1,6 +1,6 @@
 ---
-title: "Release Sheet"
-description: "Releasing a Test Sheet."
+title: "Releasing a Sheet"
+description: "This page cover how to release a test sheet and get approved to push it live for everyone on Roll20."
 summary: ""
 date: 2024-02-07T16:13:18+02:00
 lastmod: 2024-09-07T16:13:18+02:00

@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "InitRelay"
 description: ""
 summary: ""
 date: 2024-06-07T16:12:37+02:00
@@ -15,10 +15,25 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games. `initRelay` is the main method that initializes the Beacon SDK communication channel with the host (Either the Roll20 tabletop or in Roll20 Characters). It should be initialized as soon as the sheet loads, as its `onInit` handler will be the earliest we can get access to that character's data.
 
-
-The Beacon SDK is composed of various components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games.
-
+```javascript
+initRelay({
+    handlers: {
+        onInit,
+        onChange,
+        onSettingsChange,
+        onSharedSettingsChange,
+        onTranslationsRequest,
+        onDragOver,
+        onDropOver,
+    },
+    actions: {},
+    computed: {},
+    convertLegacyMacroAttributes,
+    handleLegacyRollTemplates
+}): Promise<Dispatch>
+``` 
 These components are crucial for handling actions, computations, macros, and rolls. This overview provides a high-level summary of each section, helping you understand their roles and how they integrate within the SDK.
 
 
@@ -66,3 +81,9 @@ These components are crucial for handling actions, computations, macros, and rol
 >}}
 
 
+{{< link-card
+  title="Dispatch"
+  description="The dispatch object provides methods for sending commands from the character sheet back to the host. Except when specified every method returns a promise."
+  href="/docs/components/dispatch/"
+  target="_blank"
+>}}

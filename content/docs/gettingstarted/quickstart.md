@@ -1,5 +1,5 @@
 ---
-title: "Beginner Beacon Sheet"
+title: "Quick Start Sheet Template"
 description: "This is a quick start sheet example. This sheet will guide you through getting started with the Beacon Sheet."
 summary: ""
 date: 2024-04-07T16:13:18+02:00

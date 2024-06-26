@@ -1,6 +1,6 @@
 ---
-title: "Advanced Beacon Sheet"
-description: "This is an advanced quick start sheet example. This sheet takes an advanced approach to building the Beacon sheet."
+title: "Example Patterns Sheet"
+description: "This sheet uses all of the patterns as an example of how to use them. Feel free to start using this sheet or copy and paste into your own project as needed."
 summary: ""
 date: 2024-03-07T16:13:18+02:00
 lastmod: 2024-09-07T16:13:18+02:00
