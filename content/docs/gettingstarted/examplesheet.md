@@ -28,6 +28,13 @@ To set this sheet up properly, make sure that you have the following:
 - SCSS
 - Ability to run Unit & End-to-End Tests
 
+{{< callout context="note" >}}
+To download the community quick start sheet, refer to these repositories:
+- [Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets)
+
+- [Quick Start Sheet](https://github.com/Roll20/roll20-beacon-sheets/tree/main/sheets/quickstart-example-sheet)
+
+{{< /callout >}}
 
 _**Figure 1**: Advanced sheet_
 

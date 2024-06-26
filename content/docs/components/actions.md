@@ -16,7 +16,7 @@ seo:
   noindex: false # false (default) or true
 ---
 
-Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button. Generally, most or all of a sheet’s rolls should be defined as actions.
+Actions are a collection of methods that can be executed from the Roll20 Tabletop. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button. Generally, most or all of a sheet’s rolls should be defined as actions.
 
 ```javascript
 actions: {

@@ -24,7 +24,9 @@ dispatch.update({
   character: Partial<Character>
 }): Promise<void>
 ``` 
-The `update` method sends character changes to the host (Roll20 Tabletop or Roll20 Characters) to be persisted. The partial character passed in here must contain the character's id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.
+The `update` method sends character changes to the host (Roll20 Tabletop or Roll20 Characters) to be persisted. 
+
+The partial character passed in here must contain the character's id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.
 
 #### updateCharacter
 ```javascript
@@ -32,7 +34,9 @@ dispatch.updateCharacter({
   character: Partial<Character>
 }): Promise<void>
 ``` 
-Like the `update` method, `updateCharacter` sends character changes to the host page (Roll20 Tabletop or Roll20 Characters) to be persisted. However, this method takes a full set of character attributes as the character argument, and automatically computes the diff with existing character attributes, so that only changed attributes are sent to the data store.
+Like the `update` method, `updateCharacter` sends character changes to the host page (Roll20 Tabletop or Roll20 Characters) to be persisted. 
+
+However, this method takes a full set of character attributes as the character argument, and automatically computes the diff with existing character attributes, so that only changed attributes are sent to the data store.
 
 #### roll
 ```javascript
@@ -41,7 +45,11 @@ dispatch.roll({
   messageId?: string
 }): Promise<{messageId: string, results: RollResults }>
 ``` 
-The `roll` method takes one or more rolls in the form of an object, where the keys are unique roll names and the values are roll strings. messageId can be provided to attach the roll to an existing chat message, either overriding it or appending to it in the chat log. If messageId is omitted, the roll will be associated with a new chat message and a new messageId for that message will be returned with the roll results. The method returns a promise that resolves with an object containing the messageId and the RollResult (see Types). The roll result is returned in the same format as in the non-beacon dice rolls computed roll system.
+The `roll` method takes one or more rolls in the form of an object, where the keys are unique roll names and the values are roll strings. messageId can be provided to attach the roll to an existing chat message, either overriding it or appending to it in the chat log. 
+
+If messageId is omitted, the roll will be associated with a new chat message and a new messageId for that message will be returned with the roll results. 
+
+The method returns a promise that resolves with an object containing the messageId and the RollResult (see Types). The roll result is returned in the same format as in the non-beacon dice rolls computed roll system.
 
 #### post
 ```javascript
@@ -55,7 +63,13 @@ dispatch.post({
   }
 }): Promise<string>
 ``` 
-`post` posts a message to chat, either creating a new message or overwriting an existing one. It requires a character id and message content, a string containing either plain text or HTML to be posted. The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm. The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player. Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
+`post` posts a message to chat, either creating a new message or overwriting an existing one. It requires a character id and message content, a string containing either plain text or HTML to be posted. 
+
+The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm. 
+
+The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player. 
+
+Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
 
 #### query
 ```javascript

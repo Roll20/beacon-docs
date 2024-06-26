@@ -72,7 +72,7 @@ onChange(e: {
 
 ## `onSettingsChange`
 
-`onSettingsChange` is called when either the VTT’s color theme is changed, or when the current player’s ownership of the primary character changes.
+`onSettingsChange` is called when either the Roll20 Tabletop's color theme is changed, or when the current player’s ownership of the primary character changes.
 
 ```javascript
 onSettingsChange(e: {
@@ -83,7 +83,7 @@ onSettingsChange(e: {
 
 ## `onSharedSettingsChange`
 
-`onSharedSettingsChange` is called when someone changes a shared setting in the VTT.
+`onSharedSettingsChange` is called when someone changes a shared setting in the Roll20 Tabletop.
 
 ```javascript
 onSharedSettingsChange({ settings: { [key: string]: any } }): void;
