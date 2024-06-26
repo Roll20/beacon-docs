@@ -2,15 +2,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/docs/guides/</loc>
+      <loc>http://localhost:1313/docs/gettingstarted/</loc>
       <lastmod>2023-09-07T16:06:50+02:00</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/docs/quick/</loc>
-      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
@@ -23,7 +16,7 @@
     </url>
     
     <url>
-      <loc>http://localhost:1313/docs/changelog/</loc>
+      <loc>http://localhost:1313/docs/about/</loc>
       <lastmod>2023-09-07T16:12:37+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -36,49 +29,31 @@
       <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:1313/docs/guides/introduction/</loc>
+        <loc>http://localhost:1313/docs/gettingstarted/introduction/</loc>
         <lastmod>2024-01-07T16:04:48+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/guides/installing-beacon/</loc>
+        <loc>http://localhost:1313/docs/gettingstarted/installing-beacon/</loc>
         <lastmod>2024-02-07T16:04:48+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/guides/glossary/</loc>
-        <lastmod>2024-02-07T16:04:48+02:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/docs/guides/faq/</loc>
-        <lastmod>2024-02-07T16:04:48+02:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/docs/guides/contributing-guide/</loc>
-        <lastmod>2024-09-07T16:13:18+02:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/docs/quick/beginner-beacon-sheet/</loc>
+        <loc>http://localhost:1313/docs/gettingstarted/quick-start-sheet-template/</loc>
         <lastmod>2024-05-07T16:13:18+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/quick/advanced-beacon-sheet/</loc>
+        <loc>http://localhost:1313/docs/gettingstarted/example-patterns-sheet/</loc>
         <lastmod>2024-09-07T16:13:18+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/quick/release-sheet/</loc>
+        <loc>http://localhost:1313/docs/gettingstarted/releasing-a-sheet/</loc>
         <lastmod>2024-09-07T16:13:18+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -126,8 +101,26 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/docs/changelog/version-1.0.0/</loc>
+        <loc>http://localhost:1313/docs/about/glossary/</loc>
+        <lastmod>2024-02-07T16:04:48+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/about/faq/</loc>
+        <lastmod>2024-02-07T16:04:48+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/about/changelog/</loc>
         <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/docs/about/how-to-contribute/</loc>
+        <lastmod>2024-09-07T16:13:18+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

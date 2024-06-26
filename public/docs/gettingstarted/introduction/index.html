@@ -14,10 +14,10 @@
 
 <link rel="stylesheet" href="/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/components/actions/">
-  <link rel="canonical" href="http://localhost:1313/docs/components/actions/">
-<title>Actions  |  Beacon SDK</title>
-<meta name="description" content="Congrats on setting up a new Doks project!">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/gettingstarted/introduction/">
+  <link rel="canonical" href="http://localhost:1313/docs/gettingstarted/introduction/">
+<title>Introduction  |  Beacon SDK</title>
+<meta name="description" content="Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.">
 
     
     <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -43,16 +43,16 @@
         type="image/png"
       >
 <link rel="manifest" href="/manifest.webmanifest">
-<meta property="og:title" content="Actions">
-<meta property="og:description" content="Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/docs/components/actions/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2024-05-07T16:12:37+02:00">
-<meta property="article:modified_time" content="2023-09-07T16:12:37+02:00"><meta property="og:site_name" content="Beacon SDK">
+<meta property="og:url" content="http://localhost:1313/docs/gettingstarted/introduction/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-05-07T16:04:48+02:00">
+<meta property="article:modified_time" content="2024-01-07T16:04:48+02:00"><meta property="og:site_name" content="Beacon SDK">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Actions">
-<meta name="twitter:description" content="Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.">
+<meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.">
 <meta name="twitter:site" content="@getdoks">
 
     
@@ -76,13 +76,13 @@
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/docs/components/",
-       "name": "Components",
+       "item": "http://localhost:1313/docs/gettingstarted/",
+       "name": "Getting Started",
        "position": 3
      },
      {
        "@type": "ListItem",
-       "name": "Actions",
+       "name": "Introduction",
        "position": 4
      }
    ]
@@ -135,12 +135,12 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details open open>
       <summary>Getting Started</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/docs/gettingstarted/introduction/">Introduction</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/gettingstarted/introduction/">Introduction</a>
   </li>
 
   <li>
@@ -163,7 +163,7 @@
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
@@ -171,8 +171,8 @@
       <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/components/actions/">Actions</a>
+  <li>
+      <a href="/docs/components/actions/">Actions</a>
   </li>
 
   <li>
@@ -304,12 +304,12 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details open open>
       <summary>Getting Started</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/docs/gettingstarted/introduction/">Introduction</a>
+  <li class="active" >
+      <a aria-current="page" href="/docs/gettingstarted/introduction/">Introduction</a>
   </li>
 
   <li>
@@ -332,7 +332,7 @@
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Components</summary>
       <ul class="list-unstyled list-nested">
 
@@ -340,8 +340,8 @@
       <a href="/docs/components/initrelay/">InitRelay</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/docs/components/actions/">Actions</a>
+  <li>
+      <a href="/docs/components/actions/">Actions</a>
   </li>
 
   <li>
@@ -399,7 +399,15 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#what-is-the-beacon-sdk">What is the Beacon SDK?</a></li>
+    <li><a href="#key-features">Key Features</a></li>
+    <li><a href="#components-overview">Components Overview</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -409,76 +417,70 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">Home</a></li>
 <li class="breadcrumb-item"><a href="/docs/">Docs</a></li>
-<li class="breadcrumb-item"><a href="/docs/components/">Components</a></li>
-<li class="breadcrumb-item active" aria-current="page">Actions</li>
+<li class="breadcrumb-item"><a href="/docs/gettingstarted/">Getting Started</a></li>
+<li class="breadcrumb-item active" aria-current="page">Introduction</li>
 					</ol>
 				</nav>
 			
-			<h1>Actions</h1>
+			<h1>Introduction</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-beacon-sdk">What is the Beacon SDK?</a></li>
+    <li><a href="#key-features">Key Features</a></li>
+    <li><a href="#components-overview">Components Overview</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			<p>Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button. Generally, most or all of a sheet’s rolls should be defined as actions.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="p">[</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">method</span><span class="o">:</span> <span class="p">(</span><span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">dispatch</span><span class="o">:</span> <span class="nx">Dispatch</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">character</span><span class="o">:</span> <span class="nx">Character</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">messageId</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">rolls</span><span class="o">?:</span> <span class="nx">RollResults</span> 
-</span></span><span class="line"><span class="cl"> <span class="p">},</span> <span class="p">...</span><span class="nx">args</span><span class="o">:</span> <span class="nx">string</span><span class="p">[])</span><span class="o">:</span> <span class="k">void</span> <span class="o">|</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p>Actions are passed into the  <code>initRelay</code> function in an object, where the keys are the unique names of the actions, and the values are objects containing a <code>method</code> property (additional metadata fields may be added to this object in the future).</p>
-<p>The <code>method</code> receives a <code>props</code> object containing the following properties:</p>
+			<p>The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.</p>
+<p>Whether you&rsquo;re a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated VTT experiences.</p>
+<h2 id="what-is-the-beacon-sdk">What is the Beacon SDK?<a href="#what-is-the-beacon-sdk" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The Beacon SDK (software development kit) is a toolset used to create digital character sheets on Roll20 for Roll20 Tabletop and Roll20 Characters.</p>
+<p>Whether you&rsquo;re an experience developer, or just starting out, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated character sheet experiences.</p>
+<p>The Beacon SDK also introduces a new way to develop characters sheets for Roll20. Beacon SDK allows you to connect your local development environment to sandboxes in Roll20 Characters and Roll20 Tabletop, giving you real-time updates as you develop.</p>
+<h2 id="key-features">Key Features<a href="#key-features" class="anchor" aria-hidden="true">#</a> </h2>
 <ul>
-<li><code>dispatch</code>: A <code>Dispatch</code> object.</li>
-<li><code>character</code>: The data of the character performing the action. Currently, the action will not receive the character’s bio or GM notes, regardless of whether the player has access to those fields.</li>
-<li><code>messageId</code> (optional): A unique ID for an existing chat message. It&rsquo;s included in actions triggered from chat buttons to provide context for the original roll.</li>
-<li><code>rolls</code> (optional): Included when action is triggered from a chat button. Contains the roll results of the original roll.</li>
+<li><strong>Character Sheets</strong>: Design and implement a web app character sheet with dynamic attributes and real-time updates.</li>
+<li><strong>Local Development</strong>: Work where you are most comfortable and get real-time updates in sandboxes in Roll20.</li>
+<li><strong>Testing Sheets</strong>: Release a testing sheet and give others special access to it before you push it live for everyone.</li>
+<li><strong>Roll Mechanics</strong>: Integrate complex roll formulas and display roll results directly within the Roll20 Tabletop and Roll20 Characters.</li>
+<li><strong>Legacy Support</strong>: Convert and integrate legacy macros and roll templates with the new Beacon architecture.</li>
+<li><strong>Customization</strong>: Define custom actions, computed attributes and handle specific roll templates tailored to your game&rsquo;s needs.</li>
 </ul>
-<blockquote>
-<p>These functions can also receive an unlimited number of additional arguments. This is because these actions can be triggered by plain text via a macro. However, all additional arguments must be strings. Additionally, these functions can be synchronous or asynchronous and do not return a value.</p>
-</blockquote>
+<h2 id="components-overview">Components Overview<a href="#components-overview" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The Beacon SDK is composed of several key components:</p>
+<ul>
+<li><strong>Actions</strong>: Define and manage custom actions that can be triggered within the VTT.</li>
+<li><strong>Handlers</strong>: Event handlers that process and respond to various VTT events and messages.</li>
+<li><strong>Computed Attributes</strong>: Define dynamically computed attributes based on other attributes.</li>
+<li><strong>Macro Attributes</strong>: Convert and manage legacy macro attributes for compatibility with the Beacon SDK.</li>
+<li><strong>Rolls</strong>: Implement advanced roll mechanics and display results dynamically within the VTT.</li>
+</ul>
+<p>For a comprehensive overview of these components, view the components section.</p>
+<h2 id="getting-started">Getting Started<a href="#getting-started" class="anchor" aria-hidden="true">#</a> </h2>
+<p>To get started with the Beacon SDK, you must initialize the relay, set up your character sheets, and define the necessary actions, handlers, and computed attributes.</p>
+<p>This documentation provides detailed guides and example sheets to help you through each step of the process.</p>
+<p>By leveraging the Beacon SDK, you can create rich, interactive, fully integrated VTT experiences that enhance gameplay and streamline game management.</p>
+<p>Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your digital character sheet to life.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
 	
-	<div class="card w-100">
-			<div class="card-body d-flex">
-				<div class="d-flex flex-column justify-content-center">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M5 12l14 0"></path>
-						<path d="M5 12l6 6"></path>
-						<path d="M5 12l6 -6"></path>
-				 	</svg>
-				</div>
-				<div class="d-flex flex-column">
-					<div class="text-body-secondary">Prev</div>
-					<a href="/docs/components/initrelay/" class="stretched-link text-reset text-decoration-none">InitRelay</a>
-				</div>
-			</div>
-		</div>
-	<div class="m-2"></div>
 	<div class="card text-end w-100">
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/docs/components/computed/" class="stretched-link text-reset text-decoration-none">Computed</a>
+					<a href="/docs/gettingstarted/installing-beacon/" class="stretched-link text-reset text-decoration-none">Installing Beacon</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
