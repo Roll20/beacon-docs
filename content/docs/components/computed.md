@@ -16,28 +16,31 @@ seo:
   noindex: false # false (default) or true
 ---
 
-Sheet authors define computed properties that are accessed by the host. These computed properties can be used as attributes in macros and are available to assign as values to token bars - if the `tokenBarValue` property is set to true.
+Sheet authors define computed properties that are accessed by the Roll20 Tabletop or Roll20 Characters. These computed properties can be used as attributes in macros and are available to assign as values to token bars - if the `tokenBarValue` property is set to true.
 
-```javascript
-computed: {
- [name: string]: {
- tokenBarValue?: boolean,
- description?: string,
-    get: (
-      props: {
- character: Character
- },
-      ...args: string[]
- ) => ComputedResult,
- set?: (
-      props: {
- character: Character,
- dispatch: Dispatch
- },
-      ...args: string[]
- ) => void | Promise<void>
- }
-}
+```typescript
+initRelay({
+  //...other methods
+  computed: {
+    [name: string]: {
+      tokenBarValue?: boolean
+      description?: string
+      get: (
+        props: {
+          character: Character
+        },
+        ...args: string[]
+      ) => string | number | JSONValue
+      set?: (
+        props: {
+          character: Character
+          dispatch: Dispatch
+        },
+        ...args: string[]
+      ) => void | Promise<void>
+    }
+  },
+}): Promise<Dispatch>
 ```
 
 Computed properties are passed into the `initRelay` function in an object where the keys are the names of the properties, and the value should be an object containing the following:

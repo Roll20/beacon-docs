@@ -42,9 +42,9 @@ The roll method does not send or post any data to the chat on it's own. We inste
 
 ```typescript
 dispatch.post({
-    characterId:  '-O0KZhMTxLkn2HArFj8f',
-    content: `I rolled a ${diceRoll.results.attack.results.result} to hit and did ${diceRoll.results.damage.results.result} damage!`,
-  })
+  characterId:  '-O0KZhMTxLkn2HArFj8f',
+  content: `I rolled a ${diceRoll.results.attack.results.result} to hit and did ${diceRoll.results.damage.results.result} damage!`,
+})
 ```
 
 ## Additional Roll Posting Options

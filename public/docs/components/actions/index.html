@@ -44,7 +44,7 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 <meta property="og:title" content="Actions">
-<meta property="og:description" content="Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.">
+<meta property="og:description" content="initRelay({ //...other methods actions: {}, }): Promise&lt;Dispatch&gt;Actions are a collection of methods that can be executed from the Roll20 Tabletop or Roll20 Characters.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/docs/components/actions/"><meta property="og:image" content="http://localhost:1313/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-05-07T16:12:37+02:00">
@@ -52,7 +52,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/cover.png"><meta name="twitter:title" content="Actions">
-<meta name="twitter:description" content="Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button.">
+<meta name="twitter:description" content="initRelay({ //...other methods actions: {}, }): Promise&lt;Dispatch&gt;Actions are a collection of methods that can be executed from the Roll20 Tabletop or Roll20 Characters.">
 <meta name="twitter:site" content="@getdoks">
 
     
@@ -419,7 +419,21 @@
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				
 			</nav>
-			<p>Actions are a collection of methods that can be executed from the VTT. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button. Generally, most or all of a sheet’s rolls should be defined as actions.</p>
+			
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">initRelay</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//...other methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">actions</span><span class="o">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">Dispatch</span><span class="p">&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Actions are a collection of methods that can be executed from the Roll20 Tabletop or Roll20 Characters. These actions are used for any rolls that may need to be triggered outside of the sheet itself, such as from a macro or a chat button. Generally, most or all of a sheet’s rolls should be defined as actions.</p>
 
 
 
@@ -428,29 +442,27 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="p">[</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">method</span><span class="o">:</span> <span class="p">(</span><span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">dispatch</span><span class="o">:</span> <span class="nx">Dispatch</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">character</span><span class="o">:</span> <span class="nx">Character</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">messageId</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="nx">rolls</span><span class="o">?:</span> <span class="nx">RollResults</span> 
-</span></span><span class="line"><span class="cl"> <span class="p">},</span> <span class="p">...</span><span class="nx">args</span><span class="o">:</span> <span class="nx">string</span><span class="p">[])</span><span class="o">:</span> <span class="k">void</span> <span class="o">|</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">dispatch</span>: <span class="kt">Dispatch</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">character</span>: <span class="kt">Character</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">messageId?</span>: <span class="kt">string</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">rolls?</span>: <span class="kt">RollResults</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="p">...</span><span class="nx">args</span>: <span class="kt">string</span><span class="p">[])</span><span class="o">:</span> <span class="k">void</span> <span class="o">|</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Actions are passed into the  <code>initRelay</code> function in an object, where the keys are the unique names of the actions, and the values are objects containing a <code>method</code> property (additional metadata fields may be added to this object in the future).</p>
-<p>The <code>method</code> receives a <code>props</code> object containing the following properties:</p>
+<p>The action&rsquo;s <code>method</code> receives a <code>props</code> object from the host containing the following properties:</p>
 <ul>
 <li><code>dispatch</code>: A <code>Dispatch</code> object.</li>
 <li><code>character</code>: The data of the character performing the action. Currently, the action will not receive the character’s bio or GM notes, regardless of whether the player has access to those fields.</li>
 <li><code>messageId</code> (optional): A unique ID for an existing chat message. It&rsquo;s included in actions triggered from chat buttons to provide context for the original roll.</li>
 <li><code>rolls</code> (optional): Included when action is triggered from a chat button. Contains the roll results of the original roll.</li>
 </ul>
-<blockquote>
-<p>These functions can also receive an unlimited number of additional arguments. This is because these actions can be triggered by plain text via a macro. However, all additional arguments must be strings. Additionally, these functions can be synchronous or asynchronous and do not return a value.</p>
-</blockquote>
+<p>These methods can also receive an unlimited number of additional arguments. This is because these actions can be triggered by plain text via a macro. However, all additional arguments must be strings. Additionally, these methods can be synchronous or asynchronous and do not return a value.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				
