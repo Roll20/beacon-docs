@@ -1,5 +1,5 @@
 ---
-title: "Version 1.0.0"
+title: "Changelog"
 description: ""
 summary: ""
 date: 2024-01-07T16:12:37+02:00

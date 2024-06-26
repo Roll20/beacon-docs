@@ -1,5 +1,5 @@
 ---
-title: "Contributing Guide"
+title: "How to Contribute"
 description: "This is an advanced quick start sheet example. This sheet takes an advanced approach to building the Beacon sheet."
 summary: ""
 date: 2024-02-07T16:13:18+02:00
