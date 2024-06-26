@@ -16,7 +16,7 @@ seo:
   noindex: false # false (default) or true
 ---
 
-When utilizing Macros within the VTT, there are instances where a legacy macro might need to be employed for a Beacon sheet.
+When utilizing Macros within the Roll20 Tabletop, there are instances where a legacy macro might need to be employed for a Beacon sheet.
 
 This scenario commonly arises when transitioning from an existing legacy sheet to a Beacon sheet. During such transitions, it's possible that the attributes called from the legacy macro may not align with the structure of attributes in the Beacon Sheet.
 

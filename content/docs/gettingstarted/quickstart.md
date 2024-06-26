@@ -22,6 +22,13 @@ To set this sheet up properly, make sure that you have the following tools insta
 - Vite
 - SCSS
 
+{{< callout context="note" >}}
+To download the community quick start sheet, refer to these repositories:
+- [Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets)
+
+- [Quick Start Sheet](https://github.com/Roll20/roll20-beacon-sheets/tree/main/sheets/quickstart-example-sheet)
+
+{{< /callout >}}
 
 _**Figure 1**: Quickstart sheet_
 
@@ -49,11 +56,11 @@ npm run dev
 
 Once this code executes successfully, you can access the Vite server at `http://localhost:5173`.
 
-This method is useful when you do not have access to the Roll20 website or would like to work on parts of your project that do not depend on a connection to the VTT or Roll20 Characters, such as working on styling, mocking up the environment, building Vue components, testing functionality, etc. 
+This method is useful when you do not have access to the Roll20 website or would like to work on parts of your project that do not depend on a connection to the Roll20 Tabletop or Roll20 Characters, such as working on styling, mocking up the environment, building Vue components, testing functionality, etc. 
 
 
 {{< callout context="tip" >}}
-In development mode, you cannot save or access existing character data or use the Beacon SDK functions that depend on VTT or Roll20 Characters functionality, such as dice rolling and token manipulation.
+In development mode, you cannot save or access existing character data or use the Beacon SDK functions that depend on Roll20 Tabletop or Roll20 Characters functionality, such as dice rolling and token manipulation.
 {{< /callout >}}
 
 b. **Sandbox Development**: This method will run the Vite server with the port set to `7620` and the environment set to staging mode.
@@ -62,9 +69,9 @@ b. **Sandbox Development**: This method will run the Vite server with the port s
 npm run sandbox
 ```
 
-This command will build the SCSS files and then run the Vite server. This will set the server up for connecting to a VTT custom sheet sandbox as well as through the sandbox in Roll20 Characters.
+This command will build the SCSS files and then run the Vite server. This will set the server up for connecting to a Roll20 Tabletop custom sheet sandbox as well as through the sandbox in Roll20 Characters.
 
-To test your changes in the VTT custom sheet sandbox, you will need to add the following to the `sheet.json` editor in the game settings:
+To test your changes in the Roll20 Tabletop custom sheet sandbox, you will need to add the following to the `sheet.json` editor in the game settings:
 
 ```json
 {

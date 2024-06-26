@@ -40,13 +40,13 @@ These components are crucial for handling actions, computations, macros, and rol
 {{< card-grid >}}
 {{< link-card
   title="Actions"
-  description=" Actions define specific operations that can be performed by characters within the VTT. These operations can range from simple tasks like rolling a dice to more complex interactions such as casting spells or activating abilities."
+  description=" Actions define specific operations that can be performed by characters within the Roll20 Tabletop. These operations can range from simple tasks like rolling a dice to more complex interactions such as casting spells or activating abilities."
   href="/docs/components/actions/"
   target="_blank"
 >}}
 {{< link-card
   title="Handlers"
-  description="Handlers are event listeners that manage communication between the VTT and the character sheet. They respond to various events, such as changes in character attributes or settings, and trigger appropriate actions or updates."
+  description="Handlers are event listeners that manage communication between the Roll20 Tabletop and the character sheet. They respond to various events, such as changes in character attributes or settings, and trigger appropriate actions or updates."
   href="/docs/components/handlers/"
   target="_blank"
 >}}
@@ -70,7 +70,7 @@ These components are crucial for handling actions, computations, macros, and rol
 {{< card-grid >}}
 {{< link-card
   title="Rolls"
-  description="The Rolls component allows for advanced dice-rolling mechanics within the VTT. It supports both simple and complex rolls, providing flexibility in how roll results are displayed and computed."
+  description="The Rolls component allows for advanced dice-rolling mechanics within the Roll20 Tabletop. It supports both simple and complex rolls, providing flexibility in how roll results are displayed and computed."
   href="/docs/components/rolls/"
   target="_blank"
 >}}
