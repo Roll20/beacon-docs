@@ -38,29 +38,30 @@ The following steps will aid you while releasing your sheet:
 
 3. **Create a Pull Request in the Beacon Community Sheet Repo**:
 
-  In the [Beacon Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets/tree/main), create a pull request that must include the [submission checklist](https://github.com/Roll20/roll20-beacon-sheets/blob/main/.github/PULL_REQUEST_TEMPLATE.md) listed for reference below.
+    In the [Beacon Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets/tree/main), create a pull request that must include the [submission checklist](https://github.com/Roll20/roll20-beacon-sheets/blob/main/.github/PULL_REQUEST_TEMPLATE.md) listed for reference below.
 
-  The name of the pull request should... 
+    The name of the pull request should... 
       - [ ] Contain the **short name** of the sheet being submitted, and
       - [ ] State the **type of change** being submitted (New/Update/Bugfix/etc.).
     _Pull Request Title Example: Sheet/<TYPE_OF_CHANGE>/<SHEET_SHORT_NAME>_
 
-If this is the first time you are submitting this sheet to the repository, please make sure to have the following information ready.
+    If this is the first time you are submitting this sheet to the repository, please make sure to have the following information ready.
 
-- The full name of the game associated with the sheet (i.e. Dungeons & Dragons 5th Edition, The Dresden Files RPG).
-- The name of this game system/family associated with the shee (i.e. Dungeons & Dragons, FATE).
-- The publisher of the game associated with the sheet (i.e. Wizards of the Coast, Evil Hat).
+    - The full name of the game associated with the sheet (i.e. Dungeons & Dragons 5th Edition, The Dresden Files RPG).
+    - The name of this game system/family associated with the shee (i.e. Dungeons & Dragons, FATE).
+    - The publisher of the game associated with the sheet (i.e. Wizards of the Coast, Evil Hat).
 
-The information that is provided here will be used to help users find the sheet in Roll20 Tabletop and Roll20 Characters. Please make sure that all names that you provide read exactly how you'd like them to be displayed. To see example of how this information will show up, create a new game on Roll20. The name and the publisher will show up in the dropdown menu and as the title of the sheet that is selected.
+    The information that is provided here will be used to help users find the sheet in Roll20 Tabletop and Roll20 Characters. Please make sure that all names that you provide read exactly how you'd like them to be displayed. To see example of how this information will show up, create a new game on Roll20. The name and the publisher will show up in the dropdown menu and as the title of the sheet that is selected.
 
 {{< callout context="danger" >}}
   Pull requests that contain changes to files outside the sheet sub-folder on which you're working will be rejected.
 {{< /callout >}}
 
 4. **Give Specific Roll20 Users Access**:
-Before your testing sheet is finally approved, you want choose to give specific Roll20 Users access to the testing sheet. This will allow only those users to see the sheet in Roll20 Tabletop and Roll20 Characters. These users will be able to use it just like the final users will when the sheet is public. You can give access to friends, group members, or even clients and publishers you're working with.
 
-To give access to one ore more specific user's, fill out the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link). You will need the email associated with the Roll20 Account that will have access to the sheet for each person you'd like to give access.
+    Before your testing sheet is finally approved, you want choose to give specific Roll20 Users access to the testing sheet. This will allow only those users to see the sheet in Roll20 Tabletop and Roll20 Characters. These users will be able to use it just like the final users will when the sheet is public. You can give access to friends, group members, or even clients and publishers you're working with.
+
+    To give access to one ore more specific user's, fill out the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link). You will need the email associated with the Roll20 Account that will have access to the sheet for each person you'd like to give access.
 
 {{< callout context="tip" >}}
 We can always grant more people access to the sheet after it is released. Resubmit the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link) to the new people for which you'd like to give access.
@@ -70,26 +71,8 @@ We can always grant more people access to the sheet after it is released. Resubm
 
     After you create a pull request, our team will approve it and add your sheet to the sheet selection in Roll20 Tabletop and Roll20 Characters. We will then give only your Roll20 user and any others you've listed in the pull request comments access to the sheet in Roll20. This sheet will then be available for you and others with access to test it.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {{< callout context="note" >}}
 ## Submission Checklist
-
 - [ ] The Pull Request title contains the **short name** of the sheet being submitted.
 - [ ] The Pull Request title states the **type of change** being submitted (New/Update/Bugfix/etc.).
 - [ ] I have authorization from the game's publisher to make this an official sheet on Roll20 with their name attached.
@@ -108,18 +91,7 @@ If you are submitting a new sheet to the repository, please fill in any empty sp
 
 The information that is provided here will be used to help users find the sheet in Roll20 Tabletop and Roll20 Characters. Please make sure that all names that you provide read exactly how you'd like them to be displayed. To see example of where this information will show up, create a new game on Roll20. The Name and the publisher will show up in the dropdown menu and as the title of the sheet that is selected.
 
-
-
-
-
-
-
-
-
-
 Please check any that apply:
-
-
 
 # Changes / Description (optional)
 
@@ -128,26 +100,11 @@ Provide any notes relevant to this pull request here. This can include a descrip
 ## More Help
 
 Additional information for the beacon sdk can be found at the
-[Beacon SDK Documentation Site](https://roll20.github.io/beacon-docs/docs/guides/introduction/).
-
+[Beacon SDK Documentation Site](https://roll20.github.io/beacon-docs/docs/gettingstarted/introduction/).
 You can also post additional questions using the
 [Beacon Community GitHub Issues Tab](https://github.com/Roll20/roll20-beacon-sheets/issues).
 
 {{< /callout >}}
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
 
 ## Releasing a Final Version
 
