@@ -19,45 +19,31 @@ The Beacon SDK is currently in closed Beta. Please complete the [form](https://f
 Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
 {{< /callout >}}
 
-The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.
+The Beacon SDK is a Software Development Toolset (SDK) designed to allow web developers create digital TTRPG character sheets for Roll20 using modern web development tools.
  
-Whether you're a game master (GM), a developer, or a player, the Beacon SDK provides a framework to create dynamic, responsive, and fully integrated Roll20 Tabletop experiences.
+The Beacon SDK provides a framework to create dynamic, responsive, and fully integrated character sheet for both Roll20 Tabletop and Roll20 Characters.
 
 ## What is the Beacon SDK?
 
-The Beacon SDK is a specialized software development kit for virtual tabletops.
+The Beacon SDK gives you tools to easily access character data on Roll20 in your local web environment. This allows you hook up your local host to development sandboxes in Roll20 Tabletop and Roll20 Characters so you develop and test your characters in Roll20 using actual compendium and character data.
 
-It facilitates creating and managing interactive character sheets, roll templates, macros, and other Roll20 Tabletop functionalities.
-
-The SDK ensures easy communication between the Roll20 Tabletop platform and the character sheets, allowing real-time updates and interactions.
+Beacon SDK also gives you more tools to create and manage attributes that define your sheet's data structure. It helps to bypass problematic callback functions, and completely removes the need for sheetworkers from the custom sheet development method. 
 
 ## Key Features
 
-- **Character Sheets**: Design and implement detailed character sheets with dynamic attributes and real-time updates.
-- **Roll Mechanics**: Integrate complex roll formulas and display roll results directly within the Roll20 Tabletop.
-- **Macros**: Create and manage macros for automated actions and roll calculations.
-- **Event Handling**: Utilize a comprehensive set of handlers to manage various events and interactions within the Roll20 Tabletop.
+- **Develop Sheets Your Way**: Beacon allows you to use the modern web development frameworks of your choice essentially making digital character sheets out of a web applications.
+- **Roll Mechanics**: Integrate complex roll formulas and display roll results directly within Roll20 Tabletop or Roll20 Characters.
+- **Macros**: Create attributes that give players control to make macros for automated actions and roll calculations without giving them too much asses to attributes that could break their character sheet.
+- **Event Handling**: Utilize a comprehensive set of handlers to manage various events and interactions within Roll20 Tabletop.
 - **Legacy Support**: Convert and integrate legacy macros and roll templates with the new Beacon architecture.
-- **Customization**: Define custom actions computed properties and handle specific roll templates tailored to your game's needs.
-
-## Components Overview
-
-The Beacon SDK is composed of several key components:
-
-- **Actions**: Define and manage custom actions that can be triggered within the Roll20 Tabletop.
-- **Handlers**: Event handlers that process and respond to various Roll20 Tabletop events and messages.
-- **Computed Properties**: Define dynamically computed properties based on other attributes.
-- **Macro Attributes**: Convert and manage legacy macro attributes for compatibility with the Beacon SDK.
-- **Rolls**: Implement advanced roll mechanics and display results dynamically within the Roll20 Tabletop.
-
-For a comprehensive overview of these components, view the components section.
+- **Customization**: Define custom actions, computed attibutes, and handle specific roll templates tailored to your game's needs.
 
 ## Getting Started
 
-To get started with the Beacon SDK, you must initialize the relay, set up your character sheets, and define the necessary actions, handlers, and computed properties.
+To get started with the Beacon SDK, you must initialize the relay, set up your character sheets, and define the necessary actions, handlers, and computed attributes.
 
 This documentation provides detailed guides and examples to help you through each step of the process.
 
-By leveraging the Beacon SDK, you can create rich, interactive, fully integrated Roll20 Tabletop experiences that enhance gameplay and streamline game management.
+By leveraging the Beacon SDK, you can create rich, interactive, fully integrated characters sheet in Roll20 Tabletop and Roll20 Characters that enhance gameplay and streamline game management for players and GMs.
 
-Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your virtual tabletop to life.
+Whether adapting existing character sheets or building new ones from scratch, the Beacon SDK offers the tools and flexibility to bring your game to life.
