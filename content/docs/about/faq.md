@@ -14,6 +14,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 {{< details "**Q: How is Beacon better than the old way of building sheets (known as Custom Sheets)?**" >}}
 
 It depends on your web development skill level. There are a number of benefits to the Beacon SDK if you know how to build web applications. If you don't know how to set up your own local environment, than the Beacon SDK might now be the first place you should start. [Learn more about sheet development using the custom sheet](https://help.roll20.net/hc/en-us/articles/360037773413-Intro-to-Sheet-Development).

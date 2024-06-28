@@ -16,6 +16,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 When utilizing Macroswithin the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page), there are instances where a legacy macro might need to be employed for a Beacon sheet.
 
 This scenario commonly arises when transitioning from an existing legacy sheet to a Beacon sheet. During such transitions, it's possible that the attributes or roll templates called from the legacy macro may not align with the structure of attributes or the lack of roll templates in the Beacon Sheet.

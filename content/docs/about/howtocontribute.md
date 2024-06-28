@@ -14,88 +14,40 @@ seo:
   noindex: false # false (default) or true
 ---
 
-We appreciate your interest in contributing to the Beacon SDK project. Here are some guidelines to help you get started:
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
 
-## How to Contribute
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
+We strive to make the Beacon SDK and its documentation a better tool for Community Sheet Developers like you! So before we get started, thank you for helping us make them the best they can be. It is no small task supporting all games with the best digital character sheets, but with your help, players around the world will can use awesome characeter sheets for their favorite games.
 
 ### Reporting Bugs
 
-If you find a bug, please report it by opening an issue in the GitHub repository. Provide as much detail as possible to help us understand and reproduce the issue.
+If you find a bug with the Beacon SDK, and you want to report it, thank you. There are several ways you can go about reporting it. Feel free to choose the easiest for you. Most importantly, we want you to let us know so we can fix them. 
+
+1. You can create an issue on the [Beacon Documentation Github Repo](https://github.com/Roll20/beacon-docs/issues).
+2. You can create an issue on the [Beacon Community Sheets Repo](https://github.com/Roll20/roll20-beacon-sheets/issues).
+3. You can let us know in the [Community Sheet Developers Discord Channels](https://discord.gg/RollThru). Make sure to fill out a [Beta Sign up form(https://docs.google.com/forms/d/e/1FAIpQLScwIAc38NhSTYBtZH04pkDj9O7APwysdgsRnVssFNhsoONOUw/viewform?usp=sf_link)] before joining the Discord.
+4. You can submit a [Roll20 Help Ticket](https://help.roll20.net/hc/en-us/requests/new?ticket_form_id=1500000234201) where our support staff and make sure we get the information.
+
+When you submit a bug report, it's most helpful for you to include steps that will reliably reproduce the bug. If you don't have those, that's fine too. The most important thing is to report it. We'll work with you to figure out how we can reproduce and fix the bug.
+
+Ultimately, our team manages our sprint work with an internal tool. No matter which method you use to report the issue, we'll create a companion ticket in our internal tool and link it to your original report. This is why if we have questions, we can find your report, and when we're done, we can let you know that it has been fixed.
 
 ### Suggesting Features
 
-We welcome suggestions for new features. Please open an issue in the GitHub repository with a detailed description of the feature you would like to see and why you think it would be useful.
+If you have an idea of a feature that we should add to make things easier for you or others, please let us know! Here are a few ways that you can choose from to let us know.
 
-### Code Contributions
+1. You can create an issue on the [Beacon Documentation Github Repo](https://github.com/Roll20/beacon-docs/issues).
+2. You can create an issue on the [Beacon Community Sheets Repo](https://github.com/Roll20/roll20-beacon-sheets/issues).
+3. You can let us know in the [Community Sheet Developers Discord Channels](https://discord.gg/RollThru). Make sure to fill out a [Beta Sign up form(https://docs.google.com/forms/d/e/1FAIpQLScwIAc38NhSTYBtZH04pkDj9O7APwysdgsRnVssFNhsoONOUw/viewform?usp=sf_link)] before joining the Discord.
+4. You can schedule a meeting with Andrew and/or Alice directly to talk about it and give him the opportunity to ask questions about it.
 
-1. **Fork the Repository**: Create a personal fork of the project on GitHub.
+Ultimately, we want to hear what is particularly painful and time consuming for you so we can work to make it easier for you to create awesome digtial character sheets for the games you love.
 
-2. **Clone the Fork**: Clone your fork to your local machine.
+### Code Contributions to the Beacon SDK Documentation
 
-    ```bash
-    git clone 
-    ```
+Our goal it to build this site into the single source of information for Community Sheet Developers. The task of documenting everything will take time and iteration. If you find something in the documention that is wrong or needs to be updated, please let us know! You are also welcome to make a pull request of the [Beacon SDK Documentation Repo](https://github.com/Roll20/beacon-docs/pulls), update the files, and commit your changes. We'll review and publish them on a regular basis.
 
-3. **Create a Branch**: Create a new branch for your work.
-
-    ```bash
-    git checkout -b feature-or-bugfix-description
-    ```
-
-4. **Make Changes**: Make your changes to the codebase. Follow the existing code style and conventions.
-
-5. **Run Tests**: Ensure that all tests pass before submitting your changes.
-
-    ```bash
-    npm run ci-check
-    ```
-
-6. **Commit Changes**: Commit your changes with a descriptive commit message.
-
-    ```bash
-    git commit -m "Description of your changes"
-    ```
-
-7. **Push Changes**: Push your changes to your fork.
-
-    ```bash
-    git push origin feature-or-bugfix-description
-    ```
-
-8. **Create a Pull Request**: Open a pull request from your fork to the main repository. Provide a detailed description of your changes and why they should be merged.
-
-### Running Tests
-
-- **Unit Tests**: Run unit tests with Vitest.
-
-    ```bash
-    npm run test:unit
-    ```
-
-- **End-to-End Tests**: Run End-to-End tests with Cypress.
-
-    ```bash
-    npm run test:e2e
-    ```
-
-### Code Style
-
-- Follow the existing code style and conventions.
-- Use ESLint for linting.
-
-    ```bash
-    npm run lint
-    ```
-
-- Format code with Prettier.
-
-    ```bash
-    npm run format
-    ```
-
-## Communication
-
-- **GitHub Issues**: Use GitHub issues for bug reports, feature requests, and questions.
-- **Pull Requests**: Use GitHub pull requests to submit your code contributions.
-
-Thank you for contributing to the Beacon SDK project!
+When you do submit a pull request, thank you for helping us make the Beacon SDK project better!
