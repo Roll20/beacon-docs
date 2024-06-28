@@ -15,6 +15,13 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 Handler methods allow the sheet to respond to data passed from the Roll20 Tabletop or Roll20 Characters (both refered to as host throughout this page) to the sheet. It is the main agrument that must be passed into `initRelay` or the sheet will never fully load.
 
 ```typescript

@@ -15,6 +15,13 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 The Roll20 Tabletop and Roll20 Characters (both refered to as host throughout the rest of this page) have several new features that enhance the way rolls are handled and displayed. These features include attributes and elements that allow for dynamic roll results and interactivity within the host.
 [Vist the Roll20 help center to learn more about Roll20's Dice Rolling system](https://help.roll20.net/hc/en-us/articles/360037773133-Dice-Reference)
 

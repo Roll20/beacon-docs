@@ -13,6 +13,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 ## Prerequisites
 
 To set this sheet up properly, make sure that you have the following tools installed:

@@ -13,6 +13,13 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 There are two ways you can publish a Beacon sheet. 
 1. You can publish a testing verison of the sheet privately and give specific Roll20 users access to it on Roll20 Characters and Roll20 Tabletop, or
 2. You can submit a request to publish your sheet publicly for all users on Roll20 Characters and Roll20 Tabletop to have access.

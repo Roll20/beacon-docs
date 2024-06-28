@@ -15,6 +15,13 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 The Beacon SDK is composed of various methods and components that allow developers to create dynamic and interactive character sheets for virtual tabletop (VTT) games. `initRelay` is the main method that initializes the Beacon SDK communication channel with the host (Either the Roll20 tabletop or in Roll20 Characters). It should be initialized as soon as the sheet loads, as its `onInit` handler will be the earliest we can get access to that character's data.
 
 ```typescript

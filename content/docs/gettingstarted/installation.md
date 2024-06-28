@@ -14,6 +14,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
+
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
+{{< /callout >}}
+
 This installation guide is designed for sheet developers with experience in web development, that want to start creating a character sheet from scratch or already have an existing project they wish to add Beacon to. 
 
 {{< callout context="tip" >}}

@@ -13,12 +13,10 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-{{< callout context="caution" title="This project is currently in closed beta. " icon="outline/alert-triangle"  >}}
-Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to request access to the closed beta.
+{{< callout context="tip" title="Join the Closed Beta" icon="outline/rocket" >}}
+The Beacon SDK is currently in closed Beta. Please complete the [form](https://forms.gle/XXnj1SbfmYnUq8Hu9) to sign up for the closed beta.
 
-For more info about the release of the closed beta, refer to this [document](
-https://docs.google.com/document/d/1lVXp2TKb5gof-6hXvjWgQ7Zo09LZlorBoyjv5un8IeU/edit?usp=sharing)
-
+Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet, the community sheet developers in discord, and the new sheet developer Roll20 permissions.
 {{< /callout >}}
 
 The Beacon SDK is a toolset designed to enhance and streamline the development of virtual tabletop (VTT) character sheets and other interactive elements.
