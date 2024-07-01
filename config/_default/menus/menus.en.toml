@@ -70,7 +70,7 @@
 
 [[footer]]
   name = "Privacy Policy"
-  url = "/privacy/"
+  url = "https://help.roll20.net/hc/en-us/articles/360037770793-Terms-of-Service-and-Privacy-Policy"
   weight = 10
 
 # [[footer]]
