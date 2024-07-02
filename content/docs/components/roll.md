@@ -25,7 +25,7 @@ Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet,
 The Roll20 Tabletop and Roll20 Characters (both refered to as host throughout the rest of this page) have several new features that enhance the way rolls are handled and displayed. These features include attributes and elements that allow for dynamic roll results and interactivity within the host.
 [Vist the Roll20 help center to learn more about Roll20's Dice Rolling system](https://help.roll20.net/hc/en-us/articles/360037773133-Dice-Reference)
 
-The most command way to trigger a dice roll is through the dispatch object returned from the `initRelay`, but it could also be called from [actions](/docs/components/actions):
+The most command way to trigger a dice roll is through the dispatch object returned from the `initRelay`, but it could also be called from [actions](/beacon-docs/docs/components/actions):
 ```typescript
 dispatch.roll({
   rolls: { [rollName: string]: string } // Ex. {attack: '1d20+4', damage: `3d6+2`}
@@ -45,7 +45,7 @@ The dispatch roll method and the actions roll section do not post to the chat, i
 
 ## Posting A Roll to the Chat
 
-The roll method does not send or post any data to the chat on it's own. We instead have to use  [dispatch's post](/docs/components/dispatch/#post) method to send our roll results along with any other content to the chat.
+The roll method does not send or post any data to the chat on it's own. We instead have to use  [dispatch's post](/beacon-docs/docs/components/dispatch/#post) method to send our roll results along with any other content to the chat.
 
 ```typescript
 dispatch.post({

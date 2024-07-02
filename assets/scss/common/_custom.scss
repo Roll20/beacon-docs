@@ -8,3 +8,7 @@ a.CTAbutton {
     color: var(--sl-color-gray-1);
     text-transform: uppercase;
 }
+
+#searchToggleDesktop, #searchToggleMobile, button[data-bs-target="#offcanvasNavMain"] {
+    display: none !important;
+}
