@@ -41,40 +41,40 @@ The following steps will aid you while releasing your sheet. These steps assume 
 
 ### Step 1: Create a build command.
 
-    You must have a build command that will produce the minified production-ready code for the sheet. The build command must be able to create these exact files:
+You must have a build command that will produce the minified production-ready code for the sheet. The build command must be able to create these exact files:
 
-    - `sheet.js`
-    - `sheet.css`
-    - `host.css` (optional) - _Used for sheet rolls made to chat (roll templates)._
-    - an Image Folder (optional) - _Used to contain fonts and images used in the sheet._
+- `sheet.js`
+- `sheet.css`
+- `host.css` (optional) - _Used for sheet rolls made to chat (roll templates)._
+- an Image Folder (optional) - _Used to contain fonts and images used in the sheet._
 
-    We will use this build command to get these sheet files to use for your sheet. Make sure to test these files locally first before moving to Step 3.
+We will use this build command to get these sheet files to use for your sheet. Make sure to test these files locally first before moving to Step 3.
 
-    Build commands will vary depending on the build tools you use. This can vary from framework to framework. For the quickstart and example sheet, we use [Vite](https://vitejs.dev/). Here is a [video](https://www.youtube.com/watch?v=VAeRhmpcWEQ) that can help you get started.
+Build commands will vary depending on the build tools you use. This can vary from framework to framework. For the quickstart and example sheet, we use [Vite](https://vitejs.dev/). Here is a [video](https://www.youtube.com/watch?v=VAeRhmpcWEQ) that can help you get started.
 
 ### Step 2: Add a `sheet.json` file to your project.
 
-    The `sheet.json` file holds the metadata about your sheet. We use this information to display the sheet modal in Roll20 Characters and we should it to the user when they are creating a game on Roll20 Tabletop.
+The `sheet.json` file holds the metadata about your sheet. We use this information to display the sheet modal in Roll20 Characters and we should it to the user when they are creating a game on Roll20 Tabletop.
 
-    Add a `sheet.json` file to your sheet folder. Each time you release your sheet, make sure this information is up-to-date.
+Add a `sheet.json` file to your sheet folder. Each time you release your sheet, make sure this information is up-to-date.
     
-    ```
-      {
-        "advanced": true,
-        "authors": "CSC",
-        "roll20userid": "",
-        "preview": "",
-        "compendium": "",
-        "useroptions": [],
-        "instructions": "Example Beacon Community Sheet",
-        "legacy": false,
-        "tags": ""
-      }
+```
+{
+  "advanced": true,
+  "authors": "CSC",
+  "roll20userid": "",
+  "preview": "",
+  "compendium": "",
+  "useroptions": [],
+  "instructions": "Example Beacon Community Sheet",
+  "legacy": false,
+  "tags": ""
+}
 
-    ```
-    This example comes from the `sheet.json` for the [Quickstart sheet](https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/sheet.json).
+```
+This example comes from the `sheet.json` for the [Quickstart sheet](https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/sheet.json).
     
-    Use this table to better understand your options as you setup your own `sheet.json` file.
+Use this table to better understand your options as you setup your own `sheet.json` file.
 
 | Key             | Format and Options | Description | Required? |
 | --------------- | --- | --- | --- |
@@ -92,25 +92,25 @@ The following steps will aid you while releasing your sheet. These steps assume 
 | `patreon`       | `URL` | Place the URL for a Patreon campaign here, and it will appear under your sheet's description. | No |
 | `tipee`         | `URL` | Place the URL for a Tipeee here, and it will appear under your sheet's description | No |
     
-    You can find more information about the sheet.json used for custom sheets on the [Roll20 Wiki](https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/package.json). 
+You can find more information about the sheet.json used for custom sheets on the [Roll20 Wiki](https://github.com/Roll20/roll20-beacon-sheets/blob/main/sheets/quickstart-example-sheet/package.json). 
 
 ### Step 3: Create a pull request in the Beacon Community Sheet repo.
 
-    In the [Beacon Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets/tree/main), create a pull request that must include the [submission checklist](https://github.com/Roll20/roll20-beacon-sheets/blob/main/.github/PULL_REQUEST_TEMPLATE.md) listed for reference below.
+In the [Beacon Community Sheet Repo](https://github.com/Roll20/roll20-beacon-sheets/tree/main), create a pull request that must include the [submission checklist](https://github.com/Roll20/roll20-beacon-sheets/blob/main/.github/PULL_REQUEST_TEMPLATE.md) listed for reference below.
 
-    The name of the pull request should... 
-      - [ ] Contain the **short name** of the sheet being submitted, and
-      - [ ] State the **type of change** being submitted (New/Update/Bugfix/etc.).
-    _Pull Request Title Example: Sheet/<TYPE_OF_CHANGE>/<SHEET_SHORT_NAME>_
+The name of the pull request should... 
+  - [ ] Contain the **short name** of the sheet being submitted, and
+  - [ ] State the **type of change** being submitted (New/Update/Bugfix/etc.).
+_Pull Request Title Example: Sheet/<TYPE_OF_CHANGE>/<SHEET_SHORT_NAME>_
 
-    If this is the first time you are submitting this sheet to the repository, please make sure to have the following information ready.
+If this is the first time you are submitting this sheet to the repository, please make sure to have the following information ready.
 
-    - The full name of the game associated with the sheet (i.e. Dungeons & Dragons 5th Edition, The Dresden Files RPG).
-    - The name of the game system/family associated with the sheet (i.e. Dungeons & Dragons, FATE).
-    - The publisher of the game associated with the sheet (i.e. Wizards of the Coast, Evil Hat).
-    - The a URL address of where the game rules can be purchased/downloaded/found.
+- The full name of the game associated with the sheet (i.e. Dungeons & Dragons 5th Edition, The Dresden Files RPG).
+- The name of the game system/family associated with the sheet (i.e. Dungeons & Dragons, FATE).
+- The publisher of the game associated with the sheet (i.e. Wizards of the Coast, Evil Hat).
+- The a URL address of where the game rules can be purchased/downloaded/found.
 
-    The information that is provided here will be used to help users find the sheet in Roll20 Tabletop and Roll20 Characters. Please make sure that all names that you provide read exactly how you'd like them to be displayed. To see an example of how this information will show up, create a new game on Roll20. The name and the publisher will show up in the dropdown menu and as the title of the sheet that is selected.
+The information that is provided here will be used to help users find the sheet in Roll20 Tabletop and Roll20 Characters. Please make sure that all names that you provide read exactly how you'd like them to be displayed. To see an example of how this information will show up, create a new game on Roll20. The name and the publisher will show up in the dropdown menu and as the title of the sheet that is selected.
 
 {{< callout context="danger" >}}
   Pull requests that contain changes to files outside the sheet sub-folder on which you're working will be rejected.
@@ -118,9 +118,9 @@ The following steps will aid you while releasing your sheet. These steps assume 
 
 ### Step 4: Give specific Roll20 users access.
 
-    Before your testing sheet is finally approved, you want choose to give specific Roll20 Users access to the testing sheet. This will allow only those users to see the sheet in Roll20 Tabletop and Roll20 Characters. These users will be able to use it just like the final users will when the sheet is public. You can give access to friends, group members, or even clients and publishers you're working with.
+Before your testing sheet is finally approved, you want choose to give specific Roll20 Users access to the testing sheet. This will allow only those users to see the sheet in Roll20 Tabletop and Roll20 Characters. These users will be able to use it just like the final users will when the sheet is public. You can give access to friends, group members, or even clients and publishers you're working with.
 
-    To give access to one ore more specific user's, fill out the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link). You will need the email associated with the Roll20 Account that will have access to the sheet for each person you'd like to give access.
+To give access to one ore more specific user's, fill out the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link). You will need the email associated with the Roll20 Account that will have access to the sheet for each person you'd like to give access.
 
 {{< callout context="tip" >}}
 We can always grant more people access to the sheet after it is released. Resubmit the [Beacon Sheet Access Form](https://docs.google.com/forms/d/e/1FAIpQLSdaVl_RSMdZ5Rv_Q1gIK2wtNIHd6CibhOZGdQWo833k-z9Jdg/viewform?usp=sf_link) to the new people for which you'd like to give access.
@@ -128,7 +128,7 @@ We can always grant more people access to the sheet after it is released. Resubm
     
 ### Step 5: Wait for approval and access.
 
-    After you create a pull request, our team will approve it and add your sheet to the sheet selection in Roll20 Tabletop and Roll20 Characters. We will then give only your Roll20 user and any others you've listed in the pull request comments access to the sheet in Roll20. This sheet will then be available for you and others with access to test it.
+After you create a pull request, our team will approve it and add your sheet to the sheet selection in Roll20 Tabletop and Roll20 Characters. We will then give only your Roll20 user and any others you've listed in the pull request comments access to the sheet in Roll20. This sheet will then be available for you and others with access to test it.
 
 {{< callout context="note" >}}
 ## Submission Checklist
