@@ -1,1 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://roll20.github.io/beacon-docs/docs/components/initrelay/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/actions/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/computed/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/handlers/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/rolls/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/dispatch/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url><url><loc>https://roll20.github.io/beacon-docs/docs/components/handling-legacy-methods/</loc><lastmod>2023-09-07T16:12:37+02:00</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/initrelay/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/actions/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/computed/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/handlers/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/rolls/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/dispatch/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://roll20.github.io/beacon-docs/docs/components/handling-legacy-methods/</loc>
+      <lastmod>2023-09-07T16:12:37+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>
