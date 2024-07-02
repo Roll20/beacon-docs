@@ -1,1 +1,10 @@
 // Put your custom SCSS code here
+a.CTAbutton {
+    background-color: var(--sl-color-purple-low);
+    display: inline-block;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--sl-color-gray-1);
+    text-transform: uppercase;
+}
