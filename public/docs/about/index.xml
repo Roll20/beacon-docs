@@ -1,41 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>About on </title>
-    <link>https://roll20.github.io/beacon-docs/docs/about/</link>
-    <description>Recent content in About on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>Copyright (c) 2020-2024 Beacon SDK</copyright>
-    <lastBuildDate>Sat, 07 Sep 2024 16:13:18 +0200</lastBuildDate>
-    <atom:link href="https://roll20.github.io/beacon-docs/docs/about/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>FAQ</title>
-      <link>https://roll20.github.io/beacon-docs/docs/about/faq/</link>
-      <pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate>
-      <guid>https://roll20.github.io/beacon-docs/docs/about/faq/</guid>
-      <description>Join the Closed Beta&#xA;The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description>
-    </item>
-    <item>
-      <title>Glossary</title>
-      <link>https://roll20.github.io/beacon-docs/docs/about/glossary/</link>
-      <pubDate>Thu, 07 Mar 2024 16:04:48 +0200</pubDate>
-      <guid>https://roll20.github.io/beacon-docs/docs/about/glossary/</guid>
-      <description>Join the Closed Beta&#xA;The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description>
-    </item>
-    <item>
-      <title>How to Contribute</title>
-      <link>https://roll20.github.io/beacon-docs/docs/about/how-to-contribute/</link>
-      <pubDate>Wed, 07 Feb 2024 16:13:18 +0200</pubDate>
-      <guid>https://roll20.github.io/beacon-docs/docs/about/how-to-contribute/</guid>
-      <description>Join the Closed Beta&#xA;The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description>
-    </item>
-    <item>
-      <title>Changelog</title>
-      <link>https://roll20.github.io/beacon-docs/docs/about/changelog/</link>
-      <pubDate>Sun, 07 Jan 2024 16:12:37 +0200</pubDate>
-      <guid>https://roll20.github.io/beacon-docs/docs/about/changelog/</guid>
-      <description>Release Date: 2024-07-1&#xA;New Features Closed Beta Released. Sign up to get access to Beacon SDK and Roll20 Sandboxes </description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>About on</title><link>https://roll20.github.io/beacon-docs/docs/about/</link><description>Recent content in About on</description><generator>Hugo</generator><language>en</language><copyright>Copyright (c) 2020-2024 Beacon SDK</copyright><lastBuildDate>Sat, 07 Sep 2024 16:13:18 +0200</lastBuildDate><atom:link href="https://roll20.github.io/beacon-docs/docs/about/index.xml" rel="self" type="application/rss+xml"/><item><title>FAQ</title><link>https://roll20.github.io/beacon-docs/docs/about/faq/</link><pubDate>Sun, 07 Jan 2024 16:04:48 +0200</pubDate><guid>https://roll20.github.io/beacon-docs/docs/about/faq/</guid><description>Join the Closed Beta
+The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description></item><item><title>Glossary</title><link>https://roll20.github.io/beacon-docs/docs/about/glossary/</link><pubDate>Thu, 07 Mar 2024 16:04:48 +0200</pubDate><guid>https://roll20.github.io/beacon-docs/docs/about/glossary/</guid><description>Join the Closed Beta
+The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description></item><item><title>How to Contribute</title><link>https://roll20.github.io/beacon-docs/docs/about/how-to-contribute/</link><pubDate>Wed, 07 Feb 2024 16:13:18 +0200</pubDate><guid>https://roll20.github.io/beacon-docs/docs/about/how-to-contribute/</guid><description>Join the Closed Beta
+The Beacon SDK is currently in closed Beta. Please complete the form to sign up for the closed beta.</description></item><item><title>Changelog</title><link>https://roll20.github.io/beacon-docs/docs/about/changelog/</link><pubDate>Sun, 07 Jan 2024 16:12:37 +0200</pubDate><guid>https://roll20.github.io/beacon-docs/docs/about/changelog/</guid><description>Release Date: 2024-07-1
+New Features Closed Beta Released. Sign up to get access to Beacon SDK and Roll20 Sandboxes</description></item></channel></rss>

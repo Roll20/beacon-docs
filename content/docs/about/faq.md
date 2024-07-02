@@ -83,9 +83,9 @@ Roll buttons are HTML elements with specific attributes that execute designated 
 
 
 
-{{< details "**Q: How are legacy attributes handled in Beacon?**" >}}
+{{< details "**Q: How are Custom Sheet attributes handled in Beacon?**" >}}
 
-Beacon gives you the ability to transition your legacy attributes to new attributes you create in Beacon. This means that when a user updates their sheet to the new Beacon sheet, their legacy attribute can be mapped to Beacon attributes using the `convertLegacyMacroAttributes` function. Sheet developers can define how to handle legacy attribute values to ensure compatibility with existing macros.
+Beacon gives you the ability to transition your Custom Sheet attributes to new attributes you create in Beacon. This means that when a user updates their sheet to the new Beacon sheet, their Custom Sheet attribute can be mapped to Beacon attributes using the `convertLegacyMacroAttributes` function. Sheet developers can define how to handle Custom Sheet attribute values to ensure compatibility with existing macros.
 {{< /details >}}
 
 
@@ -103,7 +103,7 @@ Tokens represent characters or objects on Roll20 Tabletop (VTT). Functions like 
 
 {{< details "**Q: What is the role of the convertLegacyMacroAttributesArgs type?**" >}}
 
-The `convertLegacyMacroAttributesArgs` type defines the arguments used for handling legacy macro attributes. It includes the attribute name, character ID, and character data needed for mapping legacy attributes to the new sheet structure.
+The `convertLegacyMacroAttributesArgs` type defines the arguments used for handling Custom Sheet macro attributes. It includes the attribute name, character ID, and character data needed for mapping Custom Sheet attributes to the new sheet structure.
 {{< /details >}}
 
 

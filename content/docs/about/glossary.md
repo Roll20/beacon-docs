@@ -33,7 +33,7 @@ A digital or printed page used to track a character's attributes, abilities, and
 Properties that have both get and set methods, which can be dynamically calculated.
 
 ## ConvertLegacyMacroAttributes: 
-A function to handle mapping legacy macro attributes to the new Beacon Sheet format.
+A function to handle mapping Custom Sheet macro attributes to the new Beacon Sheet format.
 
 ## Dispatch: 
 A set of functions enabling the sheet to send commands back to the VTT.
