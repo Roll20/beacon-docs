@@ -1,5 +1,5 @@
 title = ""
-baseurl = "https://roll20.github.io/beacon-docs"
+baseURL = "https://roll20.github.io/beacon-docs"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
