@@ -1,5 +1,5 @@
-title = ""
-baseURL = "https://roll20.github.io/beacon-docs"
+title = "The Beacon SDK by Roll20"
+baseurl = "http://localhost/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -17,7 +17,7 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2020-2024 Beacon SDK"
+copyRight = "Copyright (c) Roll20, LLC"
 
 [build.buildStats]
   enable = true

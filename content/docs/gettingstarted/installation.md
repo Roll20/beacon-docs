@@ -56,7 +56,7 @@ This will install the Beacon SDK package to your project's `package.json` file.
 
 The Beacon package exports various utilities you can use in your application. The main one that needs to be setup to enable the connection between Beacon SDK and Roll20 is `initRelay`. 
 
-Ideally you would want to call this when your sheet is initalizing, and it is the function where you will define sheet actions, computed values, and how the sheet will response to or send character data changes.  [visit the initRelay page for a more detailed breakdown.](/beacon-docs/docs/components/initrelay/)
+Ideally you would want to call this when your sheet is initalizing, and it is the function where you will define sheet actions, computed values, and how the sheet will response to or send character data changes.  [visit the initRelay page for a more detailed breakdown.](/docs/components/initrelay/)
 
 Add the following to your project: 
 ```javascript
@@ -77,7 +77,7 @@ const dispatch = initRelay({
 })
 ```
 
-`initRelay` returns a dispatch function that allows you to call methods or send changes from the sheet to Roll20. Check out the page on [dispatch](/beacon-docs/docs/components/dispatch/) to learn more about the different methods.
+`initRelay` returns a dispatch function that allows you to call methods or send changes from the sheet to Roll20. Check out the page on [dispatch](/docs/components/dispatch/) to learn more about the different methods.
 
 ## Step 3: Settings up the Roll20 tabletop sandbox
 

@@ -48,13 +48,13 @@ These components are crucial for handling actions, computations, macros, and rol
 {{< link-card
   title="Actions"
   description=" Actions define specific operations that can be performed by characters within the Roll20 Tabletop. These operations can range from simple tasks like rolling a dice to more complex interactions such as casting spells or activating abilities."
-  href="/beacon-docs/docs/components/actions/"
+  href="/docs/components/actions/"
   target="_blank"
 >}}
 {{< link-card
   title="Handlers"
   description="Handlers are event listeners that manage communication between the Roll20 Tabletop and the character sheet. They respond to various events, such as changes in character attributes or settings, and trigger appropriate actions or updates."
-  href="/beacon-docs/docs/components/handlers/"
+  href="/docs/components/handlers/"
   target="_blank"
 >}}
 {{< /card-grid >}}
@@ -63,13 +63,13 @@ These components are crucial for handling actions, computations, macros, and rol
 {{< link-card
   title="Computed"
   description=" Computed properties are dynamic values derived from other character attributes. They allow for the creation of complex, calculated attributes that automatically update when their dependencies change."
-  href="/beacon-docs/docs/components/computed/"
+  href="/docs/components/computed/"
   target="_blank"
 >}}
 {{< link-card
   title="Custom Sheet Macro Attributes"
   description="Macro attributes handle the conversion of older Custom Sheet macro attributes to the new format used in the Beacon SDK. This ensures compatibility with older character sheets and macros, allowing for a smooth transition to the new system."
-  href="/beacon-docs/docs/components/custom-sheet-macro-attributes/"
+  href="/docs/components/custom-sheet-macro-attributes/"
   target="_blank"
 >}}
 {{< /card-grid >}}
@@ -78,14 +78,14 @@ These components are crucial for handling actions, computations, macros, and rol
 {{< link-card
   title="Rolls"
   description="The Rolls component allows for advanced dice-rolling mechanics within the Roll20 Tabletop. It supports both simple and complex rolls, providing flexibility in how roll results are displayed and computed."
-  href="/beacon-docs/docs/components/rolls/"
+  href="/docs/components/rolls/"
   target="_blank"
 >}}
 
 {{< link-card
   title="Dispatch"
   description="The dispatch object provides methods for sending commands from the character sheet back to the host. Except when specified every method returns a promise."
-  href="/beacon-docs/docs/components/dispatch/"
+  href="/docs/components/dispatch/"
   target="_blank"
 >}}
 {{< /card-grid >}}
