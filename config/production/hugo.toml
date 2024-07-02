@@ -1,2 +1,2 @@
 # Overrides for production environment
-baseURL  = "https://roll20.github.io/beacon-docs/"
+baseURL  = "https://roll20.github.io/beacon-docs"
