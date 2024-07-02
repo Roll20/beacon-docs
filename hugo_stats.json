@@ -53,6 +53,7 @@
       "ul"
     ],
     "classes": [
+      "CTAbutton",
       "active",
       "anchor",
       "bg-dots",
