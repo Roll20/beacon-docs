@@ -36,7 +36,7 @@ initRelay({
     attribute: string,
     characterId: string,
     character: Character
-  }) => {}: any,
+  }) => {}: string | number | null,
 }): Promise<Dispatch>
 ``` 
 
@@ -46,7 +46,11 @@ This method is defined during the initial SDK initialization process and is invo
 Advanced sheet actions typically will first search through the defined computed properties before resorting to the `convertLegacyMacroAttributes` method as a fallback.
 {{< /callout >}}
 
-The method's purpose is to return a value that will be substituted in the macro. However, it grants us the autonomy to devise the preferred approach for handling older Custom Sheet attribute values.
+The method's purpose is to return a value that will be substituted in the macro. However, it grants us the autonomy to devise the preferred approach for handling older Custom Sheet attribute values. 
+
+{{< callout context="danger" >}}
+Returning a `null` value will display the following error message to the user: `Unable to find attribute with the name ${attribute}`
+{{< /callout >}}
 
 ## handleLegacyRollTemplates
 
