@@ -46,6 +46,7 @@ You must have a build command that will produce the minified production-ready co
 - `sheet.js`
 - `sheet.css`
 - `host.css` (optional) - _Used for sheet rolls made to chat (roll templates)._
+- `worker.js` (optional) - _Enables Mod (API) Script integration. Read more [here](/docs/components/modApi)_
 - an Image Folder (optional) - _Used to contain fonts and images used in the sheet._
 
 We will use this build command to get these sheet files to use for your sheet. Make sure to test these files locally first before moving to Step 3.
