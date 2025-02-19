@@ -43,7 +43,7 @@ To download the community quick start sheet, refer to these repositories:
 
 _**Figure 1**: Advanced sheet_
 
-This sheet uses the same steps listed in the . Immediately after implementing those three steps, you'll add the following step:
+This sheet uses the same steps listed in the [Quick Start Sheet](https://github.com/Roll20/roll20-beacon-sheets/tree/main/sheets/quickstart-example-sheet). Immediately after implementing the first three steps, you'll add the following step:
 
 - **Run a CI check**: This will run several checks to ensure your code is as optimal as possible, including formatting, linting, type checking, unit tests, and end-to-end tests.
 
