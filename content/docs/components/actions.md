@@ -54,3 +54,36 @@ The action's `method` receives a `props` object from the host containing the fol
 - `rolls` (optional): Included when action is triggered from a chat button. Contains the roll results of the original roll.
 
 These methods can also receive an unlimited number of additional arguments. This is because these actions can be triggered by plain text via a macro. However, all additional arguments must be strings. Additionally, these methods can be synchronous or asynchronous and do not return a value.
+
+### addMacrosToHost
+`addMacrosToHost` can be used to add the actions defined in initRelay above to either the macro bar or the token action bar. An example of this would be adding pre-defined actions to the token action bar for NPC characters or removing macros when types of 
+
+###### Example:
+Assuming we have an action called "targeted_strength_check" that compares the npc character's strength vs a targeted token. We can add it to the token's action bar as well as the Character Macros tab with the following:
+
+```javascript
+dispatch.addMacrosToHost({
+  macro: {
+    id: 'npc_strength_check1',
+    name: npc_strength_check,
+    characterId: '20kdk1-k3j',
+    commandString?: `@{20kdk1-k3j|targeted_strength_check}`,
+    locations: ['tokenActionBar']
+  }
+})
+```
+
+![targeted_strength_check](images/addMacroToHost_npc_example.png)
+
+In a similar way we can remove it from the token action bar using `addMacrosToHost`, if for example our NPC changes and we want to reflect that in it's token actions by running the following:
+
+```javascript
+dispatch.addMacrosToHost({
+  macro: {
+    id: 'npc_strength_check1',
+  }
+})
+```
+
+The above will remove the `npc_strength_check1` action from the token bar but will still leave it in the Character Macros page:
+ ![targeted_strength_check](images/addMacroToHost_npc_example02.png)

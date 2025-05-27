@@ -182,34 +182,47 @@ dispatch.addToTracker({
 ```
 `addToTracker` adds or updates a single item in the turn tracker. Passing in a tokenId will add the specified token to the tracker, while passing in custom with a name and an optional image url (img) will add a custom item, not connected to any character or token. A round calculation string can be added via the optional formula parameter. value is the initiative number for the item.
 
-#### addActionsToHost
+#### addMacrosToHost
 ```javascript
-dispatch.addActionsToHost({
-  sheetAction?: {
-    characterId: string
-    action: string
+dispatch.addMacrosToHost({
+  macro: {
+    id?: string
+    name?: string
+    characterId?: string
+    commandString?: string
     args?: string[]
+    locations?: ['macroBar'] | ['tokenActionBar'] | ['macroBar', 'tokenActionBar']
   }
-  action?: string
-  locations?: ['macroBar'] | ['tokenActionBar'] | ['macroBar', 'tokenActionBar']
-  actionId?: string
-  name: string
   requestId?: string
 }): void
 ```
-`addActionsToHost` adds a specific action(macro) to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. Either sheetAction or action can be passed in but not both at the same time. The sheetAction arg should be passed in when an the action is to designated to a character. While the action arg should be passed in when the action is more generic.
+`addMacrosToHost` previously `addActionsToHost`, adds a specific macro command to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. 
 
-#### getActions
+Most things can be omitted like the `id` however atleast a `name` and `commmandString` are required when registering a new macro command, while it won't appear in the macroBar or tokenActionBar unless a location is pased in, it will appear in the Collections panel in the VTT. 
+
+Passing in a `characterId` will assign the macro as a character macro, displaying it in the `Advanced Tools -> Characters Macros` tab for a character sheet. Note: The Characters Macros tab is only available in Jumpgate games.
+
+Passing in a `location` will add it either to the player's macroBar, the character's tokenActionBar or both. Omitting a location will remove it from the respective location or all locations. To update the location in this way, just the `id` of the macro is required to be passed in, note that removing a location or all locations will not delete the Macro and it will still be found in either the Collections panel or the Characters Macro tab.
+
+[See Actions page for examples on the usuage of `addMacrosToHost`](/beacon-docs/docs/components/actions)
+
+#### getCharacterMacros
 ```javascript
-dispatch.getActions({
+dispatch.getCharacterMacros({
   args: {
-     characterId?: string
+     characterId: string
   }
 }): Promise<{
-  actions?: {} | { [id: string]: ActionFromHost }
+  macros?: {} | { [id: string]: {
+    characterId: string,
+    name: string,
+    commandString: string,
+    onTokenBar: boolean,
+    onMacroBar: boolean
+  } }
 }>
 ```
-`getActions` gets a specific character’s actions(macro).
+`getCharacterMacros` gets a specific character’s macros. The `ids` returned from this list can be used in conjuction with `addMacrosToHost` update their locations. In jumpgate games, character macros can also be found in the `Advanced Tools -> Characters Macros` tab.
 
 #### setContainerSize
 ```javascript
