@@ -32,7 +32,7 @@ A digital or printed page used to track a character's attributes, abilities, and
 ## Computed Property: 
 Properties that have both get and set methods, which can be dynamically calculated.
 
-## ConvertLegacyMacroAttributes: 
+## HandleFallbackAttributes: 
 A function to handle mapping Custom Sheet macro attributes to the new Beacon Sheet format.
 
 ## Dispatch: 
