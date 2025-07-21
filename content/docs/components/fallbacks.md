@@ -99,3 +99,25 @@ The properites object will also include a plainText key for roll template argume
   }
 }
 ```
+
+## handleFallbackActions
+
+There might be times when an action isn't found in the Beacon Sheet's action list.
+
+This scenario commonly arises when transitioning from an existing older Custom Sheet to a Beacon sheet. During such transitions, it's possible that an older action name might need to be handled in the Beacon Sheet.
+
+`handleFallbackActions` can be used to handle these scenarios or as a general fallback for actions.
+
+```typescript
+initRelay({
+  handleFallbackActions: (message: { 
+    command: string, // The action command/name
+    characterId: string, 
+    args: Record<string, any>, // Arguments passed into action 
+    character: Character ,
+    dispatch: Dispatch
+  }) => {}: any,
+}): Promise<Dispatch>
+```
+
+This method doesn't return annything.
