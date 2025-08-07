@@ -24,7 +24,7 @@ Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet,
 
 The dispatch is returned by the `initRelay` and provides methods for sending commands from the character sheet back to the host. Except when specified every method below will return a promise.
 
-#### update
+## update
 ```javascript
 dispatch.update({
   options: { overwrite?: boolean }
@@ -35,7 +35,7 @@ The `update` method sends character changes to the host (Roll20 Tabletop or Roll
 
 The partial character passed in here must contain the character's id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.
 
-#### updateCharacter
+## updateCharacter
 ```javascript
 dispatch.updateCharacter({
   character: Partial<Character>
@@ -45,7 +45,7 @@ Like the `update` method, `updateCharacter` sends character changes to the host 
 
 However, this method takes a full set of character attributes as the character argument, and automatically computes the diff with existing character attributes, so that only changed attributes are sent to the data store.
 
-#### roll
+## roll
 ```javascript
 dispatch.roll({
   rolls: { [rollName: string]: string } // Ex. {attack: '1d20+4', damage: `3d6+2`}
@@ -58,7 +58,7 @@ If messageId is omitted, the roll will be associated with a new chat message and
 
 The method returns a promise that resolves with an object containing the messageId and the RollResult (see Types). The roll result is returned in the same format as in the non-beacon dice rolls computed roll system.
 
-#### post
+## post
 ```javascript
 dispatch.post({
   characterId: string,
@@ -78,7 +78,7 @@ The secret option is ignored unless whisper is also set, toggling to true will c
 
 Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
 
-#### query
+## query
 ```javascript
 dispatch.query(options: Swal2Options): {
   isConfirmed: boolean,
@@ -102,7 +102,7 @@ The `query` method takes an options object and uses them to display a [SweetAler
 
 `titleText, text, iconColor, input, width, padding, background, position, grow, timer, timerProgressBar, showConfirmButton, showDenyButton, showCancelButton, ariaLabel, confirmButtonText, denyButtonText, cancelButtonText, confirmButtonAriaLabel, confirmButtonColor, cancelButtonAriaLabel, cancelButtonColor, denyButtonAriaLabel, denyButtonColor, reverseButtons, showCloseButton, closeButtonAriaLabel, returnInputValueOnDeny, imageUrl, imageWidth, imageHeight, imageAlt, inputLabel, inputPlaceholder, inputValue, inputOptions, inputPlaceholder, inputAutoTrim, inputAttributes, validationMessage, progressSteps, currentProgressStep, progressStepsDistance.`
 
-#### Perform
+## Perform
 ```javascript
 dispatch.perform({
   characterId: string,
@@ -112,7 +112,7 @@ dispatch.perform({
 ```
 `perform` executes the specified action on behalf of the character (designated by the character id), passing in args to the action method. This method can perform actions on behalf of any character, even a character that the sheet does not have data for.
 
-#### getComputed
+## getComputed
 ```javascript
 dispatch.getComputed({
   characterId: string,
@@ -132,7 +132,7 @@ dispatch.setComputed({
 ```
 `getComputed` and `setComputed` are both nearly identical in how they are called, taking a character id and a property with the name of the computed property you wish to get or set, and an array of string args. Both methods return a promise that resolves with the computed value.
 
-#### compendiumRequest
+## compendiumRequest
 ```javascript
 dispatch.compendiumRequest({ 
   query: string
@@ -144,7 +144,7 @@ dispatch.compendiumRequest({
 ```
 `compendiumRequest` executes an AJAX request to the compendium service’s graphQL endpoint. It takes in a graphQL query string written according to the Compendium service’s schema. The query string does not need to include the ruleSystem shortName as this is set automatically according to the campaign override or sheet.json value in the Roll20 Tabletop.
 
-#### debouncedCompendiumRequest
+## debouncedCompendiumRequest
 ```javascript
 dispatch.debouncedCompendiumRequest({ 
   query: string
@@ -154,7 +154,7 @@ dispatch.debouncedCompendiumRequest({
 ```
 Like `compendiumRequest`, except that calls to this method are automatically debounced (at 100ms) and grouped together into a single request to the compendium service. Note that this method will only return the requested data, it does not return errors or extensions.
 
-#### getTokens
+## getTokens
 ```javascript
 dispatch.getTokens({
   characterId: string
@@ -168,7 +168,7 @@ dispatch.getTokens({
 ```
 `getTokens` requires a character id string and returns information about tokens on the user’s current page. The return value contains two arrays of tokens. The tokens array contains all tokens on the current page that represent the character whose id was provided to the method. The selected array contains any tokens that are currently selected, regardless of which character they represent. The returned token objects contain all of the token attributes available to the API, you can find documentation here and here.
 
-#### addToTracker
+## addToTracker
 ```javascript
 dispatch.addToTracker({
   tokenId?: string,
@@ -182,36 +182,49 @@ dispatch.addToTracker({
 ```
 `addToTracker` adds or updates a single item in the turn tracker. Passing in a tokenId will add the specified token to the tracker, while passing in custom with a name and an optional image url (img) will add a custom item, not connected to any character or token. A round calculation string can be added via the optional formula parameter. value is the initiative number for the item.
 
-#### addActionsToHost
+## addMacrosToHost
 ```javascript
-dispatch.addActionsToHost({
-  sheetAction?: {
-    characterId: string
-    action: string
+dispatch.addMacrosToHost({
+  macro: {
+    id?: string
+    name?: string
+    characterId?: string
+    commandString?: string
     args?: string[]
+    locations?: ['macroBar'] | ['tokenActionBar'] | ['macroBar', 'tokenActionBar']
   }
-  action?: string
-  locations?: ['macroBar'] | ['tokenActionBar'] | ['macroBar', 'tokenActionBar']
-  actionId?: string
-  name: string
   requestId?: string
 }): void
 ```
-`addActionsToHost` adds a specific action(macro) to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. Either sheetAction or action can be passed in but not both at the same time. The sheetAction arg should be passed in when an the action is to designated to a character. While the action arg should be passed in when the action is more generic.
+`addMacrosToHost` previously `addActionsToHost`, adds a specific macro command to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. 
 
-#### getActions
+Most things can be omitted like the `id` however atleast a `name` and `commmandString` are required when registering a new macro command, while it won't appear in the macroBar or tokenActionBar unless a location is pased in, it will appear in the Collections panel in the VTT. 
+
+Passing in a `characterId` will assign the macro as a character macro, displaying it in the `Advanced Tools -> Characters Macros` tab for a character sheet. Note: The Characters Macros tab is only available in Jumpgate games.
+
+Passing in a `location` will add it either to the player's macroBar, the character's tokenActionBar or both. Omitting a location will remove it from the respective location or all locations. To update the location in this way, just the `id` of the macro is required to be passed in, note that removing a location or all locations will not delete the Macro and it will still be found in either the Collections panel or the Characters Macro tab.
+
+[See Actions page for examples on the usuage of `addMacrosToHost`](/beacon-docs/docs/components/actions)
+
+## getCharacterMacros
 ```javascript
-dispatch.getActions({
+dispatch.getCharacterMacros({
   args: {
-     characterId?: string
+     characterId: string
   }
 }): Promise<{
-  actions?: {} | { [id: string]: ActionFromHost }
+  macros?: {} | { [id: string]: {
+    characterId: string,
+    name: string,
+    commandString: string,
+    onTokenBar: boolean,
+    onMacroBar: boolean
+  } }
 }>
 ```
-`getActions` gets a specific character’s actions(macro).
+`getCharacterMacros` gets a specific character’s macros. The `ids` returned from this list can be used in conjuction with `addMacrosToHost` update their locations. In jumpgate games, character macros can also be found in the `Advanced Tools -> Characters Macros` tab.
 
-#### setContainerSize
+## setContainerSize
 ```javascript
 dispatch.setContainerSize({
   args: { 
@@ -222,7 +235,7 @@ dispatch.setContainerSize({
 ```
 `setContainerSize` updates the size of the container which holds the sheet shared settings. Returns a promise that can be awaited. This can be used in conjunction with something like the ResizeSensor event listener from npm: css-element-queries to automatically resize the container on the host.
 
-#### updateTokensByCharacter
+## updateTokensByCharacter
 ```javascript
 dispatch.updateTokensByCharacter({
   args: { 
@@ -233,7 +246,7 @@ dispatch.updateTokensByCharacter({
 ```
 `updateTokensByCharacter` updates a particular character’s default token as well as all existing tokens representing that character. Returns a promise that can be awaited.
 
-#### updateTokensByIds
+## updateTokensByIds
 ```javascript
 dispatch.updateTokensByIds({
   args: { 
@@ -244,7 +257,7 @@ dispatch.updateTokensByIds({
 ```
 `updateTokensByIds` updates a single or several tokens. Returns a promise that can be awaited.
 
-#### autoLinkText
+## autoLinkText
 ```javascript
 dispatch.autoLinkText({
   args: { 
@@ -254,7 +267,7 @@ dispatch.autoLinkText({
 ```
 `autoLinkText` goes through the text to find handout names between square brackets and converts them into links with the handoutID. For example in a game with a handout named `Dragon`, passing in the text string of `this is a [Dragon]` to autoLinkText returns something similar to this is a `<a href="https://journal.roll20.net/8je02j0kd02k">Dragon</a>`.  
 
-#### openDialogFromLink
+## openDialogFromLink
 ```javascript
 dispatch.openDialogFromLink({
   args: { 
@@ -266,3 +279,15 @@ dispatch.openDialogFromLink({
  - If the url is for a handout, it will open the corresponding handout in the campaign. This will also check if the user opening the link has access to the handout.  
  - If the url is for a compendium, it will open a pop up to the compendium page, it will also check to ensure the user has access to view the page.
  - If the url is for an external page, a confirmation pop up will display to warn the user that the link is for an external site and open a new tab in their main window if confirmed.
+
+## writeToClipboard
+```javascript
+dispatch.writeToClipboard(text)
+```
+`writeToClipboard` allows writing text such as macro commands or roll templates from the sheet to the player's OS clipboard. 
+
+This command will trigger a dialog model to pop up in the host, the dialog will include a warning urging the player to fully understand what their copying to their clipboard; The dialog will also include a preview of the text.
+
+Clicking `allow` will copy the text to the player's clipboard, while clicking `deny` will prevent it and log `"user refused copy action"`
+
+![writeToClipboard_dialog](images/writeToClipboard_dialog.png)

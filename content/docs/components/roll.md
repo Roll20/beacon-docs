@@ -23,7 +23,7 @@ Join to get access to the Beacon SDK, the community sheet repo for Beacon sheet,
 {{< /callout >}}
 
 The Roll20 Tabletop and Roll20 Characters (both refered to as host throughout the rest of this page) have several new features that enhance the way rolls are handled and displayed. These features include attributes and elements that allow for dynamic roll results and interactivity within the host.
-[Vist the Roll20 help center to learn more about Roll20's Dice Rolling system](https://help.roll20.net/hc/en-us/articles/360037773133-Dice-Reference)
+[Visit the Roll20 help center to learn more about Roll20's Dice Rolling system](https://help.roll20.net/hc/en-us/articles/360037773133-Dice-Reference)
 
 The most command way to trigger a dice roll is through the dispatch object returned from the `initRelay`, but it could also be called from [actions](/beacon-docs/docs/components/actions):
 ```typescript
