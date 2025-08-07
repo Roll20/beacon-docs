@@ -67,9 +67,9 @@ These components are crucial for handling actions, computations, macros, and rol
   target="_blank"
 >}}
 {{< link-card
-  title="Custom Sheet Macro Attributes"
-  description="Macro attributes handle the conversion of legacy macro attributes to the new format used in the Beacon SDK. This ensures compatibility with older character sheets and macros, allowing for a smooth transition to the new system."
-  href="/beacon-docs/docs/components/custom-sheet-macro-attributes/"
+  title="Fallbacks"
+  description="Fallback methods to allow Sheet Developers to handle attributes, roll templates and actions not found/defined in the sheet. These methods can also help to ensure compatibility with older character sheets macros, roll templates and actions allowing for a smooth transition to the new system."
+  href="/beacon-docs/docs/components/fallbacks/"
   target="_blank"
 >}}
 {{< /card-grid >}}
