@@ -70,13 +70,54 @@ dispatch.post({
   }
 }): Promise<string>
 ``` 
-`post` posts a message to chat, either creating a new message or overwriting an existing one. It requires a character id and message content, a string containing either plain text or HTML to be posted. 
+`post` posts a message to chat, either creating a new message or overwriting an existing one. Any inline rolls or macro references will be automatically resolved before the message is posted. It requires a character id and message content, a string containing either plain text or HTML to be posted. 
 
 The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm. 
 
 The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player. 
 
 Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
+
+#### postRaw
+```javascript
+dispatch.postRaw({
+  characterId: string,
+  messageId?: string,
+  content: string,
+  options?: {
+    whisper?: 'gm',
+    secret?: boolean,
+  }
+}): Promise<string>
+``` 
+`postRaw` Functions like `post`, but will not try to parse/roll inline rolls or macros, instead posting the message directly to chat without further processing.
+
+#### parseMessage
+```javascript
+dispatch.parseMessage({
+  characterId: string,
+  messageId?: string,
+  content: string,
+  options?: {
+    whisper?: 'gm',
+    secret?: boolean,
+  }
+}): Promise<{
+    content: string,
+    rolls?: { [key: string]: Roll },
+    inlinerolls?: Object[],
+    rawContent?: string,
+}>
+``` 
+`parseMessage` works identically to `post`, but instead of posting the results to chat, they are returned to the sheet.
+
+This function returns an object containing:
+
+* `content`: The fully resolved chat message
+* `rolls`: The data from any rolls attached to this message
+* `inlinerolls`: Data from any inline rolls embedded in the original content
+* `rawContent`: The message content, with placeholders (`$[[0]]`) instead of inline rolls.
+
 
 #### query
 ```javascript
