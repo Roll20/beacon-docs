@@ -39,6 +39,27 @@ initRelay({
 }): Promise<Dispatch>
 ```
 
+```typescript
+type Character {
+  id: string // The character's unique ID
+  name: string // The character's name
+  characterType?: string // The character type metadata, i.e. PC, NPC, Vehicle, etc.
+  description?: string // The character desciprtion metadata
+  customMeta1?: string // Custom metadata fields
+  customMeta2?: string
+  customMeta3?: string
+  attributes: JSONObject
+  customAttributes?: CustomAttributes
+  abilities?: Abilities
+  playerMacros?: PlayerMacros
+  bio?: string | null
+  gmNotes?: string | null
+  token: Token
+  statusmarkers?: string
+  avatar: string
+}
+```
+
 ## onInit
 
 The `onInit` method receives the initial data from the host. 
@@ -53,6 +74,8 @@ onInit(event: {
     language: string, // two-letter language code, i.e. 'en'
     gm: boolean, // whether or not the current player has gm permissions
     owned: boolean, // whether or not the current player controls the primary character
+    playerSubscription: 'free'|'plus'|'pro', // The player's subscription level
+    campaignSubscription?: 'free'|'plus'|'pro', // The campaign's subscription level
     settingsSheet: boolean, // whether or not this sheet is the settings sheet
     headless: boolean, // whether or not it should be displayed, set by the host
     sandbox: boolean,
