@@ -132,6 +132,26 @@ dispatch.setComputed({
 ```
 `getComputed` and `setComputed` are both nearly identical in how they are called, taking a character id and a property with the name of the computed property you wish to get or set, and an array of string args. Both methods return a promise that resolves with the computed value.
 
+## getAvailableCharacters
+```typescript
+dispatch.getAvailableCharacters(): Promise<{
+  [id: string]: {
+    id: string;
+    name: string;
+    avatar: string;
+    permissions: "view"|"edit";
+    characterType: string;
+    description: string;
+    customMeta1: string;
+    customMeta2: string;
+    customMeta3: string;
+    statusmarkers: string;
+    tags: string;
+  }
+}>
+```
+`getAvailableCharacters` returns a list of all characters available to the current player. It returns the characters' metadata, as well as the player's permission level (`view` or `edit`).
+
 ## compendiumRequest
 ```javascript
 dispatch.compendiumRequest({ 

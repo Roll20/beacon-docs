@@ -51,10 +51,12 @@ onInit(event: {
   settings: { // Campaign and character specific settings
     colorTheme: string, // 'dark' or 'light'
     language: string, // two-letter language code, i.e. 'en'
-    gm: boolean, // whether or not the current player has gm permissions
-    owned: boolean, // whether or not the current player controls the primary character
-    settingsSheet: boolean, // whether or not this sheet is the settings sheet
-    headless: boolean, // whether or not it should be displayed, set by the host
+    gm: boolean, // Whether the current player has gm permissions
+    owned: boolean, // Whether the current player controls the primary character
+    playerSubscription: 'free'|'plus'|'pro', // The player's subscription level
+    campaignSubscription?: 'free'|'plus'|'pro', // The campaign's subscription level
+    settingsSheet: boolean, // Whether this sheet is the settings sheet
+    headless: boolean, // Whether it should be displayed, set by the host
     sandbox: boolean,
     campaignId: number, // The id of the current campaign
     environment: string, // VTT, CHARACTERS, DISCORD
@@ -68,6 +70,27 @@ onInit(event: {
     expansion: number,
   },
 }, dispatch: Dispatch): void;
+```
+The `Character` data is returned in the following format:
+
+```typescript
+type Character {
+  id: string // The character's unique ID
+  name: string // The character's name
+  characterType?: string // The character type metadata, i.e. PC, NPC, Vehicle, etc.
+  description?: string // The character desciprtion metadata
+  customMeta1?: string // Custom metadata fields
+  customMeta2?: string
+  customMeta3?: string
+  attributes: Object // The character's attributes
+  customAttributes?: CustomAttributes // Custom attributes created by the user
+  abilities?: Abilities // The character's abilities (macros)
+  playerMacros?: PlayerMacros // Custom macros created by the user
+  bio?: string | null // The character's biography metadata
+  gmNotes?: string | null // The character's GM Notes metadata (only present if the player is GM)
+  token: Token // The character's default token
+  avatar: string // The url for the character's avatar
+}
 ```
 
 {{< callout context="note" >}}
