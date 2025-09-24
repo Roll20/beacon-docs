@@ -63,6 +63,7 @@ The method returns a promise that resolves with an object containing the message
 dispatch.post({
   characterId: string,
   messageId?: string,
+  actionId?: string,
   content: string,
   options?: {
     whisper?: 'gm',
@@ -78,11 +79,14 @@ The secret option is ignored unless whisper is also set, toggling to true will c
 
 Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
 
+Post can also accept an actionId. When provided a valid actionId from a triggered action, that action's signature will be added to the chat's action history and will be filled in the chat box when the user presses the up arrow key.
+
 #### postRaw
 ```javascript
 dispatch.postRaw({
   characterId: string,
   messageId?: string,
+  actionId?: string,
   content: string,
   options?: {
     whisper?: 'gm',

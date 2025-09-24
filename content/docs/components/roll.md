@@ -54,6 +54,9 @@ dispatch.post({
 })
 ```
 
+## Adding to Chat History (Up-Arrow)
+In order to provide support for adding a roll to the chat history, the roll must have originated from an [action](/beacon-docs/docs/components/actions). Actions provide a string argument, `actionId`, which must be provided in the `post` method when the roll is posted to chat. When the user presses the up arrow key, the chat input will be filled with a macro for this action including any provided arguments.
+
 ## Additional Roll Posting Options
 
 ## data-rollname
