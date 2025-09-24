@@ -37,6 +37,7 @@ actions: {
     method: (props: {
       dispatch: Dispatch,
       character: Character,
+      actionId?: string,
       messageId?: string,
       rolls?: RollResults 
     }, ...args: string[]): void | Promise<void>
@@ -50,6 +51,7 @@ The action's `method` receives a `props` object from the host containing the fol
 
 - `dispatch`: A `Dispatch` object.
 - `character`: The data of the character performing the action. Currently, the action will not receive the character’s bio or GM notes, regardless of whether the player has access to those fields.
+- `actionId` (optional): A unique ID for the action. If this id is provided to a `post` or `postRaw` call, the action will be added to the chat's action history and will be filled in the chat box when the user presses the up arrow key.
 - `messageId` (optional): A unique ID for an existing chat message. It's included in actions triggered from chat buttons to provide context for the original roll.
 - `rolls` (optional): Included when action is triggered from a chat button. Contains the roll results of the original roll.
 
