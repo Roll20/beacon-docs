@@ -124,7 +124,9 @@ This function returns an object containing:
 
 #### query
 ```javascript
-dispatch.query(options: Swal2Options): {
+dispatch.query({
+  options: Swal2Options
+}): {
   isConfirmed: boolean,
   isDenied: boolean,
   isDismissed: boolean,
