@@ -16,6 +16,10 @@ seo:
   noindex: false # false (default) or true
 ---
 
+## **Release** v0.3.0
+Added the documentation relating to the cache of Computed values. This modifies the `dispatch.update`, `dispatch.updateCharacter` behaviours, in addition to adding the `dispatch.clearComputedCache`. All of the additions and changes are compatible with previous versions and do not *require* any changes.
+
+## **Release** v0.0.10
 **Release Date**: 2024-07-1
 
 ### New Features

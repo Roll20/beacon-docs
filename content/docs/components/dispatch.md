@@ -27,23 +27,32 @@ The dispatch is returned by the `initRelay` and provides methods for sending com
 ## update
 ```javascript
 dispatch.update({
-  options: { overwrite?: boolean }
-  character: Partial<Character>
+  options: { overwrite?: boolean },
+  character: Partial<Character>,
+  invalidateComputed?: string[],
 }): Promise<void>
-``` 
-The `update` method sends character changes to the host (Roll20 Tabletop or Roll20 Characters) to be persisted. 
+```
+The `update` method sends character changes to the host (Roll20 Tabletop or Roll20 Characters) to be persisted.
 
 The partial character passed in here must contain the character's id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.
+
+If `invalidateComputed` is passed in, it is expected to be an array of strings that match computed names, this tells the host that those computed values should be removed from the cache and be recalculated when next requested. If `invalidateComputed` is left out, the host treats is as a whole-cache invalidation and invalidates the entire cache.
+
+{{< callout context="warning" icon="outline/alert-square" >}}
+Providing an empty array is not the same as omitting the property. An empty array will invalidate **none** of the cache, instead of all of it.
+{{< /callout >}}
 
 ## updateCharacter
 ```javascript
 dispatch.updateCharacter({
-  character: Partial<Character>
+  character: Partial<Character>,
 }): Promise<void>
-``` 
-Like the `update` method, `updateCharacter` sends character changes to the host page (Roll20 Tabletop or Roll20 Characters) to be persisted. 
+```
+Like the `update` method, `updateCharacter` sends character changes to the host page (Roll20 Tabletop or Roll20 Characters) to be persisted.
 
 However, this method takes a full set of character attributes as the character argument, and automatically computes the diff with existing character attributes, so that only changed attributes are sent to the data store.
+
+Unlike `update`, this method always invalidates the entire computed property cache.
 
 ## roll
 ```javascript
@@ -51,10 +60,10 @@ dispatch.roll({
   rolls: { [rollName: string]: string } // Ex. {attack: '1d20+4', damage: `3d6+2`}
   messageId?: string
 }): Promise<{messageId: string, results: RollResults }>
-``` 
-The `roll` method takes one or more rolls in the form of an object, where the keys are unique roll names and the values are roll strings. messageId can be provided to attach the roll to an existing chat message, either overriding it or appending to it in the chat log. 
+```
+The `roll` method takes one or more rolls in the form of an object, where the keys are unique roll names and the values are roll strings. messageId can be provided to attach the roll to an existing chat message, either overriding it or appending to it in the chat log.
 
-If messageId is omitted, the roll will be associated with a new chat message and a new messageId for that message will be returned with the roll results. 
+If messageId is omitted, the roll will be associated with a new chat message and a new messageId for that message will be returned with the roll results.
 
 The method returns a promise that resolves with an object containing the messageId and the RollResult (see Types). The roll result is returned in the same format as in the non-beacon dice rolls computed roll system.
 
@@ -70,12 +79,12 @@ dispatch.post({
     secret?: boolean,
   }
 }): Promise<string>
-``` 
-`post` posts a message to chat, either creating a new message or overwriting an existing one. Any inline rolls or macro references will be automatically resolved before the message is posted. It requires a character id and message content, a string containing either plain text or HTML to be posted. 
+```
+`post` posts a message to chat, either creating a new message or overwriting an existing one. Any inline rolls or macro references will be automatically resolved before the message is posted. It requires a character id and message content, a string containing either plain text or HTML to be posted.
 
-The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm. 
+The method also accepts an options object. Currently, only whisper and secret are supported, the only valid value for whisper is gm, which will send the message as a whisper to the gm.
 
-The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player. 
+The secret option is ignored unless whisper is also set, toggling to true will cause the message to not be visible to the controlling player.
 
 Like roll, messageId can be provided to update an existing chat message, but if omitted the method will generate a new messageId and post a new chat message.  The method returns the messageId.
 
@@ -93,7 +102,7 @@ dispatch.postRaw({
     secret?: boolean,
   }
 }): Promise<string>
-``` 
+```
 `postRaw` Functions like `post`, but will not try to parse/roll inline rolls or macros, instead posting the message directly to chat without further processing.
 
 #### parseMessage
@@ -112,7 +121,7 @@ dispatch.parseMessage({
     inlinerolls?: Object[],
     rawContent?: string,
 }>
-``` 
+```
 `parseMessage` works identically to `post`, but instead of posting the results to chat, they are returned to the sheet.
 
 This function returns an object containing:
@@ -178,6 +187,19 @@ dispatch.setComputed({
 ```
 `getComputed` and `setComputed` are both nearly identical in how they are called, taking a character id and a property with the name of the computed property you wish to get or set, and an array of string args. Both methods return a promise that resolves with the computed value.
 
+## clearComputedCache
+```javascript
+dispatch.clearComputedCache({
+  characterId: string,
+  properties?: string[],
+}): Promise<string | number | object>
+```
+`clearComputedCache` is used when you need to invalidate part of the computed cache which doesn't happen at the same time as an update to the character data. The properties provided is an array of computed names. If `properties` isn't provided, the entire cache is invalidated.
+
+{{< callout context="warning" icon="outline/alert-square" >}}
+Providing an empty array is not the same as omitting the property. An empty array will invalidate **none** of the cache, instead of all of it.
+{{< /callout >}}
+
 ## getAvailableCharacters
 ```typescript
 dispatch.getAvailableCharacters(): Promise<{
@@ -200,7 +222,7 @@ dispatch.getAvailableCharacters(): Promise<{
 
 ## compendiumRequest
 ```javascript
-dispatch.compendiumRequest({ 
+dispatch.compendiumRequest({
   query: string
 }): Promise<{
   data: Object
@@ -212,7 +234,7 @@ dispatch.compendiumRequest({
 
 ## debouncedCompendiumRequest
 ```javascript
-dispatch.debouncedCompendiumRequest({ 
+dispatch.debouncedCompendiumRequest({
   query: string
 }): Promise<{
   data: Object
@@ -262,9 +284,9 @@ dispatch.addMacrosToHost({
   requestId?: string
 }): void
 ```
-`addMacrosToHost` previously `addActionsToHost`, adds a specific macro command to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar. 
+`addMacrosToHost` previously `addActionsToHost`, adds a specific macro command to an area of the Roll20 Tabletop UI; either the macrobar or the token action bar.
 
-Most things can be omitted like the `id` however atleast a `name` and `commmandString` are required when registering a new macro command, while it won't appear in the macroBar or tokenActionBar unless a location is pased in, it will appear in the Collections panel in the VTT. 
+Most things can be omitted like the `id` however atleast a `name` and `commmandString` are required when registering a new macro command, while it won't appear in the macroBar or tokenActionBar unless a location is pased in, it will appear in the Collections panel in the VTT.
 
 Passing in a `characterId` will assign the macro as a character macro, displaying it in the `Advanced Tools -> Characters Macros` tab for a character sheet. Note: The Characters Macros tab is only available in Jumpgate games.
 
@@ -293,9 +315,9 @@ dispatch.getCharacterMacros({
 ## setContainerSize
 ```javascript
 dispatch.setContainerSize({
-  args: { 
+  args: {
     width?: number
-    height?: number 
+    height?: number
   }
 }): Promise<void>
 ```
@@ -304,7 +326,7 @@ dispatch.setContainerSize({
 ## updateTokensByCharacter
 ```javascript
 dispatch.updateTokensByCharacter({
-  args: { 
+  args: {
     characterId: string
     token: Partial<Token>
   }
@@ -315,7 +337,7 @@ dispatch.updateTokensByCharacter({
 ## updateTokensByIds
 ```javascript
 dispatch.updateTokensByIds({
-  args: { 
+  args: {
       tokenIds: array of ids as strings
       token: Partial<Token>
   }
@@ -326,23 +348,23 @@ dispatch.updateTokensByIds({
 ## autoLinkText
 ```javascript
 dispatch.autoLinkText({
-  args: { 
+  args: {
       text: string
   }
 }): Promise<string>
 ```
-`autoLinkText` goes through the text to find handout names between square brackets and converts them into links with the handoutID. For example in a game with a handout named `Dragon`, passing in the text string of `this is a [Dragon]` to autoLinkText returns something similar to this is a `<a href="https://journal.roll20.net/8je02j0kd02k">Dragon</a>`.  
+`autoLinkText` goes through the text to find handout names between square brackets and converts them into links with the handoutID. For example in a game with a handout named `Dragon`, passing in the text string of `this is a [Dragon]` to autoLinkText returns something similar to this is a `<a href="https://journal.roll20.net/8je02j0kd02k">Dragon</a>`.
 
 ## openDialogFromLink
 ```javascript
 dispatch.openDialogFromLink({
-  args: { 
+  args: {
       urlString: string
   }
 }): void
 ```
-`openDialogFromLink` opens the supplied urlString through the Roll20 Tabletop. 
- - If the url is for a handout, it will open the corresponding handout in the campaign. This will also check if the user opening the link has access to the handout.  
+`openDialogFromLink` opens the supplied urlString through the Roll20 Tabletop.
+ - If the url is for a handout, it will open the corresponding handout in the campaign. This will also check if the user opening the link has access to the handout.
  - If the url is for a compendium, it will open a pop up to the compendium page, it will also check to ensure the user has access to view the page.
  - If the url is for an external page, a confirmation pop up will display to warn the user that the link is for an external site and open a new tab in their main window if confirmed.
 
@@ -350,7 +372,7 @@ dispatch.openDialogFromLink({
 ```javascript
 dispatch.writeToClipboard(text)
 ```
-`writeToClipboard` allows writing text such as macro commands or roll templates from the sheet to the player's OS clipboard. 
+`writeToClipboard` allows writing text such as macro commands or roll templates from the sheet to the player's OS clipboard.
 
 This command will trigger a dialog model to pop up in the host, the dialog will include a warning urging the player to fully understand what their copying to their clipboard; The dialog will also include a preview of the text.
 

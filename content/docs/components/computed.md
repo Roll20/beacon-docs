@@ -31,6 +31,7 @@ initRelay({
     [name: string]: {
       tokenBarValue?: boolean
       description?: string
+      cacheable?: boolean
       get: (
         props: {
           character: Character
@@ -54,6 +55,7 @@ Computed properties are passed into the `initRelay` function in an object where 
 - `get` (required): It receives character data along with any number of string parameters and should return the computed value.
 - `tokenBarValue` (optional): A boolean indicating whether this property should be available for use in token bars.
 - `description` (optional): A text value indicating what this computed summary property represents.
+- `cacheable` (optional): A boolean indicating whether or not this computed property is able to be cached for faster look-up speeds.
 - `set` (optional): This method receives character data and a dispatch, along with string arguments. This method does not need to return a value.
 
 
@@ -68,3 +70,13 @@ Computed properties are passed into the `initRelay` function in an object where 
 - If the `set` function is omitted, the value will not be editable from the token itself. If defined, `set` methods will receive one string argument, which is whatever the user types into the input for modifying the bar.
 {{< /callout >}}
 
+## Computed Cacheability
+When a computed property does not specify whether or not it is cacheable, Beacon does it's best to predict if it is cacheable or not using the following methods:
+- The computed's name starts with `repeating_`: not cacheable.
+- The `get` method of the computed configuration requires 2 or more arguments: not cacheable. (Note: `get(dispatch, ...args) {}` is detected as cacheable with this check).
+
+If a computed name violates either of the following requirements, it will not be cached regardless of what the sheet's configuration specifies due to storage limitations of the cache.
+- The name must be less than or equal to 768 bytes
+- The name must not contain any of these characters: `[`, `]`, `.`, `#`, `$`, `/`.
+
+When an attribute is requested from Beacon, in any location (API Script, Token Bar Attribute, Chat Message, other sheet, etc.), the cache will be checked first for any matching attribute, and return the cached result without ever calling your `get` method. If the cache doesn't include the attribute, then the `get` method will be called, and the value will be stored in the cache if it's cacheable.
