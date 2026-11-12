@@ -72,10 +72,10 @@ Computed properties are passed into the `initRelay` function in an object where 
 
 ## Computed Cacheability
 When a computed property does not specify whether or not it is cacheable, Beacon does it's best to predict if it is cacheable or not using the following methods:
-- The computed's name starts with `repeating_`, not cacheable.
-- The `get` method of the computed configuration requires 2 or more arguments, not cacheable. (Note: `get(dispatch, ...args) {}` is detected as cacheable via this route).
+- The computed's name starts with `repeating_`: not cacheable.
+- The `get` method of the computed configuration requires 2 or more arguments: not cacheable. (Note: `get(dispatch, ...args) {}` is detected as cacheable with this check).
 
-If a computed name violates either of the following requirements, it will not be cached regardless of what the sheet's configuration specifies due to storage limitations of how the cache works.
+If a computed name violates either of the following requirements, it will not be cached regardless of what the sheet's configuration specifies due to storage limitations of the cache.
 - The name must be less than or equal to 768 bytes
 - The name must not contain any of these characters: `[`, `]`, `.`, `#`, `$`, `/`.
 
