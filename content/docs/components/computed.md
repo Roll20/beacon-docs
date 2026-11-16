@@ -32,6 +32,7 @@ initRelay({
       tokenBarValue?: boolean
       description?: string
       cacheable?: boolean
+      aliases?: string[]
       get: (
         props: {
           character: Character
@@ -56,6 +57,7 @@ Computed properties are passed into the `initRelay` function in an object where 
 - `tokenBarValue` (optional): A boolean indicating whether this property should be available for use in token bars.
 - `description` (optional): A text value indicating what this computed summary property represents.
 - `cacheable` (optional): A boolean indicating whether or not this computed property is able to be cached for faster look-up speeds.
+- `aliases` (optional): An array of strings that this computed can also be accessed under.
 - `set` (optional): This method receives character data and a dispatch, along with string arguments. This method does not need to return a value.
 
 
@@ -80,3 +82,12 @@ If a computed name violates either of the following requirements, it will not be
 - The name must not contain any of these characters: `[`, `]`, `.`, `#`, `$`, `/`.
 
 When an attribute is requested from Beacon, in any location (API Script, Token Bar Attribute, Chat Message, other sheet, etc.), the cache will be checked first for any matching attribute, and return the cached result without ever calling your `get` method. If the cache doesn't include the attribute, then the `get` method will be called, and the value will be stored in the cache if it's cacheable.
+
+## Computed Aliases
+Sometimes you may want to include a single attribute under multiple names for purposes of maintaining backwards-compatibility with macros or API scripts. When this is desirable, you can specify additional names that should be treated as the same computed specification, each alias provided must meet the following requirements:
+
+- It must not be an empty string
+- It must not match any non-alias computed
+- It must not match any other alias
+
+Aliased computeds operate identically to non-aliased computeds, with the exception that they are never cached by the host under the aliased name. When caching the computed would occur, it is cached under the canonical name instead.
