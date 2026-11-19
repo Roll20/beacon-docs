@@ -31,6 +31,8 @@ initRelay({
     [name: string]: {
       tokenBarValue?: boolean
       description?: string
+      cacheable?: boolean
+      aliases?: string[]
       get: (
         props: {
           character: Character
@@ -54,6 +56,8 @@ Computed properties are passed into the `initRelay` function in an object where 
 - `get` (required): It receives character data along with any number of string parameters and should return the computed value.
 - `tokenBarValue` (optional): A boolean indicating whether this property should be available for use in token bars.
 - `description` (optional): A text value indicating what this computed summary property represents.
+- `cacheable` (optional): A boolean indicating whether or not this computed property is able to be cached for faster look-up speeds.
+- `aliases` (optional): An array of strings that this computed can also be accessed under.
 - `set` (optional): This method receives character data and a dispatch, along with string arguments. This method does not need to return a value.
 
 
@@ -68,3 +72,43 @@ Computed properties are passed into the `initRelay` function in an object where 
 - If the `set` function is omitted, the value will not be editable from the token itself. If defined, `set` methods will receive one string argument, which is whatever the user types into the input for modifying the bar.
 {{< /callout >}}
 
+## Computed Cacheability
+When a computed property does not specify whether or not it is cacheable, Beacon does it's best to predict if it is cacheable or not using the following methods:
+- The computed's name starts with `repeating_`: not cacheable.
+- The `get` method of the computed configuration requires 2 or more arguments: not cacheable. (Note: `get(dispatch, ...args) {}` is detected as cacheable with this check).
+
+If a computed name violates either of the following requirements, it will not be cached regardless of what the sheet's configuration specifies due to storage limitations of the cache.
+- The name must be less than or equal to 768 bytes
+- The name must not contain any of these characters: `[`, `]`, `.`, `#`, `$`, `/`.
+
+When an attribute is requested from Beacon, in any location (API Script, Token Bar Attribute, Chat Message, other sheet, etc.), the cache will be checked first for any matching attribute, and return the cached result without ever calling your `get` method. If the cache doesn't include the attribute, then the `get` method will be called, and the value will be stored in the cache if it's cacheable.
+
+## Computed Aliases
+Sometimes you may want to include a single attribute under multiple names for purposes of maintaining backwards-compatibility with macros or API scripts. When this is desirable, you can specify additional names that should be treated as the same computed specification, each alias provided must meet the following requirements:
+
+- It must not be an empty string
+- It must not match any non-alias computed
+- It must not match any other alias
+
+Aliased computeds operate identically to non-aliased computeds, with the exception that they are never cached by the host under the aliased name. When caching the computed would occur, it is cached under the canonical name instead.
+
+All of the aliases, and the canonical name, will have their own row in the Advanced Tools panel the character sheet.
+
+The example below results in 4 computed properties being listed in the Advanced Tools panel, and being accessible in macros that reference the character.
+```typescript
+initRelay({
+  //...other methods
+  computed: {
+    hp: {
+      aliases: [
+        `hp_max`,
+        `npc_hp`,
+        `npc_hp_max`,
+      ],
+      get() {
+        return 4; // chosen by fair dice roll.
+      },
+    },
+  },
+});
+```
