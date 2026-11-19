@@ -91,3 +91,24 @@ Sometimes you may want to include a single attribute under multiple names for pu
 - It must not match any other alias
 
 Aliased computeds operate identically to non-aliased computeds, with the exception that they are never cached by the host under the aliased name. When caching the computed would occur, it is cached under the canonical name instead.
+
+All of the aliases, and the canonical name, will have their own row in the Advanced Tools panel the character sheet.
+
+The example below results in 4 computed properties being listed in the Advanced Tools panel, and being accessible in macros that reference the character.
+```typescript
+initRelay({
+  //...other methods
+  computed: {
+    hp: {
+      aliases: [
+        `hp_max`,
+        `npc_hp`,
+        `npc_hp_max`,
+      ],
+      get() {
+        return 4; // chosen by fair dice roll.
+      },
+    },
+  },
+});
+```
