@@ -36,11 +36,7 @@ The `update` method sends character changes to the host (Roll20 Tabletop or Roll
 
 The partial character passed in here must contain the character's id, and can contain any combination of the attributes, bio, and gmNotes properties. When updating a character’s attributes, only include those attributes that have changed.
 
-If `invalidateComputed` is passed in, it is expected to be an array of strings that match computed names, this tells the host that those computed values should be removed from the cache and be recalculated when next requested. If `invalidateComputed` is left out, the host treats is as a whole-cache invalidation and invalidates the entire cache.
-
-{{< callout context="warning" icon="outline/alert-square" >}}
-Providing an empty array is not the same as omitting the property. An empty array will invalidate **none** of the cache, instead of all of it.
-{{< /callout >}}
+If `invalidateComputed` is passed in, it is expected to be an array of strings that match computed names or an empty array, this tells the host that those computed values should be removed from the cache and be recalculated when next requested; if an empty array is passed in, the host does not invalidate any of the cache. If `invalidateComputed` is left out, the host treats is as a whole-cache invalidation and invalidates the entire cache.
 
 ## updateCharacter
 ```javascript
